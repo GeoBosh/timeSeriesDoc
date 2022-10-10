@@ -1,3 +1,8 @@
+<!-- badges: start -->
+[![CRANStatusBadge](http://www.r-pkg.org/badges/version/timeSeries)](https://cran.r-project.org/package=timeSeries)
+[![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/timeSeries)](https://www.r-pkg.org/pkg/timeSeries)
+[![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/timeSeries?color=blue)](https://r-pkg.org/pkg/timeSeries)
+<!-- badges: end -->
 
 The R package 'timeSeries' provides a time series class and tools for creation, import,
 manipulation, statistical and financial computations on time series.
