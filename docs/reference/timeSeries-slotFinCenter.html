@@ -79,19 +79,19 @@ Get or assign a financial center to a 'timeSeries' object."><!-- mathjax --><scr
 <span class="r-in">   <span class="va">tS</span> <span class="op">&lt;-</span> <span class="fu"><a href="fin-dummy.html">dummySeries</a></span><span class="op">(</span><span class="op">)</span></span>
 <span class="r-in">   <span class="va">tS</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                  TS.1       TS.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-01-01 0.41017899 0.66528442</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-02-01 0.80380770 0.20223898</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-03-01 0.30420527 0.39138194</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-04-01 0.37137592 0.34686348</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-05-01 0.79962287 0.29950506</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-06-01 0.29972842 0.34774590</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-07-01 0.09276604 0.48301733</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-08-01 0.30989038 0.96822468</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-09-01 0.79953817 0.04527326</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-10-01 0.83318437 0.49456638</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-11-01 0.67945164 0.80893257</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-12-01 0.33321634 0.78937484</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  TS.1      TS.2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-01-01 0.21879954 0.2012480</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-02-01 0.81059855 0.2588098</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-03-01 0.52569755 0.9921504</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-04-01 0.91465817 0.8073523</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-05-01 0.83134505 0.5533336</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-06-01 0.04577026 0.6464061</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-07-01 0.45609148 0.3118243</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-08-01 0.26518667 0.6218192</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-09-01 0.30467220 0.3297702</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-10-01 0.50730687 0.5019975</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-11-01 0.18109621 0.6770945</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-12-01 0.75967064 0.4849912</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Print Financial Center -</span></span>
 <span class="r-in">   <span class="fu">finCenter</span><span class="op">(</span><span class="va">tS</span><span class="op">)</span></span>
@@ -103,35 +103,35 @@ Get or assign a financial center to a 'timeSeries' object."><!-- mathjax --><scr
 <span class="r-in">   <span class="fu">finCenter</span><span class="op">(</span><span class="va">tS</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"Zurich"</span></span>
 <span class="r-in">   <span class="va">tS</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Zurich</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                           TS.1       TS.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-01-01 01:00:00 0.41017899 0.66528442</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-02-01 01:00:00 0.80380770 0.20223898</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-03-01 01:00:00 0.30420527 0.39138194</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-04-01 02:00:00 0.37137592 0.34686348</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-05-01 02:00:00 0.79962287 0.29950506</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-06-01 02:00:00 0.29972842 0.34774590</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-07-01 02:00:00 0.09276604 0.48301733</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-08-01 02:00:00 0.30989038 0.96822468</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-09-01 02:00:00 0.79953817 0.04527326</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-10-01 02:00:00 0.83318437 0.49456638</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-11-01 01:00:00 0.67945164 0.80893257</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-12-01 01:00:00 0.33321634 0.78937484</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                           TS.1      TS.2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-01-01 01:00:00 0.21879954 0.2012480</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-02-01 01:00:00 0.81059855 0.2588098</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-03-01 01:00:00 0.52569755 0.9921504</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-04-01 02:00:00 0.91465817 0.8073523</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-05-01 02:00:00 0.83134505 0.5533336</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-06-01 02:00:00 0.04577026 0.6464061</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-07-01 02:00:00 0.45609148 0.3118243</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-08-01 02:00:00 0.26518667 0.6218192</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-09-01 02:00:00 0.30467220 0.3297702</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-10-01 02:00:00 0.50730687 0.5019975</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-11-01 01:00:00 0.18109621 0.6770945</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-12-01 01:00:00 0.75967064 0.4849912</span>
 <span class="r-in">   <span class="fu">setFinCenter</span><span class="op">(</span><span class="va">tS</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"New_York"</span></span>
 <span class="r-in">   <span class="va">tS</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> New_York</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                           TS.1       TS.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2021-12-31 19:00:00 0.41017899 0.66528442</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-01-31 19:00:00 0.80380770 0.20223898</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-02-28 19:00:00 0.30420527 0.39138194</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-03-31 20:00:00 0.37137592 0.34686348</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-04-30 20:00:00 0.79962287 0.29950506</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-05-31 20:00:00 0.29972842 0.34774590</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-06-30 20:00:00 0.09276604 0.48301733</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-07-31 20:00:00 0.30989038 0.96822468</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-08-31 20:00:00 0.79953817 0.04527326</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-09-30 20:00:00 0.83318437 0.49456638</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-10-31 20:00:00 0.67945164 0.80893257</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-11-30 19:00:00 0.33321634 0.78937484</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                           TS.1      TS.2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2021-12-31 19:00:00 0.21879954 0.2012480</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-01-31 19:00:00 0.81059855 0.2588098</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-02-28 19:00:00 0.52569755 0.9921504</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-03-31 20:00:00 0.91465817 0.8073523</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-04-30 20:00:00 0.83134505 0.5533336</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-05-31 20:00:00 0.04577026 0.6464061</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-06-30 20:00:00 0.45609148 0.3118243</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-07-31 20:00:00 0.26518667 0.6218192</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-08-31 20:00:00 0.30467220 0.3297702</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-09-30 20:00:00 0.50730687 0.5019975</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-10-31 20:00:00 0.18109621 0.6770945</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-11-30 19:00:00 0.75967064 0.4849912</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

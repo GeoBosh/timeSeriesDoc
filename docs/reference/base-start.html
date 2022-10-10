@@ -72,23 +72,24 @@ Returns start or end time stamp of a "timeSeries" object.'><!-- mathjax --><scri
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co">## Create Dummy timeSeries -    </span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1234</span><span class="op">)</span></span>
+<span class="r-in"><span class="co">## Create Dummy timeSeries -    </span></span>
 <span class="r-in">   <span class="va">tS</span> <span class="op">&lt;-</span> <span class="fu"><a href="fin-dummy.html">dummySeries</a></span><span class="op">(</span><span class="op">)</span><span class="op">[</span>, <span class="fl">1</span><span class="op">]</span></span>
 <span class="r-in">   <span class="va">tS</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 TS.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-01-01 0.6372526</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-02-01 0.3034622</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-03-01 0.3131720</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-04-01 0.6054901</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-05-01 0.8333163</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-06-01 0.4268776</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-07-01 0.7516943</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-08-01 0.2915908</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-09-01 0.4991127</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-10-01 0.1570075</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-11-01 0.5879455</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-12-01 0.8544724</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                   TS.1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-01-01 0.113703411</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-02-01 0.622299405</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-03-01 0.609274733</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-04-01 0.623379442</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-05-01 0.860915384</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-06-01 0.640310605</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-07-01 0.009495756</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-08-01 0.232550506</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-09-01 0.666083758</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-10-01 0.514251141</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-11-01 0.693591292</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-12-01 0.544974836</span>
 <span class="r-in">   </span>
 <span class="r-in"><span class="co">## Return Start and end Time Stamp -</span></span>
 <span class="r-in">   <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/start.html" class="external-link">start</a></span><span class="op">(</span><span class="va">tS</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/stats/start.html" class="external-link">end</a></span><span class="op">(</span><span class="va">tS</span><span class="op">)</span><span class="op">)</span></span>

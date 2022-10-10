@@ -97,25 +97,26 @@ Merges several object types with "timeSeries" objects.
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-11 54.0000 56.9375 54.0000 55.7500 50602900</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-12 56.3125 56.8750 53.8125 54.3750 45109800</span>
 <span class="r-in"></span>
+<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1234</span><span class="op">)</span></span>
 <span class="r-in"><span class="co">## Merge 'timeSeries' with numeric Object -</span></span>
 <span class="r-in">   <span class="va">y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">12</span><span class="op">)</span></span>
 <span class="r-in">   <span class="fu"><a href="https://rdrr.io/r/base/class.html" class="external-link">class</a></span><span class="op">(</span><span class="va">y</span><span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "numeric"</span>
 <span class="r-in">   <span class="fu">merge</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>               Open    High     Low   Close   Volume           x</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-09-27 63.4375 63.5625 59.8125 60.6250 53077800 -1.34015046</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-09-28 60.8125 61.8750 60.6250 61.3125 26180200  0.36256278</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-09-29 61.0000 61.3125 58.6250 60.3125 37026800 -0.92406383</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-02 60.5000 60.8125 58.2500 59.1250 29281200  0.08760151</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-03 59.5625 59.8125 56.5000 56.5625 42687000  0.05788667</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-04 56.3750 56.5625 54.5000 55.4375 68226700 -0.35916707</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-05 55.5000 57.2500 55.2500 55.3750 40549700  0.13061474</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-06 55.8125 56.7500 54.7500 55.5625 30897000 -1.39153528</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-09 55.6250 55.7500 53.0000 54.1875 29161800  0.31781385</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-10 53.9375 55.5625 53.8125 54.5625 31033100 -0.02583343</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-11 54.0000 56.9375 54.0000 55.7500 50602900 -0.97301030</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-12 56.3125 56.8750 53.8125 54.3750 45109800 -0.56808079</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>               Open    High     Low   Close   Volume          x</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-09-27 63.4375 63.5625 59.8125 60.6250 53077800 -1.2070657</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-09-28 60.8125 61.8750 60.6250 61.3125 26180200  0.2774292</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-09-29 61.0000 61.3125 58.6250 60.3125 37026800  1.0844412</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-02 60.5000 60.8125 58.2500 59.1250 29281200 -2.3456977</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-03 59.5625 59.8125 56.5000 56.5625 42687000  0.4291247</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-04 56.3750 56.5625 54.5000 55.4375 68226700  0.5060559</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-05 55.5000 57.2500 55.2500 55.3750 40549700 -0.5747400</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-06 55.8125 56.7500 54.7500 55.5625 30897000 -0.5466319</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-09 55.6250 55.7500 53.0000 54.1875 29161800 -0.5644520</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-10 53.9375 55.5625 53.8125 54.5625 31033100 -0.8900378</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-11 54.0000 56.9375 54.0000 55.7500 50602900 -0.4771927</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-12 56.3125 56.8750 53.8125 54.3750 45109800 -0.9983864</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Merge 'timeSeries' with matrix Object -</span></span>
 <span class="r-in">   <span class="va">y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">24</span><span class="op">)</span>, ncol<span class="op">=</span><span class="fl">2</span><span class="op">)</span></span>
@@ -123,19 +124,19 @@ Merges several object types with "timeSeries" objects.
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "matrix" "array" </span>
 <span class="r-in">   <span class="fu">merge</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>               Open    High     Low   Close   Volume        y.1         y.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-09-27 63.4375 63.5625 59.8125 60.6250 53077800  1.0997019 -0.01655292</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-09-28 60.8125 61.8750 60.6250 61.3125 26180200 -0.2465683 -1.37378314</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-09-29 61.0000 61.3125 58.6250 60.3125 37026800 -1.5478752 -0.71423601</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-02 60.5000 60.8125 58.2500 59.1250 29281200 -0.5545212  0.26068600</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-03 59.5625 59.8125 56.5000 56.5625 42687000 -0.5349780  0.75495369</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-04 56.3750 56.5625 54.5000 55.4375 68226700 -1.2326013  0.71311319</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-05 55.5000 57.2500 55.2500 55.3750 40549700  0.5715474  0.33995355</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-06 55.8125 56.7500 54.7500 55.5625 30897000 -0.7608559  0.52388498</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-09 55.6250 55.7500 53.0000 54.1875 29161800  1.0481648  1.74665906</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-10 53.9375 55.5625 53.8125 54.5625 31033100  0.3971667  2.71047089</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-11 54.0000 56.9375 54.0000 55.7500 50602900 -0.8803687 -1.16434433</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-12 56.3125 56.8750 53.8125 54.3750 45109800  1.5726684  0.72602207</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>               Open    High     Low   Close   Volume         y.1        y.2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-09-27 63.4375 63.5625 59.8125 60.6250 53077800 -0.77625389 -0.6937202</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-09-28 60.8125 61.8750 60.6250 61.3125 26180200  0.06445882 -1.4482049</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-09-29 61.0000 61.3125 58.6250 60.3125 37026800  0.95949406  0.5747557</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-02 60.5000 60.8125 58.2500 59.1250 29281200 -0.11028549 -1.0236557</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-03 59.5625 59.8125 56.5000 56.5625 42687000 -0.51100951 -0.0151383</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-04 56.3750 56.5625 54.5000 55.4375 68226700 -0.91119542 -0.9359486</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-05 55.5000 57.2500 55.2500 55.3750 40549700 -0.83717168  1.1022975</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-06 55.8125 56.7500 54.7500 55.5625 30897000  2.41583518 -0.4755931</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-09 55.6250 55.7500 53.0000 54.1875 29161800  0.13408822 -0.7094400</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-10 53.9375 55.5625 53.8125 54.5625 31033100 -0.49068590 -0.5012581</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-11 54.0000 56.9375 54.0000 55.7500 50602900 -0.44054787 -1.6290935</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-12 56.3125 56.8750 53.8125 54.3750 45109800  0.45958944 -1.1676193</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Merge 'timeSeries' with matrix Object -</span></span>
 <span class="r-in">   <span class="va">y</span> <span class="op">&lt;-</span> <span class="fu"><a href="timeSeries.html">timeSeries</a></span><span class="op">(</span>data<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">12</span><span class="op">)</span>, charvec<span class="op">=</span><span class="fu"><a href="timeSeries-slotTime.html">time</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span></span>
@@ -146,18 +147,18 @@ Merges several object types with "timeSeries" objects.
 <span class="r-in">   <span class="fu">merge</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>               Open    High     Low   Close   Volume       TS.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-09-27 63.4375 63.5625 59.8125 60.6250 53077800  2.0610664</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-09-28 60.8125 61.8750 60.6250 61.3125 26180200  1.5470635</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-09-29 61.0000 61.3125 58.6250 60.3125 37026800  1.4362906</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-02 60.5000 60.8125 58.2500 59.1250 29281200 -0.5124746</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-03 59.5625 59.8125 56.5000 56.5625 42687000 -0.2158460</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-04 56.3750 56.5625 54.5000 55.4375 68226700 -1.7491182</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-05 55.5000 57.2500 55.2500 55.3750 40549700  0.5768927</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-06 55.8125 56.7500 54.7500 55.5625 30897000  0.3389428</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-09 55.6250 55.7500 53.0000 54.1875 29161800 -1.0345013</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-10 53.9375 55.5625 53.8125 54.5625 31033100 -0.8072418</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-11 54.0000 56.9375 54.0000 55.7500 50602900  0.5110109</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-12 56.3125 56.8750 53.8125 54.3750 45109800  0.8701840</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-09-27 63.4375 63.5625 59.8125 60.6250 53077800 -2.1800396</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-09-28 60.8125 61.8750 60.6250 61.3125 26180200 -1.3409932</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-09-29 61.0000 61.3125 58.6250 60.3125 37026800 -0.2942939</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-02 60.5000 60.8125 58.2500 59.1250 29281200 -0.4658975</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-03 59.5625 59.8125 56.5000 56.5625 42687000  1.4494963</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-04 56.3750 56.5625 54.5000 55.4375 68226700 -1.0686427</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-05 55.5000 57.2500 55.2500 55.3750 40549700 -0.8553646</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-06 55.8125 56.7500 54.7500 55.5625 30897000 -0.2806230</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-09 55.6250 55.7500 53.0000 54.1875 29161800 -0.9943401</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-10 53.9375 55.5625 53.8125 54.5625 31033100 -0.9685143</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-11 54.0000 56.9375 54.0000 55.7500 50602900 -1.1073182</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-12 56.3125 56.8750 53.8125 54.3750 45109800 -1.2519859</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

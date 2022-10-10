@@ -46,44 +46,38 @@
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">timeSeries</span><span class="op">(</span><span class="va">data</span>, <span class="va">charvec</span>, units <span class="op">=</span> <span class="cn">NULL</span>, format <span class="op">=</span> <span class="cn">NULL</span>, zone <span class="op">=</span> <span class="st">""</span>, 
-    FinCenter <span class="op">=</span> <span class="st">""</span>, recordIDs <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span><span class="op">)</span>, title <span class="op">=</span> <span class="cn">NULL</span>, 
-    documentation <span class="op">=</span> <span class="cn">NULL</span>, <span class="va">...</span><span class="op">)</span></code></pre></div>
+           FinCenter <span class="op">=</span> <span class="st">""</span>, recordIDs <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span><span class="op">)</span>, title <span class="op">=</span> <span class="cn">NULL</span>, 
+           documentation <span class="op">=</span> <span class="cn">NULL</span>, <span class="va">...</span><span class="op">)</span></code></pre></div>
     </div>
 
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
-    <dl><dt>charvec</dt>
+    <dl><dt>data</dt>
+<dd><p>a <code>matrix</code> object or any objects which can be coerced to a matrix.</p></dd>
+<dt>charvec</dt>
 <dd><p>a character vector of dates and times or any objects which can
-        be coerced to a <code>timeDate</code> object.</p></dd>
-<dt>data</dt>
-<dd><p>a <code>matrix</code> object or any objects which can be coereced to a matrix.</p></dd>
-<dt>documentation</dt>
-<dd><p>optional documentation string, or a vector of character strings.</p></dd>
-<dt>FinCenter</dt>
-<dd><p>a character with the the location of the  financial center named 
-        as "continent/city".</p></dd>
-<dt>format</dt>
-<dd><p>the format specification of the input character vector,
-        <br>
-        [as.timeSeries] - <br>
-        a character string with the format in POSIX notation to be passed 
-        to the time series object.</p></dd>
-<dt>recordIDs</dt>
-<dd><p>a data frame which can be used for record identification
-        information. <br>
-        [print] - <br>
-        a logical value. Should the <code>recordIDs</code> printed together
-        with the data matrix and time series positions?</p></dd>
-<dt>title</dt>
-<dd><p>an optional title string, if not specified the inputs data 
-        name is deparsed.</p></dd>
+    be coerced to a <code>timeDate</code> object.</p></dd>
 <dt>units</dt>
 <dd><p>an optional character string, which allows to overwrite the 
-        current column names of a <code>timeSeries</code> object. By default 
-        <code>NULL</code> which means that the column names are selected
-        automatically.</p></dd>
+    current column names of a <code>timeSeries</code> object. By default 
+    <code>NULL</code> which means that the column names are selected
+    automatically.</p></dd>
+<dt>format</dt>
+<dd><p>the format specification of the input character vector,
+    a character string with the format in POSIX notation.</p></dd>
 <dt>zone</dt>
 <dd><p>the time zone or financial center where the data were recorded.</p></dd>
+<dt>FinCenter</dt>
+<dd><p>a character with the the location of the  financial center named 
+    as "continent/city".</p></dd>
+<dt>recordIDs</dt>
+<dd><p>for <code>timeSeries</code>, a data frame which can be used for record
+    identification.</p></dd>
+<dt>title</dt>
+<dd><p>an optional title string, if not specified the input's data 
+    name is deparsed.</p></dd>
+<dt>documentation</dt>
+<dd><p>optional documentation string, or a vector of character strings.</p></dd>
 <dt>...</dt>
 <dd><p>arguments passed to other methods.</p></dd>
 </dl></div>
@@ -96,30 +90,22 @@
     
 
 <p><b>Generation of Time Series Objects:</b>
-    <br></p>    
-<p>We have defined a <code>timeSeries</code> class which is in many aspects similar
-    to the S-Plus class with the same name, but has also some important
-    differences. The class has seven Slots, the 'Data' slot which holds 
-    the time series data in matrix form, the 'position' slot which holds
-    the time/date as a character vector, the 'format' and 'FinCenter'
-    slots which are the same as for the 'timeDate' object, the 'units'
-    slot which holds the column names of the data matrix, and a 'title'
-    and a 'documentation' slot which hold descriptive character strings.
-    Date and time is managed in the same way as for <code>timeDate</code> objects.</p>
-    </div>
-    <div class="section level2">
-    <h2 id="note">Note<a class="anchor" aria-label="anchor" href="#note"></a></h2>
-    
-
-<p>These functions were written for Rmetrics users using R and Rmetrics
-    under Microsoft's Windows operating system where timze zones, 
-    daylight saving times and holiday calendars are insuffeciently 
-    supported.</p>
+  <br></p>    
+<p>We have defined a <code>timeSeries</code> class which is in many aspects
+  similar to the S-Plus class with the same name, but has also some
+  important differences. The class has seven Slots, the 'Data' slot
+  which holds the time series data in matrix form, the 'position' slot
+  which holds the time/date as a character vector, the 'format' and
+  'FinCenter' slots which are the same as for the 'timeDate' object, the
+  'units' slot which holds the column names of the data matrix, and a
+  'title' and a 'documentation' slot which hold descriptive character
+  strings.  Date and time is managed in the same way as for
+  <code>timeDate</code> objects.</p>
     </div>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co">## Load Microsoft Data -</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co">## Load Microsoft data -</span></span>
 <span class="r-in">   <span class="co"># Microsoft Data: </span></span>
 <span class="r-in">   <span class="fu">setRmetricsOptions</span><span class="op">(</span>myFinCenter <span class="op">=</span> <span class="st">"GMT"</span><span class="op">)</span></span>
 <span class="r-in">   <span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">MSFT</span><span class="op">)</span></span>
@@ -133,7 +119,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-03 59.5625 59.8125 56.5000 56.5625 42687000</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-04 56.3750 56.5625 54.5000 55.4375 68226700</span>
 <span class="r-in"></span>
-<span class="r-in"><span class="co">## Create a timeSeries Object, The Direct Way ...</span></span>
+<span class="r-in"><span class="co">## Create a timeSeries object, the direct Way ...</span></span>
 <span class="r-in">   <span class="va">Close</span> <span class="op">&lt;-</span> <span class="va">MSFT</span><span class="op">[</span>, <span class="fl">5</span><span class="op">]</span></span>
 <span class="r-in">   <span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">Close</span><span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
@@ -145,7 +131,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-03 42687000</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-04 68226700</span>
 <span class="r-in">   </span>
-<span class="r-in"><span class="co">## Create a timeSeries Object from Scratch - </span></span>
+<span class="r-in"><span class="co">## Create a timeSeries object from scratch - </span></span>
 <span class="r-in">   <span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">as.matrix</a></span><span class="op">(</span><span class="va">MSFT</span><span class="op">[</span>, <span class="fl">4</span><span class="op">]</span><span class="op">)</span></span>
 <span class="r-in">   <span class="va">charvec</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/colnames.html" class="external-link">rownames</a></span><span class="op">(</span><span class="va">MSFT</span><span class="op">)</span></span>
 <span class="r-in">   <span class="va">Close</span> <span class="op">&lt;-</span> <span class="fu">timeSeries</span><span class="op">(</span><span class="va">data</span>, <span class="va">charvec</span>, units <span class="op">=</span> <span class="st">"Close"</span><span class="op">)</span></span>
@@ -161,8 +147,8 @@
 <span class="r-in">   <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/start.html" class="external-link">start</a></span><span class="op">(</span><span class="va">Close</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/stats/start.html" class="external-link">end</a></span><span class="op">(</span><span class="va">Close</span><span class="op">)</span><span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] [2000-09-27] [2001-09-27]</span>
-<span class="r-in">    </span>
-<span class="r-in"><span class="co">## Cut out April Data from 2001 - </span></span>
+<span class="r-in"></span>
+<span class="r-in"><span class="co">## Cut out April data from 2001 - </span></span>
 <span class="r-in">   <span class="va">tsApril01</span> <span class="op">&lt;-</span> <span class="fu"><a href="stats-window.html">window</a></span><span class="op">(</span><span class="va">Close</span>, <span class="st">"2001-04-01"</span>, <span class="st">"2001-04-30"</span><span class="op">)</span> </span>
 <span class="r-in">   <span class="va">tsApril01</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
@@ -311,31 +297,31 @@
 <span class="r-in">   <span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="fu">timeSeries</span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">1e6L</span>, <span class="fu">timeSequence</span><span class="op">(</span>length.out <span class="op">=</span> <span class="fl">1e6L</span>, by <span class="op">=</span> <span class="st">"sec"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                     TS.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-09-10 18:34:55    1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-09-10 18:34:56    2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-09-10 18:34:57    3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-09-10 18:34:58    4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-09-10 18:34:59    5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-09-10 18:35:00    6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-09-11 18:58:41    1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-09-11 18:58:42    2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-09-11 18:58:43    3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-09-11 18:58:44    4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-09-11 18:58:45    5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-09-11 18:58:46    6</span>
 <span class="r-in">   <span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="fu">timeSeries</span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">1e6L</span>, <span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq</a></span><span class="op">(</span><span class="fu">Sys.timeDate</span><span class="op">(</span><span class="op">)</span>, length.out <span class="op">=</span> <span class="fl">1e6L</span>, by <span class="op">=</span> <span class="st">"sec"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                     TS.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-10-09 18:34:55    1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-10-09 18:34:56    2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-10-09 18:34:57    3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-10-09 18:34:58    4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-10-09 18:34:59    5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-10-09 18:35:00    6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-10-10 18:58:41    1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-10-10 18:58:42    2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-10-10 18:58:43    3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-10-10 18:58:44    4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-10-10 18:58:45    5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-10-10 18:58:46    6</span>
 <span class="r-in">   <span class="co"># 'charvec' is a 'POSIXt' object</span></span>
 <span class="r-in">   <span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="fu">timeSeries</span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">1e6L</span>, <span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/Sys.time.html" class="external-link">Sys.time</a></span><span class="op">(</span><span class="op">)</span>, length.out <span class="op">=</span> <span class="fl">1e6L</span>, by <span class="op">=</span> <span class="st">"sec"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                     TS.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-10-09 18:34:56    1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-10-09 18:34:57    2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-10-09 18:34:58    3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-10-09 18:34:59    4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-10-09 18:35:00    5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-10-09 18:35:01    6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-10-10 18:58:41    1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-10-10 18:58:42    2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-10-10 18:58:43    3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-10-10 18:58:44    4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-10-10 18:58:45    5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-10-10 18:58:46    6</span>
 <span class="r-in">   <span class="co"># 'charvec' is a 'numeric' object</span></span>
 <span class="r-in">   <span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="fu">timeSeries</span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">1e6L</span>, <span class="fl">1</span><span class="op">:</span><span class="fl">1e6L</span><span class="op">)</span><span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>

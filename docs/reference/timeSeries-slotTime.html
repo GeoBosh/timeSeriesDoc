@@ -109,35 +109,35 @@ Functions and methods extracting and modifying positions
 <span class="r-in">   <span class="fu">setTime</span><span class="op">(</span><span class="va">X</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu">time</span><span class="op">(</span><span class="va">X</span><span class="op">)</span> <span class="op">-</span> <span class="fl">24</span><span class="op">*</span><span class="fl">3600</span> <span class="co"># sec</span></span>
 <span class="r-in">   <span class="va">X</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                   TS.1        TS.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2021-12-31 -0.18067150 -0.29008571</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-01-31  0.23206031  0.08847879</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-02-28  0.95669554 -1.18344773</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-03-31 -0.22413890  0.52857993</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-04-30 -0.11931791 -0.28819707</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-05-31 -0.43419972 -0.02084050</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-06-30 -0.51232580 -0.03564996</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-07-31 -1.67219790  0.66836210</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-08-31  1.28170459 -0.66726977</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-09-30  0.07442837 -0.76552161</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-10-31  1.73175545  0.19676379</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-11-30 -0.93377821  1.24593943</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  TS.1         TS.2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2021-12-31 -0.5238281  0.656588464</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-01-31 -0.4968500  2.548991071</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-02-28 -1.8060313 -0.034760390</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-03-31 -0.5820759 -0.669633580</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-04-30 -1.1088896 -0.007604756</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-05-31 -1.0149620  1.777084448</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-06-30 -0.1623095 -1.138607737</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-07-31  0.5630558  1.367827179</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-08-31  1.6478175  1.329564791</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-09-30 -0.7733534  0.336472797</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-10-31  1.6059096  0.006892838</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-11-30 -1.1578085 -0.455468738</span>
 <span class="r-in">   <span class="fu">time</span><span class="op">(</span><span class="va">X</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu">time</span><span class="op">(</span><span class="va">X</span><span class="op">)</span> <span class="op">+</span> <span class="fl">24</span><span class="op">*</span><span class="fl">3600</span> <span class="co"># sec</span></span>
 <span class="r-in">   <span class="va">X</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                   TS.1        TS.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-01-01 -0.18067150 -0.29008571</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-02-01  0.23206031  0.08847879</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-03-01  0.95669554 -1.18344773</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-04-01 -0.22413890  0.52857993</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-05-01 -0.11931791 -0.28819707</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-06-01 -0.43419972 -0.02084050</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-07-01 -0.51232580 -0.03564996</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-08-01 -1.67219790  0.66836210</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-09-01  1.28170459 -0.66726977</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-10-01  0.07442837 -0.76552161</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-11-01  1.73175545  0.19676379</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-12-01 -0.93377821  1.24593943</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  TS.1         TS.2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-01-01 -0.5238281  0.656588464</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-02-01 -0.4968500  2.548991071</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-03-01 -1.8060313 -0.034760390</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-04-01 -0.5820759 -0.669633580</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-05-01 -1.1088896 -0.007604756</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-06-01 -1.0149620  1.777084448</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-07-01 -0.1623095 -1.138607737</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-08-01  0.5630558  1.367827179</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-09-01  1.6478175  1.329564791</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-10-01 -0.7733534  0.336472797</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-11-01  1.6059096  0.006892838</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-12-01 -1.1578085 -0.455468738</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

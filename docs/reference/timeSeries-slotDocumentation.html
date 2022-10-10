@@ -92,47 +92,48 @@ object.</p>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co">## Create an artificial timeSeries Object - </span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1234</span><span class="op">)</span></span>
+<span class="r-in"><span class="co">## Create an artificial timeSeries Object - </span></span>
 <span class="r-in">   <span class="va">tS</span> <span class="op">&lt;-</span> <span class="fu"><a href="fin-dummy.html">dummySeries</a></span><span class="op">(</span><span class="op">)</span></span>
 <span class="r-in">   <span class="va">tS</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 TS.1      TS.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-01-01 0.4340961 0.7879249</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-02-01 0.1724838 0.5952879</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-03-01 0.2827302 0.5474315</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-04-01 0.5131803 0.4009878</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-05-01 0.7534540 0.6252588</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-06-01 0.8567953 0.4174565</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-07-01 0.9904504 0.5365323</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-08-01 0.1511665 0.1585544</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-09-01 0.3334947 0.6905842</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-10-01 0.7331391 0.5373382</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-11-01 0.1273321 0.5663768</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-12-01 0.6229946 0.3908003</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                   TS.1       TS.2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-01-01 0.113703411 0.28273358</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-02-01 0.622299405 0.92343348</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-03-01 0.609274733 0.29231584</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-04-01 0.623379442 0.83729563</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-05-01 0.860915384 0.28622328</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-06-01 0.640310605 0.26682078</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-07-01 0.009495756 0.18672279</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-08-01 0.232550506 0.23222591</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-09-01 0.666083758 0.31661245</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-10-01 0.514251141 0.30269337</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-11-01 0.693591292 0.15904600</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-12-01 0.544974836 0.03999592</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Get Optional Attributes -</span></span>
 <span class="r-in">   <span class="fu">getAttributes</span><span class="op">(</span><span class="va">tS</span><span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
 <span class="r-in">   <span class="va">tS</span><span class="op">@</span><span class="va">documentation</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Sun Oct  9 19:34:55 2022"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Mon Oct 10 19:58:40 2022"</span>
 <span class="r-in">   </span>
 <span class="r-in"><span class="co">## Set a new Optional Attribute -</span></span>
 <span class="r-in">   <span class="fu">setAttributes</span><span class="op">(</span><span class="va">tS</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>what<span class="op">=</span><span class="st">"A dummy Series"</span><span class="op">)</span></span>
 <span class="r-in">   <span class="va">tS</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 TS.1      TS.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-01-01 0.4340961 0.7879249</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-02-01 0.1724838 0.5952879</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-03-01 0.2827302 0.5474315</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-04-01 0.5131803 0.4009878</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-05-01 0.7534540 0.6252588</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-06-01 0.8567953 0.4174565</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-07-01 0.9904504 0.5365323</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-08-01 0.1511665 0.1585544</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-09-01 0.3334947 0.6905842</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-10-01 0.7331391 0.5373382</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-11-01 0.1273321 0.5663768</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-12-01 0.6229946 0.3908003</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                   TS.1       TS.2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-01-01 0.113703411 0.28273358</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-02-01 0.622299405 0.92343348</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-03-01 0.609274733 0.29231584</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-04-01 0.623379442 0.83729563</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-05-01 0.860915384 0.28622328</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-06-01 0.640310605 0.26682078</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-07-01 0.009495756 0.18672279</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-08-01 0.232550506 0.23222591</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-09-01 0.666083758 0.31661245</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-10-01 0.514251141 0.30269337</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-11-01 0.693591292 0.15904600</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-12-01 0.544974836 0.03999592</span>
 <span class="r-in">   <span class="fu">getAttributes</span><span class="op">(</span><span class="va">tS</span><span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $what</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $what[[1]]</span>
@@ -140,7 +141,7 @@ object.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in">   <span class="va">tS</span><span class="op">@</span><span class="va">documentation</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Sun Oct  9 19:34:55 2022"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Mon Oct 10 19:58:40 2022"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> attr(,"Attributes")</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> attr(,"Attributes")$what</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> attr(,"Attributes")$what[[1]]</span>
