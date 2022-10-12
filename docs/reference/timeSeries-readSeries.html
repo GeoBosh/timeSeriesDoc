@@ -117,14 +117,53 @@ Reads a file in table format and creates a "timeSeries" object
 <p>The file is imported with <code><a href="https://rdrr.io/r/utils/read.table.html" class="external-link">read.table</a></code>. Note the different
   default for argument <code>"sep"</code>.</p>
 <p>The first column of the table must hold the timestamps. Format of the
-  stimestamps can be either specified in the header of the first column
+  timestamps can be either specified in the header of the first column
   or by the <code>format</code> argument.</p>
     </div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>an object of class <code>"timeSeries"</code>.</p>
+    <p>an object of class <code>"timeSeries"</code></p>
     </div>
 
+    <div class="section level2">
+    <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co">## full path to an example file</span></span>
+<span class="r-in"><span class="va">fn</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata/msft.csv"</span>, package <span class="op">=</span> <span class="st">"timeSeries"</span><span class="op">)</span></span>
+<span class="r-in"><span class="co">## first few lines of the file</span></span>
+<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/readLines.html" class="external-link">readLines</a></span><span class="op">(</span><span class="va">fn</span>, n <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "\"%Y-%m-%d\";Open;High;Low;Close;Volume"           </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2] "2000-09-27;63.4375;63.5625;59.8125;60.625;53077800"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [3] "2000-09-28;60.8125;61.875;60.625;61.3125;26180200" </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [4] "2000-09-29;61;61.3125;58.625;60.3125;37026800"     </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [5] "2000-10-02;60.5;60.8125;58.25;59.125;29281200"     </span>
+<span class="r-in"></span>
+<span class="r-in"><span class="co">## import the file</span></span>
+<span class="r-in"><span class="va">msft</span> <span class="op">&lt;-</span> <span class="fu">readSeries</span><span class="op">(</span><span class="va">fn</span><span class="op">)</span></span>
+<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">msft</span><span class="op">)</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>               Open    High     Low   Close   Volume</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-09-27 63.4375 63.5625 59.8125 60.6250 53077800</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-09-28 60.8125 61.8750 60.6250 61.3125 26180200</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-09-29 61.0000 61.3125 58.6250 60.3125 37026800</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-02 60.5000 60.8125 58.2500 59.1250 29281200</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-03 59.5625 59.8125 56.5000 56.5625 42687000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-04 56.3750 56.5625 54.5000 55.4375 68226700</span>
+<span class="r-in"></span>
+<span class="r-in"><span class="co">## is msft the same as the data object MSFT?</span></span>
+<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/all.equal.html" class="external-link">all.equal</a></span><span class="op">(</span><span class="va">msft</span>, <span class="va">MSFT</span><span class="op">)</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Attributes: &lt; Component “documentation”: 1 string mismatch &gt;"</span>
+<span class="r-in"><span class="co">## ... almost, except for slot 'documentation'</span></span>
+<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">msft</span><span class="op">@</span><span class="va">documentation</span>, <span class="va">MSFT</span><span class="op">@</span><span class="va">documentation</span><span class="op">)</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Wed Oct 12 21:11:57 2022" ""                        </span>
+<span class="r-in"><span class="co">## actually, all.equal() says 'attribute', not slot. this is ok too:</span></span>
+<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/attr.html" class="external-link">attr</a></span><span class="op">(</span><span class="va">MSFT</span>, <span class="st">"documentation"</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/attr.html" class="external-link">attr</a></span><span class="op">(</span><span class="va">msft</span>, <span class="st">"documentation"</span><span class="op">)</span><span class="op">)</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] ""                         "Wed Oct 12 21:11:57 2022"</span>
+<span class="r-in"><span class="co">## make 'documentation' equal, here "", and compare again:</span></span>
+<span class="r-in"><span class="va">msft</span><span class="op">@</span><span class="va">documentation</span> <span class="op">&lt;-</span> <span class="st">""</span></span>
+<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/all.equal.html" class="external-link">all.equal</a></span><span class="op">(</span><span class="va">msft</span>, <span class="va">MSFT</span><span class="op">)</span> <span class="co"># TRUE</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] TRUE</span>
+</code></pre></div>
+    </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside></div>
 
