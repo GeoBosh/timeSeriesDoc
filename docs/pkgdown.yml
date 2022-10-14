@@ -2,5 +2,8 @@ pandoc: '2.5'
 pkgdown: 2.0.3
 pkgdown_sha: ~
 articles: {}
-last_built: 2022-10-14T09:39Z
+last_built: 2022-10-14T13:24Z
+urls:
+  reference: https://geobosh.github.io/timeSeriesDoc/reference
+  article: https://geobosh.github.io/timeSeriesDoc/articles
 
