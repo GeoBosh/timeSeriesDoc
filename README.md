@@ -6,13 +6,14 @@
 
 The R package 'timeSeries' provides a time series class and tools for creation, import,
 manipulation, statistical and financial computations on time series.
-
-This repository contains only the documentation of timeSeries, created with `pkgdown`.
 The package is part of the Rmetrics suite of R packages and is developed on
 [R-forge](https://r-forge.r-project.org/projects/rmetrics).
 
+This repository contains only the documentation of 'timeSeries', created with `pkgdown`.
+The rendered website is at [timeSeriesDoc](https://geobosh.github.io/timeSeriesDoc/)
 
-# Installing timeSeries
+
+# Installing 'timeSeries'
 
 Install the [latest stable version](https://cran.r-project.org/package=timeSeries) of
 `timeSeries` from CRAN:
@@ -31,13 +32,10 @@ To report bugs visit [Rmetrics](https://r-forge.r-project.org/projects/rmetrics/
 
 # Documentation
 
-You can view the documentation of `timeSeries` at
+You can view the documentation website of `timeSeries` at
 [timeSeriesDoc](https://geobosh.github.io/timeSeriesDoc/)
 or download the
 [reference manual](https://cran.r-project.org/package=timeSeries/timeSeries.pdf)
 of the latest release from CRAN. There is also a large
 [vignette on plots](https://cran.r-project.org/package=timeSeries/vignettes/timeSeriesPlot.pdf).
-
-# Overview
-
 
