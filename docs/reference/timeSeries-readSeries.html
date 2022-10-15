@@ -154,10 +154,10 @@ Reads a file in table format and creates a "timeSeries" object
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Attributes: &lt; Component “documentation”: 1 string mismatch &gt;"</span>
 <span class="r-in"><span class="co">## ... almost, except for slot 'documentation'</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">msft</span><span class="op">@</span><span class="va">documentation</span>, <span class="va">MSFT</span><span class="op">@</span><span class="va">documentation</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Fri Oct 14 14:24:52 2022" ""                        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Fri Oct 14 23:23:50 2022" ""                        </span>
 <span class="r-in"><span class="co">## actually, all.equal() says 'attribute', not slot. this is ok too:</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/attr.html" class="external-link">attr</a></span><span class="op">(</span><span class="va">MSFT</span>, <span class="st">"documentation"</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/attr.html" class="external-link">attr</a></span><span class="op">(</span><span class="va">msft</span>, <span class="st">"documentation"</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] ""                         "Fri Oct 14 14:24:52 2022"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] ""                         "Fri Oct 14 23:23:50 2022"</span>
 <span class="r-in"><span class="co">## make 'documentation' equal, here "", and compare again:</span></span>
 <span class="r-in"><span class="va">msft</span><span class="op">@</span><span class="va">documentation</span> <span class="op">&lt;-</span> <span class="st">""</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/all.equal.html" class="external-link">all.equal</a></span><span class="op">(</span><span class="va">msft</span>, <span class="va">MSFT</span><span class="op">)</span> <span class="co"># TRUE</span></span>

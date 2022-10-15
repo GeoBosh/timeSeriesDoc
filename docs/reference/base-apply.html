@@ -54,53 +54,76 @@ Applies a function to a "timeSeries" object over time periods
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">fapply</span><span class="op">(</span><span class="va">x</span>, <span class="va">from</span>, <span class="va">to</span>, <span class="va">FUN</span>, <span class="va">...</span><span class="op">)</span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="co"># S4 method for timeSeries</span>
+<span class="fu"><a href="https://rdrr.io/r/base/apply.html" class="external-link">apply</a></span><span class="op">(</span><span class="va">X</span>, <span class="va">MARGIN</span>, <span class="va">FUN</span>, <span class="va">...</span><span class="op">)</span>
+
+<span class="fu">fapply</span><span class="op">(</span><span class="va">x</span>, <span class="va">from</span>, <span class="va">to</span>, <span class="va">FUN</span>, <span class="va">...</span><span class="op">)</span>
 
 <span class="fu">applySeries</span><span class="op">(</span><span class="va">x</span>, from <span class="op">=</span> <span class="cn">NULL</span>, to <span class="op">=</span> <span class="cn">NULL</span>, by <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"monthly"</span>, <span class="st">"quarterly"</span><span class="op">)</span>, 
-    FUN <span class="op">=</span> <span class="va">colMeans</span>, units <span class="op">=</span> <span class="cn">NULL</span>, format <span class="op">=</span> <span class="va">x</span><span class="op">@</span><span class="va">format</span>, zone <span class="op">=</span> <span class="va">x</span><span class="op">@</span><span class="va">FinCenter</span>, 
-    FinCenter <span class="op">=</span> <span class="va">x</span><span class="op">@</span><span class="va">FinCenter</span>, recordIDs <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span><span class="op">)</span>, title <span class="op">=</span> <span class="va">x</span><span class="op">@</span><span class="va">title</span>,
-    documentation <span class="op">=</span> <span class="va">x</span><span class="op">@</span><span class="va">documentation</span>, <span class="va">...</span><span class="op">)</span></code></pre></div>
+            FUN <span class="op">=</span> <span class="va">colMeans</span>, units <span class="op">=</span> <span class="cn">NULL</span>, format <span class="op">=</span> <span class="va">x</span><span class="op">@</span><span class="va">format</span>, 
+            zone <span class="op">=</span> <span class="va">x</span><span class="op">@</span><span class="va">FinCenter</span>, FinCenter <span class="op">=</span> <span class="va">x</span><span class="op">@</span><span class="va">FinCenter</span>, 
+            recordIDs <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span><span class="op">)</span>, title <span class="op">=</span> <span class="va">x</span><span class="op">@</span><span class="va">title</span>, 
+            documentation <span class="op">=</span> <span class="va">x</span><span class="op">@</span><span class="va">documentation</span>, <span class="va">...</span><span class="op">)</span></code></pre></div>
     </div>
 
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
-    <dl><dt>x</dt>
+    <dl><dt>x,X</dt>
 <dd><p>an object of class <code>timeSeries</code>.</p></dd>
-<dt>from, to</dt>
-<dd><p>starting date and end date as timeDate objects. Note,
-        <code>to</code> must be time ordered after <code>from</code>.
-        If <code>from</code> and <code>to</code> are missing in function <code>fapply</code>
-        they are set by default to <code>from=start(x)</code>, and <code>to=end(x)</code>.</p></dd>
+<dt>MARGIN</dt>
+<dd><p>a vector giving the subscripts which the function will be
+    applied over, see base R's <code><a href="https://rdrr.io/r/base/apply.html" class="external-link">apply</a></code>.</p></dd>
 <dt>FUN</dt>
 <dd><p>the function to be applied. For the function <code>applySeries</code> the
-        default setting is <code>FUN=colMeans</code>.</p></dd>
+    default setting is <code>FUN = colMeans</code>.</p></dd>
+<dt>from, to</dt>
+<dd>
+    
+<p>starting date and end date as <code>"timeDate"</code> objects. Note,
+    <code>to</code> must be time ordered after <code>from</code>.  If <code>from</code>
+    and <code>to</code> are missing in function <code>fapply</code> they are set by
+    default to <code>from=start(x)</code>, and <code>to=end(x)</code>.</p>
+<p></p></dd>
 <dt>by</dt>
-<dd><p>a character value either <code>"monthly"</code> or <code>"quarterly"</code>
-        used in the function <code>applySeries</code>. The default value is 
-        <code>"monthly"</code>. Only operative when both arguments <code>from</code> 
-        and <code>to</code> have their default values <code>NULL</code>.
-        In this case the function <code>FUN</code> will be applied to monthly or
-        quarterly periods.</p></dd>
+<dd>
+
+<p>a character value either <code>"monthly"</code> or <code>"quarterly"</code> used
+    in the function <code>applySeries</code>. The default value is
+    <code>"monthly"</code>. Only operative when both arguments <code>from</code> and
+    <code>to</code> have their default values <code>NULL</code>.  In this case the
+    function <code>FUN</code> will be applied to monthly or quarterly periods.</p>
+<p></p></dd>
 <dt>units</dt>
-<dd><p>an optional character string, which allows to overwrite the 
-        current column names of a <code>timeSeries</code> object. By default 
-        <code>NULL</code> which means that the column names are selected
-        automatically.</p></dd>
+<dd>
+
+<p>an optional character string, which allows to overwrite the current
+    column names of a <code>timeSeries</code> object. By default <code>NULL</code>
+    which means that the column names are selected automatically.</p>
+<p></p></dd>
 <dt>format</dt>
-<dd><p>the format specification of the input character vector in POSIX 
-        notation.</p></dd>
+<dd>
+
+<p>the format specification of the input character vector in POSIX
+    notation.</p>
+<p></p></dd>
 <dt>zone</dt>
 <dd><p>the time zone or financial center where the data were recorded.</p></dd>
 <dt>FinCenter</dt>
 <dd><p>a character value with the the location of the  financial center 
-        named as "continent/city", or "city".</p></dd>
+    named as "continent/city", or "city".</p></dd>
 <dt>recordIDs</dt>
-<dd><p>a data frame which can be used for record identification
-        information. Note, this is not yet handled by the apply functions,
-        an empty data.frame will be returned.</p></dd>
+<dd>
+
+<p>a data frame which can be used for record identification
+    information. Note, this is not yet handled by the apply functions,
+    an empty data.frame will be returned.</p>
+<p></p></dd>
 <dt>title</dt>
-<dd><p>an optional title string, if not specified the inputs data 
-        name is deparsed.</p></dd>
+<dd>
+
+<p>an optional title string, if not specified the input's data name is
+    deparsed.</p>
+<p></p></dd>
 <dt>documentation</dt>
 <dd><p>optional documentation string, or a vector of character strings.</p></dd>
 <dt>...</dt>
@@ -109,25 +132,31 @@ Applies a function to a "timeSeries" object over time periods
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
     
-
+  
+<p>The <code>"timeSeries"</code> method for <code>apply</code> extracts the core data
+  (a matrix) from <code>X</code> and calls <code>apply</code> on passing on all the
+  remaining arguments. If the result is suitable, it converts it to
+  <code>"timeSeries"</code>, otherwise returns it as is. ‘Suitable’
+  here means that it is a matrix or a vector (which is converted to a
+  matrix) and the number of observations is the same as <code>X</code>.</p>
 <p>Like <code>apply</code> applies a function to the margins of an array, the
-    function <code>fapply</code> applies a function to the time stamps or
-    signal counts of a financial (therefore the "f" in front of the 
-    function name) time series of class <code>"timeSeries"</code>.</p>    
-<p>The function <code>fapply</code> inputs a <code>timeSeries</code> object, and
-    if <code>from</code> and <code>to</code> are missing, they take the start 
-    and end time stamps of the series as default falues. The function 
-    then behaves like <code>apply</code> on the column margin.</p>    
-<p>Note, the function <code>fapply</code> can be used repetitive in the following
-    sense: If <code>from</code> and <code>to</code> are two <code>timeDate</code> vectors of 
-    equal length then for each period spanned by the elelemts of the 
-    two vectors the function <code>FUN</code> will be applied to each period.
-    The resulting time stamps, are the time stamps of the <code>to</code>
-    vector. Note, the periods can be regular or irregelar, and they can 
-    even overlap.</p>    
+  function <code>fapply</code> applies a function to the time stamps or signal
+  counts of a financial (therefore the “f” in front of the
+  function name) time series of class <code>"timeSeries"</code>.</p>    
+<p>The function <code>fapply</code> takes a <code>"timeSeries"</code> object as input
+  and if <code>from</code> and <code>to</code> are missing, they are set to the
+  start and end time stamps of the series as default values. The
+  function then behaves like <code>apply</code> on the column margin.</p>    
+<p>Note, the function <code>fapply</code> can be used repetitively in the
+  following sense: If <code>from</code> and <code>to</code> are two <code>"timeDate"</code>
+  vectors of equal length then for each period spanned by the elements
+  of the two vectors the function <code>FUN</code> will be applied to each
+  period.  The resulting time stamps are the time stamps of the
+  <code>to</code> vector. Note, the periods can be regular or irregelar, and
+  they can even overlap.</p>    
 <p>The function <code>fapply</code> calls the more general function
-    <code>applySeries</code> which also offers, to create automatical monthly
-    and quarterly periods.</p>
+  <code>applySeries</code> which also offers, to create automatically monthly
+  and quarterly periods.</p>
     </div>
 
     <div class="section level2">
