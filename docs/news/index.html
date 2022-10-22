@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">timeSeries</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4021.105</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4021.106</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,14 +39,14 @@
     </div>
 
     <div class="section level2">
-<h2 class="pkg-version" data-toc-text="4021.105" id="timeseries-4021105">timeSeries 4021.105<a class="anchor" aria-label="anchor" href="#timeseries-4021105"></a></h2>
+<h2 class="pkg-version" data-toc-text="4021.105" id="timeseries-4021105">timeSeries 4021.105<a class="anchor" aria-label="anchor" href="#timeseries-4021105"></a></h2><p class="text-muted">CRAN release: 2022-10-15</p>
 <ul><li><p>updated and significantly improved the documentation.</p></li>
 <li><p>class <code>timeSeries</code> now has a dedicated summary method. Previously it was falling back to the method for matrices.</p></li>
 <li><p><code>colCumsums</code>, <code>colCummaxs</code>, <code>colCummins</code>, and <code>colCumprods</code> no longer throw error for <code>timeSeries</code> objects when called with <code>na.rm = TRUE</code>. Fixes bug #2121 reported by Shane Haas.</p></li>
 <li><p>corrected USDCHF dataset. The year information was wrong (the data started from year 8295). The bug had been introduced in version 2100.84 when the dataset file was converted from a <code>usdchf.csv</code> to <code>USDCHF.rda</code>. <code>USDCHF@documentation</code> contains a short note about this change. Also changed the FinCenter to Zurich (neither the documentation nor the csv file contain FinCenter information).</p></li>
 <li><p>the original source file <code>msft.dat.csv</code> of the <code>MSFT</code> data is included now as <code>inst/extdata/msft.csv</code> (note the different name). The file had been removed in v2100.84. Note that there is a file `<code>msft.dat.csv</code> in <code>test/</code> but it is a modified and abbreviated version of the original file.</p></li>
 <li><p><code>dummySeries</code> has been renamed to the more expressive <code>dummyMonthlySeries</code>. The old name is still available but is deprecated.</p></li>
-<li><p>The functions <code>returnSeries</code> and <code>getReturns</code> are no longer exported and will be removed in the near future. They are synonyms for the function  and their use was discouraged for many years. Just use <code>returns</code>.</p></li>
+<li><p>The functions <code>returnSeries</code> and <code>getReturns</code> are no longer exported and will be removed in the near future. They are synonyms for the function <code>returns</code> and their use was discouraged for many years. Just use <code>returns</code>.</p></li>
 <li><p>The functions <code>spreadSeries</code> and <code>midquoteSeries</code> are no longer exported and will be removed in the near future. Just use their synonyms <code>spreads</code> and <code>midquotes</code>, respectively.</p></li>
 <li><p>function <code>cut</code> is now formally deprecated. Use <code>window</code> instead.</p></li>
 <li><p>deprecated function <code>seriesData</code> is now defunct. Use <code><a href="https://rdrr.io/r/base/matrix.html" class="external-link">as.matrix()</a></code> instead.</p></li>
@@ -87,7 +87,7 @@
 </div>
 
 <div class="pkgdown-footer-right">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
     </footer></div>

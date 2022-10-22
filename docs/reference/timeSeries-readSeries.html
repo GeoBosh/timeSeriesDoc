@@ -16,7 +16,7 @@ Reads a file in table format and creates a "timeSeries" object
     
     <a class="navbar-brand me-2" href="../index.html">timeSeries</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4021.105</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4021.106</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -66,7 +66,8 @@ Reads a file in table format and creates a "timeSeries" object
 <p>the filename of a spreadsheet dataset from which to import 
     the data records.</p>    
 <p></p></dd>
-<dt>header</dt>
+
+  <dt>header</dt>
 <dd>
 
 <p>a logical value indicating whether the file contains the
@@ -75,7 +76,8 @@ Reads a file in table format and creates a "timeSeries" object
     'TRUE' if and only if the first row contains one fewer fields
     than the number of columns.</p>
 <p></p></dd>
-<dt>sep</dt>
+
+  <dt>sep</dt>
 <dd>
     
 <p>the field seperator used in the spreadsheet file to separate
@@ -83,19 +85,22 @@ Reads a file in table format and creates a "timeSeries" object
     series fails, then the reading is automatically repeated with
     <code>sep=","</code>.</p>
 <p></p></dd>
-<dt>zone</dt>
+
+  <dt>zone</dt>
 <dd>
 
 <p>the time zone or financial center where the data were recorded.  By
     default <code>zone = ""</code> which is short for GMT.</p>
 <p></p></dd>
-<dt>FinCenter</dt>
+  
+  <dt>FinCenter</dt>
 <dd>
 
 <p>a character with the the location of the financial center named as
     "continent/city".</p>
 <p></p></dd>
-<dt>format</dt>
+
+  <dt>format</dt>
 <dd>
     
 <p>a character string with the format in POSIX notation specifying the
@@ -103,12 +108,14 @@ Reads a file in table format and creates a "timeSeries" object
     first column in the file has the timestamp format specifier,
     e.g. "%Y-%m-%d" for the short ISO 8601 format.</p>      
 <p></p></dd>
-<dt>...</dt>
+  
+  <dt>...</dt>
 <dd>
     
 <p>Additional arguments passed to <code><a href="https://rdrr.io/r/utils/read.table.html" class="external-link">read.table()</a></code> which is used to
     read the file.</p>
 <p></p></dd>
+
 </dl></div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
@@ -122,7 +129,11 @@ Reads a file in table format and creates a "timeSeries" object
     </div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>an object of class <code>"timeSeries"</code></p>
+    
+
+<p>an object of class <code>"timeSeries"</code></p>
+
+
     </div>
 
     <div class="section level2">
@@ -154,10 +165,10 @@ Reads a file in table format and creates a "timeSeries" object
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Attributes: &lt; Component “documentation”: 1 string mismatch &gt;"</span>
 <span class="r-in"><span class="co">## ... almost, except for slot 'documentation'</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">msft</span><span class="op">@</span><span class="va">documentation</span>, <span class="va">MSFT</span><span class="op">@</span><span class="va">documentation</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Fri Oct 14 23:23:50 2022" ""                        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Sat Oct 22 10:15:48 2022" ""                        </span>
 <span class="r-in"><span class="co">## actually, all.equal() says 'attribute', not slot. this is ok too:</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/attr.html" class="external-link">attr</a></span><span class="op">(</span><span class="va">MSFT</span>, <span class="st">"documentation"</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/attr.html" class="external-link">attr</a></span><span class="op">(</span><span class="va">msft</span>, <span class="st">"documentation"</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] ""                         "Fri Oct 14 23:23:50 2022"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] ""                         "Sat Oct 22 10:15:48 2022"</span>
 <span class="r-in"><span class="co">## make 'documentation' equal, here "", and compare again:</span></span>
 <span class="r-in"><span class="va">msft</span><span class="op">@</span><span class="va">documentation</span> <span class="op">&lt;-</span> <span class="st">""</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/all.equal.html" class="external-link">all.equal</a></span><span class="op">(</span><span class="va">msft</span>, <span class="va">MSFT</span><span class="op">)</span> <span class="co"># TRUE</span></span>
@@ -173,7 +184,7 @@ Reads a file in table format and creates a "timeSeries" object
 </div>
 
 <div class="pkgdown-footer-right">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
     </footer></div>

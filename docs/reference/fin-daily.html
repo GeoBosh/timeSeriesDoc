@@ -14,7 +14,7 @@ Special daily 'timeSeries' functions."><!-- mathjax --><script src="https://cdnj
     
     <a class="navbar-brand me-2" href="../index.html">timeSeries</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4021.105</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4021.106</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -63,7 +63,8 @@ Special daily 'timeSeries' functions."><!-- mathjax --><script src="https://cdnj
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
     <dl><dt>x</dt>
 <dd><p>an object of class <code>timeSeries</code>.</p></dd>
-<dt>method</dt>
+
+  <dt>method</dt>
 <dd>
 
 <p>the method to be used for the alignment. A character string, one of
@@ -73,35 +74,43 @@ Special daily 'timeSeries' functions."><!-- mathjax --><script src="https://cdnj
     <code>"linear"</code>, interpolate linearly between <code>"before"</code> and
     <code>"after"</code>.</p>
 <p></p></dd>
-<dt>include.weekends</dt>
+
+  <dt>include.weekends</dt>
 <dd>
 
 <p>a logical value. Should weekend dates be included or removed from
     the series?</p>
 <p></p></dd>
-<dt>units</dt>
+
+  <dt>units</dt>
 <dd>
     
 <p>an optional character string, which allows to overwrite the current
     column names of a <code>timeSeries</code> object. By default <code>NULL</code>
     which means that the column names are selected automatically.</p>    
 <p></p></dd>
-<dt>zone</dt>
+
+  <dt>zone</dt>
 <dd><p>the time zone or financial center where the data were recorded.</p></dd>
-<dt>FinCenter</dt>
+
+  <dt>FinCenter</dt>
 <dd><p>a character with the the location of the  financial center named
     as <code>"continent/city"</code>.</p></dd>
-<dt>period</dt>
+
+  <dt>period</dt>
 <dd>
 
 <p>a character string specifying the rollling period composed by the
     length of the period and its unit, e.g. <code>"7d"</code> represents one
     week.</p>
 <p></p></dd>
-<dt>FUN</dt>
+
+  <dt>FUN</dt>
 <dd><p>a function to use for aggregation, by default <code>colMeans</code>.</p></dd>
-<dt>...</dt>
+
+  <dt>...</dt>
 <dd><p>arguments passed to interpolating methods.</p></dd>
+
 </dl></div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
@@ -112,9 +121,22 @@ Special daily 'timeSeries' functions."><!-- mathjax --><script src="https://cdnj
     </div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>for <code>alignDailySeries</code>, a weekly aligned daily
-<code>timeSeries</code> object from a daily time series with missing
-    holidays. <br>    for <code>rollDailySeries</code>, an object of class <code>timeSeries</code>    with rolling values, computed from the function <code>FUN</code>.</p>
+    
+
+
+<p>for <code>alignDailySeries</code>, a weekly aligned daily</p>
+<p></p>
+<p><code>timeSeries</code> object from a daily time series with missing
+    holidays. <br></p>
+
+
+
+<p>for <code>rollDailySeries</code>, an object of class <code>timeSeries</code></p>
+
+
+<p>with rolling values, computed from the function <code>FUN</code>.</p>
+
+
     </div>
 
     <div class="section level2">
@@ -129,7 +151,7 @@ Special daily 'timeSeries' functions."><!-- mathjax --><script src="https://cdnj
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-02 60.5000 60.8125 58.2500 59.1250 29281200</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-03 59.5625 59.8125 56.5000 56.5625 42687000</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-04 56.3750 56.5625 54.5000 55.4375 68226700</span>
-<span class="r-in">   <span class="fu"><a href="https://rdrr.io/r/stats/start.html" class="external-link">end</a></span><span class="op">(</span><span class="va">MSFT</span><span class="op">)</span></span>
+<span class="r-in">   <span class="fu"><a href="base-start.html">end</a></span><span class="op">(</span><span class="va">MSFT</span><span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] [2001-09-27]</span>
 <span class="r-in"></span>
@@ -289,7 +311,7 @@ Special daily 'timeSeries' functions."><!-- mathjax --><script src="https://cdnj
 </div>
 
 <div class="pkgdown-footer-right">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
     </footer></div>
