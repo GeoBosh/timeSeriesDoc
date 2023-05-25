@@ -3,7 +3,7 @@
     
 Aggregate a "timeSeries" object over general periods.  There
     also functions for the common cases of changing daily to weekly and
-    daily to monthly.'><title>Aggregate time series — aggregate-methods • timeSeries</title><script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link href="../deps/bootstrap-5.1.0/bootstrap.min.css" rel="stylesheet"><script src="../deps/bootstrap-5.1.0/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous"><!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Aggregate time series — aggregate-methods"><meta property="og:description" content='
+    daily to monthly.'><title>Aggregate time series — aggregate-methods • timeSeries</title><script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link href="../deps/bootstrap-5.2.2/bootstrap.min.css" rel="stylesheet"><script src="../deps/bootstrap-5.2.2/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous"><!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Aggregate time series — aggregate-methods"><meta property="og:description" content='
     
 Aggregate a "timeSeries" object over general periods.  There
     also functions for the common cases of changing daily to weekly and
@@ -18,7 +18,7 @@ Aggregate a "timeSeries" object over general periods.  There
     
     <a class="navbar-brand me-2" href="../index.html">timeSeries</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4021.106</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4030.106</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,11 +57,11 @@ Aggregate a "timeSeries" object over general periods.  There
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="co"># S4 method for timeSeries</span>
-<span class="fu">aggregate</span><span class="op">(</span><span class="va">x</span>, <span class="va">by</span>, <span class="va">FUN</span>, <span class="va">...</span><span class="op">)</span>
-
-<span class="fu">daily2monthly</span><span class="op">(</span><span class="va">x</span>, init<span class="op">=</span><span class="cn">FALSE</span><span class="op">)</span> 
-<span class="fu">daily2weekly</span><span class="op">(</span><span class="va">x</span>, startOn<span class="op">=</span><span class="st">"Tue"</span>, init<span class="op">=</span><span class="cn">FALSE</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="co"># S4 method for timeSeries</span></span>
+<span><span class="fu">aggregate</span><span class="op">(</span><span class="va">x</span>, <span class="va">by</span>, <span class="va">FUN</span>, <span class="va">...</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">daily2monthly</span><span class="op">(</span><span class="va">x</span>, init<span class="op">=</span><span class="cn">FALSE</span><span class="op">)</span> </span>
+<span><span class="fu">daily2weekly</span><span class="op">(</span><span class="va">x</span>, startOn<span class="op">=</span><span class="st">"Tue"</span>, init<span class="op">=</span><span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -134,12 +134,12 @@ Aggregate a "timeSeries" object over general periods.  There
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co">## Load Microsoft Data Set -</span></span>
-<span class="r-in">   <span class="va">x</span> <span class="op">&lt;-</span> <span class="va">MSFT</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="co">## Aggregate by Weeks - </span></span>
-<span class="r-in">   <span class="va">by</span> <span class="op">&lt;-</span> <span class="fu">timeSequence</span><span class="op">(</span>from <span class="op">=</span> <span class="fu"><a href="base-start.html">start</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>,  to <span class="op">=</span> <span class="fu"><a href="base-start.html">end</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>, by <span class="op">=</span> <span class="st">"week"</span><span class="op">)</span></span>
-<span class="r-in">   <span class="fu">aggregate</span><span class="op">(</span><span class="va">x</span>, <span class="va">by</span>, <span class="va">mean</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Load Microsoft Data Set -</span></span></span>
+<span class="r-in"><span>   <span class="va">x</span> <span class="op">&lt;-</span> <span class="va">MSFT</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">## Aggregate by Weeks - </span></span></span>
+<span class="r-in"><span>   <span class="va">by</span> <span class="op">&lt;-</span> <span class="fu">timeSequence</span><span class="op">(</span>from <span class="op">=</span> <span class="fu"><a href="base-start.html">start</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>,  to <span class="op">=</span> <span class="fu"><a href="base-start.html">end</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>, by <span class="op">=</span> <span class="st">"week"</span><span class="op">)</span></span></span>
+<span class="r-in"><span>   <span class="fu">aggregate</span><span class="op">(</span><span class="va">x</span>, <span class="va">by</span>, <span class="va">mean</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                Open     High      Low    Close   Volume</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2000-09-27 63.43750 63.56250 59.81250 60.62500 53077800</span>
@@ -195,11 +195,11 @@ Aggregate a "timeSeries" object over general periods.  There
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2001-09-12 55.86333 57.90000 55.30333 56.33333 47782067</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2001-09-19 53.96333 54.93333 52.19000 53.70000 56272467</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2001-09-26 50.94000 52.09200 49.55000 50.81000 53200500</span>
-<span class="r-in"></span>
-<span class="r-in"><span class="co">## Aggregate to Last Friday of Month -</span></span>
-<span class="r-in">   <span class="va">by</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/unique.html" class="external-link">unique</a></span><span class="op">(</span><span class="fu">timeLastNdayInMonth</span><span class="op">(</span><span class="fu"><a href="timeSeries-slotTime.html">time</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>, <span class="fl">5</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-in">   <span class="va">X</span> <span class="op">&lt;-</span> <span class="fu">aggregate</span><span class="op">(</span><span class="va">x</span>, <span class="va">by</span>, <span class="va">mean</span><span class="op">)</span></span>
-<span class="r-in">   <span class="va">X</span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">## Aggregate to Last Friday of Month -</span></span></span>
+<span class="r-in"><span>   <span class="va">by</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/unique.html" class="external-link">unique</a></span><span class="op">(</span><span class="fu">timeLastNdayInMonth</span><span class="op">(</span><span class="fu"><a href="timeSeries-slotTime.html">time</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>, <span class="fl">5</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span>   <span class="va">X</span> <span class="op">&lt;-</span> <span class="fu">aggregate</span><span class="op">(</span><span class="va">x</span>, <span class="va">by</span>, <span class="va">mean</span><span class="op">)</span></span></span>
+<span class="r-in"><span>   <span class="va">X</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                Open     High      Low    Close   Volume</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2000-09-29 61.75000 62.25000 59.68750 60.75000 38761600</span>
@@ -215,18 +215,18 @@ Aggregate a "timeSeries" object over general periods.  There
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2001-07-27 68.78474 69.65368 67.71474 68.60632 35630868</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2001-08-31 63.64240 64.44040 62.52000 63.33960 25102488</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2001-09-28 53.40357 54.79357 52.12071 53.42500 49792257</span>
-<span class="r-in">   <span class="fu">dayOfWeek</span><span class="op">(</span><span class="fu"><a href="timeSeries-slotTime.html">time</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span><span class="op">)</span></span>
+<span class="r-in"><span>   <span class="fu">dayOfWeek</span><span class="op">(</span><span class="fu"><a href="timeSeries-slotTime.html">time</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2000-09-29 2000-10-27 2000-11-24 2000-12-29 2001-01-26 2001-02-23 2001-03-30 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      "Fri"      "Fri"      "Fri"      "Fri"      "Fri"      "Fri"      "Fri" </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2001-04-27 2001-05-25 2001-06-29 2001-07-27 2001-08-31 2001-09-28 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      "Fri"      "Fri"      "Fri"      "Fri"      "Fri"      "Fri" </span>
-<span class="r-in">   <span class="fu">isMonthly</span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span>
+<span class="r-in"><span>   <span class="fu">isMonthly</span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] TRUE</span>
-<span class="r-in"></span>
-<span class="r-in"><span class="co">## Aggregate to Last Day of Quarter -</span></span>
-<span class="r-in">   <span class="va">by</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/unique.html" class="external-link">unique</a></span><span class="op">(</span><span class="fu">timeLastDayInQuarter</span><span class="op">(</span><span class="fu"><a href="timeSeries-slotTime.html">time</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-in">   <span class="va">X</span> <span class="op">&lt;-</span>  <span class="fu">aggregate</span><span class="op">(</span><span class="va">x</span>, <span class="va">by</span>, <span class="va">mean</span><span class="op">)</span></span>
-<span class="r-in">   <span class="va">X</span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">## Aggregate to Last Day of Quarter -</span></span></span>
+<span class="r-in"><span>   <span class="va">by</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/unique.html" class="external-link">unique</a></span><span class="op">(</span><span class="fu">timeLastDayInQuarter</span><span class="op">(</span><span class="fu"><a href="timeSeries-slotTime.html">time</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span>   <span class="va">X</span> <span class="op">&lt;-</span>  <span class="fu">aggregate</span><span class="op">(</span><span class="va">x</span>, <span class="va">by</span>, <span class="va">mean</span><span class="op">)</span></span></span>
+<span class="r-in"><span>   <span class="va">X</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                Open     High      Low    Close   Volume</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2000-09-30 61.75000 62.25000 59.68750 60.75000 38761600</span>
@@ -234,12 +234,12 @@ Aggregate a "timeSeries" object over general periods.  There
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2001-03-31 56.60282 58.10383 55.45111 56.83947 43853037</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2001-06-30 67.47548 68.69083 66.53270 67.70242 42081671</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2001-09-30 62.85552 63.81966 61.71155 62.67172 34511040</span>
-<span class="r-in">   <span class="fu">isQuarterly</span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span>
+<span class="r-in"><span>   <span class="fu">isQuarterly</span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] TRUE</span>
-<span class="r-in">   </span>
-<span class="r-in"><span class="co">## Aggregate daily records to end of month records -</span></span>
-<span class="r-in">   <span class="va">X</span> <span class="op">&lt;-</span> <span class="fu">daily2monthly</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
-<span class="r-in">   <span class="va">X</span></span>
+<span class="r-in"><span>   </span></span>
+<span class="r-in"><span><span class="co">## Aggregate daily records to end of month records -</span></span></span>
+<span class="r-in"><span>   <span class="va">X</span> <span class="op">&lt;-</span> <span class="fu">daily2monthly</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></span>
+<span class="r-in"><span>   <span class="va">X</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>               Open    High     Low   Close   Volume</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2000-09-30 61.0000 61.3125 58.6250 60.3125 37026800</span>
@@ -255,12 +255,12 @@ Aggregate a "timeSeries" object over general periods.  There
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2001-07-31 66.0100 67.3900 65.8500 66.1900 29515800</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2001-08-31 56.8500 58.0600 56.3000 57.0500 28950400</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2001-09-30 50.1000 50.6800 48.0000 49.9600 40595600</span>
-<span class="r-in">   <span class="fu">isMonthly</span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span>
+<span class="r-in"><span>   <span class="fu">isMonthly</span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] TRUE</span>
-<span class="r-in">   </span>
-<span class="r-in"><span class="co">## Aggregate da, ily records to end of week records -</span></span>
-<span class="r-in">   <span class="va">X</span> <span class="op">&lt;-</span> <span class="fu">daily2weekly</span><span class="op">(</span><span class="va">x</span>, startOn<span class="op">=</span><span class="st">"Fri"</span><span class="op">)</span></span>
-<span class="r-in">   <span class="va">X</span></span>
+<span class="r-in"><span>   </span></span>
+<span class="r-in"><span><span class="co">## Aggregate da, ily records to end of week records -</span></span></span>
+<span class="r-in"><span>   <span class="va">X</span> <span class="op">&lt;-</span> <span class="fu">daily2weekly</span><span class="op">(</span><span class="va">x</span>, startOn<span class="op">=</span><span class="st">"Fri"</span><span class="op">)</span></span></span>
+<span class="r-in"><span>   <span class="va">X</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>               Open    High     Low   Close    Volume</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2000-09-29 61.0000 61.3125 58.6250 60.3125  37026800</span>
@@ -315,7 +315,7 @@ Aggregate a "timeSeries" object over general periods.  There
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2001-09-07 56.1100 57.3600 55.3100 55.4000  44931900</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2001-09-14 54.9200 57.9500 54.7000 57.5800  42235900</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2001-09-21 47.9200 50.6000 47.5000 49.7100  92488300</span>
-<span class="r-in">   <span class="fu">dayOfWeek</span><span class="op">(</span><span class="fu"><a href="timeSeries-slotTime.html">time</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span><span class="op">)</span></span>
+<span class="r-in"><span>   <span class="fu">dayOfWeek</span><span class="op">(</span><span class="fu"><a href="timeSeries-slotTime.html">time</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2000-09-29 2000-10-06 2000-10-13 2000-10-20 2000-10-27 2000-11-03 2000-11-10 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      "Fri"      "Fri"      "Fri"      "Fri"      "Fri"      "Fri"      "Fri" </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2000-11-17 2000-11-24 2000-12-01 2000-12-08 2000-12-15 2000-12-22 2000-12-29 </span>
@@ -332,7 +332,7 @@ Aggregate a "timeSeries" object over general periods.  There
 <span class="r-out co"><span class="r-pr">#&gt;</span>      "Fri"      "Fri"      "Fri"      "Fri"      "Fri"      "Fri"      "Fri" </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2001-09-07 2001-09-14 2001-09-21 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      "Fri"      "Fri"      "Fri" </span>
-<span class="r-in">   </span>
+<span class="r-in"><span>   </span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
@@ -344,7 +344,7 @@ Aggregate a "timeSeries" object over general periods.  There
 </div>
 
 <div class="pkgdown-footer-right">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
     </footer></div>
