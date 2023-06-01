@@ -16,7 +16,7 @@ Compute series of drawdowns from financial returns
     
     <a class="navbar-brand me-2" href="../index.html">timeSeries</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4030.106</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4030.106.9000</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -128,7 +128,7 @@ Compute series of drawdowns from financial returns
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Use Swiss Pension Fund Data Set of Returns - </span></span></span>
-<span class="r-in"><span>   <span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">LPP2005REC</span><span class="op">)</span></span></span>
+<span class="r-in"><span>   <span class="fu"><a href="base-subsetting.html">head</a></span><span class="op">(</span><span class="va">LPP2005REC</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                     SBI          SPI          SII          LMI         MPI</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2005-11-01 -0.000612745  0.008414595 -0.003190926 -0.001108882 0.001548062</span>
@@ -145,7 +145,7 @@ Compute series of drawdowns from financial returns
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2005-11-07  0.004723952  0.001638182  0.002246611  0.003012363</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2005-11-08  0.000853619  0.001087309  0.000962708  0.000828043</span>
 <span class="r-in"><span>   <span class="va">SPI</span> <span class="op">&lt;-</span> <span class="va">LPP2005REC</span><span class="op">[</span>, <span class="st">"SPI"</span><span class="op">]</span></span></span>
-<span class="r-in"><span>   <span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">SPI</span><span class="op">)</span></span></span>
+<span class="r-in"><span>   <span class="fu"><a href="base-subsetting.html">head</a></span><span class="op">(</span><span class="va">SPI</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                     SPI</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2005-11-01  0.008414595</span>

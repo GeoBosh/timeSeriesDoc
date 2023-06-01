@@ -16,7 +16,7 @@ Functions and methods extracting and modifying positions
     
     <a class="navbar-brand me-2" href="../index.html">timeSeries</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4030.106</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4030.106.9000</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -84,16 +84,22 @@ Functions and methods extracting and modifying positions
   object.</p>
 <p><code>getTime</code> and <code>setTime</code> are non-generic alternatives are
   non-generic wrappers of <code>time</code> and <code>time&lt;-</code>, respectively.</p>
+<p>There is another generic function <code>time&lt;-</code> defined in package
+  <span class="pkg">zoo</span>. When that package is loaded its <code>time&lt;-</code> gets the
+  <code>"timeSeries"</code> method. Also, if <code>"time&lt;-"</code> is called with an
+  object from class other than <code>"timeSeries"</code>, the call is
+  dispatched to <code>"zoo:time&lt;-"</code> to apply a suitable method.</p>
     </div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
     
 
+<p>for <code>time</code> and <code>getTime</code>, a <code>"timeDate"</code> object,</p>
 
-<p>for <code>time</code> and <code>getTime</code>, a 'timeDate' object,</p>
 
-
-<p>for <code>time&lt;-</code> and and <code>setTime</code>, the modified 'timeSeries' object.</p>
+<p>for <code>time&lt;-</code> and and <code>setTime</code>, the modified</p>
+<p></p>
+<p><code>"timeSeries"</code> object.</p>
            
 
     </div>

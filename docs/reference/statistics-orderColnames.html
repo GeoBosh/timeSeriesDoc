@@ -40,7 +40,7 @@ hclustColnamesReturns hierarchical clustered column names.
     
     <a class="navbar-brand me-2" href="../index.html">timeSeries</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4030.106</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4030.106.9000</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -90,29 +90,45 @@ hclustColnamesReturns hierarchical clustered column names.
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
     <dl><dt>x</dt>
-<dd><p>an object of class <code>timesSeries</code> or any other rectangular 
-        object which can be transformed by the function <code>as.matrix</code>
-        into a numeric matrix.</p></dd>
+<dd>
 
-    <dt>FUN</dt>
-<dd><p>a character string indicating which statistical function 
-        should be applied. By default statistical ordering operates 
-        on the column means of the time series.</p></dd>
+<p>an object of class <code>timesSeries</code> or any other rectangular
+    object which can be transformed by the function <code>as.matrix</code>
+    into a numeric matrix.</p>
+<p></p></dd>
 
-    <dt>method</dt>
-<dd><p>a character string with two elements. The first determines
-        the choice of the distance measure, see <code>dist</code>, and the
-        second determines the choice of the agglomeration method, see
-        <code>hclust</code>.</p></dd>
+  <dt>FUN</dt>
+<dd> 
 
-    <dt>robust</dt>
-<dd><p>a logical flag which indicates if robust correlations
-        should be used.</p></dd>
+<p>a character string indicating which statistical function should be
+    applied. By default statistical ordering operates on the column
+    means of the time series.</p>
+<p></p></dd>
 
-    <dt>...</dt>
-<dd><p>further arguments to be passed, see details.</p></dd>
+  <dt>method</dt>
+<dd>
 
-       
+<p>a character string with two elements. The first determines the
+    choice of the distance measure, see <code><a href="https://rdrr.io/r/stats/dist.html" class="external-link">dist</a></code>, and
+    the second determines the choice of the agglomeration method, see
+    <code><a href="https://rdrr.io/r/stats/hclust.html" class="external-link">hclust</a></code>.</p>
+<p></p></dd>
+
+  <dt>robust</dt>
+<dd>
+
+<p>a logical flag which indicates if robust correlations should be
+    used.</p>
+<p></p></dd>
+
+
+  <dt>...</dt>
+<dd>
+    
+<p>further arguments to be passed to the underlying functions doing the
+    main work, see section ‘Details’.</p>
+<p></p></dd>
+
 </dl></div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
@@ -151,7 +167,12 @@ hclustColnamesReturns hierarchical clustered column names.
     
 
 
-<p>a character string or vector, the rearranged column names</p>
+<p>for <code>orderColnames</code>, an integer vector representing the
+  permutaion that will sort the column names,</p>
+
+
+<p>for the other functions, a character vector giving the rearranged
+  column names</p>
         
 
     </div>
@@ -172,7 +193,7 @@ hclustColnamesReturns hierarchical clustered column names.
 <span class="r-in"><span><span class="co">## Sort by Column Names by Hierarchical Clustering -</span></span></span>
 <span class="r-in"><span>   <span class="fu">hclustColnames</span><span class="op">(</span><span class="va">data</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "SII" "SBI" "LMI" "SPI" "MPI" "ALT"</span>
-<span class="r-in"><span>   <span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">data</span><span class="op">[</span>, <span class="fu">hclustColnames</span><span class="op">(</span><span class="va">data</span><span class="op">)</span><span class="op">]</span><span class="op">)</span></span></span>
+<span class="r-in"><span>   <span class="fu"><a href="base-subsetting.html">head</a></span><span class="op">(</span><span class="va">data</span><span class="op">[</span>, <span class="fu">hclustColnames</span><span class="op">(</span><span class="va">data</span><span class="op">)</span><span class="op">]</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                     SII          SBI          LMI          SPI         MPI</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2005-11-01 -0.003190926 -0.000612745 -0.001108882  0.008414595 0.001548062</span>

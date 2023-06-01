@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">timeSeries</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4030.106</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4030.106.9000</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,47 +58,75 @@
 <span><span class="fu">colCumprods</span><span class="op">(</span><span class="va">x</span>, na.rm <span class="op">=</span> <span class="cn">FALSE</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for timeSeries</span></span>
-<span><span class="fu">colCumreturns</span><span class="op">(</span><span class="va">x</span>, method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"geometric"</span>, <span class="st">"simple"</span><span class="op">)</span>, na.rm <span class="op">=</span> <span class="cn">FALSE</span>, <span class="va">...</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">colCumreturns</span><span class="op">(</span><span class="va">x</span>, method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"geometric"</span>, <span class="st">"simple"</span><span class="op">)</span>,</span>
+<span>                                     na.rm <span class="op">=</span> <span class="cn">FALSE</span>, <span class="va">...</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
-    <dl><dt>method</dt>
-<dd><p>a character string to indicate if geometric (TRUE) or simple 
-        (FALSE) returns should be computed.</p></dd>
+    <dl><dt>x</dt>
+<dd>
 
-    <dt>na.rm</dt>
+<p>a time series, may be an object of class <code>"matrix"</code>, or
+    <code>"timeSeries"</code>.</p>
+<p></p></dd>
+
+  <dt>na.rm</dt>
 <dd><p>a logical. Should missing values be removed?</p></dd>
 
-    <dt>x</dt>
-<dd><p>a time series, may be an object of class <code>"matrix"</code>, 
-        or <code>"timeSeries"</code>.</p></dd>
+  <dt>method</dt>
+<dd>
 
-    <dt>...</dt>
+<p>a character string to indicate if geometric (<code>TRUE</code>) or simple
+    (<code>FALSE</code>) returns should be computed.</p>
+<p></p></dd>
+
+  <dt>...</dt>
 <dd><p>arguments to be passed.</p></dd>
 
-        
 </dl></div>
     <div class="section level2">
-    <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
+    <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
     
 
-<p></p>
+<p>These functions compute the requested cumulative quantities columnwise
+  to obtain a matrix of the same dimension as the data.  The
+  <code>"timeSeries"</code> methods replace the data part of the original
+  object with the resulting matrix.</p>
+<p>The <code>"timeSeries"</code> methods for the <code>Math</code> group functions
+  <code>cummin</code>, <code>cummax</code>, <code>cumsum</code>, and <code>cumprod</code>, 
+  work similarly but don't have the <code>na.rm</code> argument.</p>
+    </div>
+    <div class="section level2">
+    <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
+    <p></p>
 <p><code>"matrix"</code> for the default methods of all functions,</p>
 <p></p>
 <p><code>"timeSeries"</code> for the  <code>"timeSeries"</code> methods</p>
-    
-
+    </div>
+    <div class="section level2">
+    <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
+    <div class="dont-index"><p><code><a href="methods-mathOps.html">Math,timeSeries-method</a></code>,
+  <code><a href="statistics-rowCumsums.html">rowCumsums</a></code></p></div>
     </div>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Simulated Return Data -</span></span></span>
-<span class="r-in"><span>   <span class="va">x</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">24</span><span class="op">)</span>, ncol <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## simulate return data</span></span></span>
+<span class="r-in"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">24</span><span class="op">)</span>, ncol <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="methods-as.html">as.timeSeries</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></span>
 <span class="r-in"><span>     </span></span>
-<span class="r-in"><span><span class="co">## Cumulative Sums Column by Column  -</span></span></span>
-<span class="r-in"><span>   <span class="fu">colCumsums</span><span class="op">(</span><span class="va">x</span><span class="op">)</span>  </span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             [,1]       [,2]</span>
+<span class="r-in"><span><span class="co">## cumulative sums  by column  -</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/class.html" class="external-link">class</a></span><span class="op">(</span><span class="fu">colCumsums</span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span>  <span class="co"># "matrix"</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "matrix" "array" </span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/class.html" class="external-link">class</a></span><span class="op">(</span><span class="fu">colCumsums</span><span class="op">(</span><span class="va">X</span><span class="op">)</span><span class="op">)</span>  <span class="co"># "timeSeries"</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "timeSeries"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> attr(,"package")</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "timeSeries"</span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu">colCumsums</span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>             SS.1       SS.2</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [1,] 0.03533135 -1.3702965</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [2,] 0.45848023 -1.1740516</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [3,] 0.66070907 -2.3864073</span>

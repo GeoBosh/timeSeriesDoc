@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">timeSeries</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4030.106</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4030.106.9000</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -71,9 +71,13 @@
   in <code>x</code>. The most natural use is when <code>value</code> has the same
   dimensions as <code>as.matrix(x)</code>, but if that is not the case the
   result is almost as if <code>value</code> was converted to
-  <code>"timeSeries"</code> directly.</p>    
-<p><code>coredata</code> and its assignment counterpart are equivalent
-  alternatives to <code>series</code> and its assignment part, respectively.</p>
+  <code>"timeSeries"</code> directly.</p>
+<p>Methods for <code><a href="https://rdrr.io/pkg/zoo/man/coredata.html" class="external-link">zoo::coredata</a></code> and its assignment counterpart are
+  defined, as well. Users who wish to use them should ensure that
+  <code><a href="https://rdrr.io/pkg/zoo/man/coredata.html" class="external-link">zoo::coredata</a></code> is visible (e.g., by calling
+  <code><a href="https://zoo.R-Forge.R-project.org/" class="external-link">library('zoo')</a></code> or <code><a href="https://github.com/joshuaulrich/xts" class="external-link">library('xts')</a></code>) or employ the
+  <code>zoo::</code> prefix in the calls.  These methods are equivalent to
+  <code>series</code> and <code>`series&lt;-`</code>, respectively.</p>
     </div>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>

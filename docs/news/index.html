@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">timeSeries</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4030.106</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4030.106.9000</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,7 +39,28 @@
     </div>
 
     <div class="section level2">
-<h2 class="pkg-version" data-toc-text="4030.106" id="timeseries-4030106">timeSeries 4030.106<a class="anchor" aria-label="anchor" href="#timeseries-4030106"></a></h2>
+<h2 class="pkg-version" data-toc-text="4030.106.9000" id="timeseries-40301069000">timeSeries 4030.106.9000<a class="anchor" aria-label="anchor" href="#timeseries-40301069000"></a></h2>
+<ul><li><p>removed deprecated function <code>colStdevs</code>, use <code><a href="../reference/statistics-colSums.html">colSds()</a></code> instead.</p></li>
+<li><p>removed deprecated ‘timeSeries’ method for function <code><a href="https://rdrr.io/r/base/cut.html" class="external-link">cut()</a></code>, use <code><a href="../reference/stats-window.html">window()</a></code> instead. The method was not compatible with the generic function <code><a href="https://rdrr.io/r/base/cut.html" class="external-link">cut()</a></code>. Now applying <code>cut(x)</code> on a ‘timeSeries’ object <code>x</code> will work on the underlying time series data.</p></li>
+<li>
+<p>replaced the S4 methods for <code><a href="https://rdrr.io/pkg/zoo/man/coredata.html" class="external-link">zoo::coredata</a></code> and <code><a href="https://rdrr.io/pkg/zoo/man/coredata.html" class="external-link">zoo::'coredata&lt;-'</a></code>. The ones for <code><a href="https://rdrr.io/pkg/zoo/man/coredata.html" class="external-link">zoo::'coredata&lt;-'</a></code> were not working at all, since <code><a href="https://rdrr.io/pkg/zoo/man/coredata.html" class="external-link">zoo::'coredata&lt;-'</a></code> is an S3 generic and the methods dispatch on two arguments. It is also a mistery why the methods for the unexported S4 generics in ‘timeSeries’ were associated with the corresponding ‘zoo’ generics.</p>
+<p>If <code>zoo</code> is not attached, the calls need to be prefixed with <code>zoo::</code> or, alternatively, since the new methods are exported, they can be called directly as <code><a href="../reference/timeSeries-slotSeries.html">coredata.timeSeries()</a></code> and `<code>coredata.'timeSeries&lt;-'() &lt;- value</code>.</p>
+</li>
+<li><p>added a default method for <code>time&lt;-</code> to improve its interaction with ‘zoo’.</p></li>
+<li><p>added ‘zoo’ to ‘Suggests:’.</p></li>
+<li><p>removed the deprecated <code>dummySeries</code>, use <code>dummyMonthlySeries</code> instead.</p></li>
+<li><p>Numerous improvements to the documentation and further changes in the code.</p></li>
+<li><p>added argument <code>fun</code> to the <code>timeSeries</code> method for <code>na.omit</code> to allow it to compute replacement values using functions, such as <code>mean</code>, <code>median</code>, or user defined.</p></li>
+<li><p>formally deprecated <code>removeNA</code>, <code>interpNA</code>, and <code>substituteNA</code>. These had been informally deprecated in the documentation for a long time.</p></li>
+<li><p>the help page for <code>orderStatistics</code> erroneously claimed that the input should be an univariate <code>timeSeries</code> object, while it is explicitly written to covefr the multivariate case.</p></li>
+<li><p>moved package ‘methods’ back to ‘Depends’, to avoid subtle problems when ‘methods’ is loaded but not attached. For example, it seems that ‘Math’ methods for ‘structure’ are not seen for <code>cummin</code> and other <code>cumXXX</code> functions, when called on time series objects (the other math functions work ok).</p></li>
+<li>
+<p><code>cumsum</code>, <code>cumprod</code>, <code>cummin</code>, and <code>cummax</code> now work on the columns of the ‘timeSeries’ object and keep its class and other attributes. This is a breaking change since previously the return value was numeric vector, the result of applying the base R functions to the data part of the object. This was not particularly useful, especilly for multivariate time series.</p>
+<p>With this change all functions from the S4 <code>Math</code> group return ‘timeSeries’.</p>
+</li>
+</ul></div>
+    <div class="section level2">
+<h2 class="pkg-version" data-toc-text="4030.106" id="timeseries-4030106">timeSeries 4030.106<a class="anchor" aria-label="anchor" href="#timeseries-4030106"></a></h2><p class="text-muted">CRAN release: 2023-05-25</p>
 <ul><li>removed UTF8 characters from NAMESPACE (fixes CRAN warning to that effect).</li></ul></div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="4021.105" id="timeseries-4021105">timeSeries 4021.105<a class="anchor" aria-label="anchor" href="#timeseries-4021105"></a></h2><p class="text-muted">CRAN release: 2022-10-15</p>
