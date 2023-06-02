@@ -68,23 +68,23 @@ Center and scale a "timeSeries" object.'><!-- mathjax --><script src="https://cd
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
     
 
-<p><code>scale</code> centers and/or scales the columns of a 
-    <code>"timeSeries"</code> object.</p>    
-<p>The value of <code>center</code> determines how column centering is performed. 
-    If <code>center</code> is a numeric vector with length equal to the number 
-    of columns of <code>x</code>, then each column of <code>x</code> has the corresponding 
-    value from <code>center</code> subtracted from it. If <code>center</code> is TRUE 
-    then centering is done by subtracting the column means (omitting NAs) 
-    of <code>x</code> from their corresponding columns, and if <code>center</code> 
-    is FALSE, no centering is done.</p>
-<p>The value of <code>scale</code> determines how column scaling is performed 
-    (after centering). If <code>scale</code> is a numeric vector with length equal 
-    to  the number of columns of <code>x</code>, then each column of <code>x</code> is 
-    divided by the corresponding value from <code>scale</code>. If <code>scale</code> 
-    is TRUE then scaling is done by dividing the (centered) columns of 
-    <code>x</code> by their standard deviations if <code>center</code> is TRUE, and 
-    the root mean square otherwise. If <code>scale</code> is FALSE, no 
-    scaling is done.</p>
+<p><code>scale</code> centers and/or scales the columns of a
+  <code>"timeSeries"</code> object.</p>    
+<p>The value of <code>center</code> determines how column centering is
+  performed.  If <code>center</code> is a numeric vector with length equal to
+  the number of columns of <code>x</code>, then each column of <code>x</code> has
+  the corresponding value from <code>center</code> subtracted from it. If
+  <code>center</code> is TRUE then centering is done by subtracting the column
+  means (omitting NAs) of <code>x</code> from their corresponding columns, and
+  if <code>center</code> is FALSE, no centering is done.</p>
+<p>The value of <code>scale</code> determines how column scaling is performed
+  (after centering). If <code>scale</code> is a numeric vector with length
+  equal to the number of columns of <code>x</code>, then each column of
+  <code>x</code> is divided by the corresponding value from <code>scale</code>. If
+  <code>scale</code> is TRUE then scaling is done by dividing the (centered)
+  columns of <code>x</code> by their standard deviations if <code>center</code> is
+  TRUE, and the root mean square otherwise. If <code>scale</code> is FALSE, no
+  scaling is done.</p>
     </div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>

@@ -46,9 +46,32 @@
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="co"># S4 method for timeSeries</span></span>
-<span><span class="fu">sort</span><span class="op">(</span><span class="va">x</span>, decreasing <span class="op">=</span> <span class="cn">FALSE</span>, <span class="va">...</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">sort</span><span class="op">(</span><span class="va">x</span>, decreasing <span class="op">=</span> <span class="cn">FALSE</span>, <span class="va">...</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># S4 method for timeSeries</span></span>
+<span><span class="fu">is.unsorted</span><span class="op">(</span><span class="va">x</span>, na.rm <span class="op">=</span> <span class="cn">FALSE</span>, strictly <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
     </div>
 
+    <div class="section level2">
+    <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
+    <dl><dt>x</dt>
+<dd><p>a <code>"timeSeries"</code> object.</p></dd>
+
+  <dt>decreasing</dt>
+<dd><p>a logical flag. Should we sort in increasing or decreasing order?
+    By default <code>FALSE</code>.</p></dd>
+
+  <dt>na.rm</dt>
+<dd><p>a logical value, should missing values be removed?</p></dd>
+
+  <dt>strictly</dt>
+<dd><p>logical indicating if the check should be for strictly increasing
+    values.</p></dd>
+
+  <dt>...</dt>
+<dd><p>optional arguments passed to other methods.</p></dd>
+
+</dl></div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
     
@@ -60,27 +83,15 @@
 <p>To find out if the series is unsorted, use <code>is.unsorted</code>.</p>
     </div>
     <div class="section level2">
-    <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
-    <dl><dt>x</dt>
-<dd><p>a <code>"timeSeries"</code> object.</p></dd>
-
-  <dt>decreasing</dt>
-<dd><p>a logical flag. Should we sort in increasing or decreasing order?
-    By default <code>FALSE</code>.</p></dd>
-
-  <dt>...</dt>
-<dd><p>optional arguments passed to other methods.</p></dd>
-
-</dl></div>
-    <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
     
 
-<p>a <code>"timeSeries"</code> object</p>
-    </div>
-    <div class="section level2">
-    <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
-    <div class="dont-index"><p><code><a href="https://rdrr.io/r/base/is.unsorted.html" class="external-link">is.unsorted</a></code></p></div>
+<p>for <code>sort</code>, a <code>"timeSeries"</code> object,</p>
+
+
+<p>for the <code>is.unsorted</code> method, <code>TRUE</code> or <code>FALSE</code></p>
+
+
     </div>
 
     <div class="section level2">
@@ -106,7 +117,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2006-08-31  0.000921518 -0.001466397</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2006-11-30  0.000453412 -0.008646808</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2006-03-31  0.000232369 -0.000929251</span>
-<span class="r-in"><span>   <span class="fu"><a href="https://rdrr.io/r/base/is.unsorted.html" class="external-link">is.unsorted</a></span><span class="op">(</span><span class="va">resampled</span><span class="op">)</span></span></span>
+<span class="r-in"><span>   <span class="fu">is.unsorted</span><span class="op">(</span><span class="va">resampled</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] TRUE</span>
 <span class="r-in"><span>   </span></span>
 <span class="r-in"><span><span class="co">## Now sort the serie in decreasing time order - </span></span></span>
@@ -126,7 +137,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2006-03-31  0.000232369 -0.000929251</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2006-02-28  0.001071074 -0.011956984</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2006-01-31 -0.000152952  0.002736095</span>
-<span class="r-in"><span>   <span class="fu"><a href="https://rdrr.io/r/base/is.unsorted.html" class="external-link">is.unsorted</a></span><span class="op">(</span><span class="va">sorted</span><span class="op">)</span></span></span>
+<span class="r-in"><span>   <span class="fu">is.unsorted</span><span class="op">(</span><span class="va">sorted</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] TRUE</span>
 <span class="r-in"><span>   </span></span>
 <span class="r-in"><span><span class="co">## Is the reverted series ordered? - </span></span></span>
@@ -146,7 +157,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2006-10-31  0.002819157 -0.008238610</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2006-11-30  0.000453412 -0.008646808</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2006-12-31  0.001144121 -0.001101976</span>
-<span class="r-in"><span>   <span class="fu"><a href="https://rdrr.io/r/base/is.unsorted.html" class="external-link">is.unsorted</a></span><span class="op">(</span><span class="va">reverted</span><span class="op">)</span></span></span>
+<span class="r-in"><span>   <span class="fu">is.unsorted</span><span class="op">(</span><span class="va">reverted</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] FALSE</span>
 </code></pre></div>
     </div>

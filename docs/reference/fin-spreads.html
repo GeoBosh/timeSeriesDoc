@@ -60,42 +60,56 @@ Compute spreads and midquotes from price streams."><!-- mathjax --><script src="
 
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
-    <dl><dt>tickSize</dt>
-<dd><p>the default is NULL to simply compute price changes in original 
-        price levels. If ticksize is supplied, the price changes will be 
-        divided by the value of <code>inTicksOfSize</code> to compute
-        price changes in ticks.</p></dd>
-         
-    <dt>which</dt>
-<dd><p>a vector with two character strings naming the column names of
-        the time series from which to compute the mid quotes and spreads.
-        By default these are bid and ask prices with column names
-        <code>c("Bid", "Ask")</code>.</p></dd>
-
-    <dt>x</dt>
+    <dl><dt>x</dt>
 <dd><p>an object of class <code>timeSeries</code>.</p></dd>
 
-    <dt>...</dt>
+  <dt>which</dt>
+<dd>
+
+<p>a vector with two character strings naming the column names of the
+    time series from which to compute the mid quotes and spreads.  By
+    default these are the bid and ask prices with column names
+    <code>c("Bid", "Ask")</code>.</p>
+<p></p></dd>
+
+  <dt>tickSize</dt>
+<dd>
+
+<p>the default is <code>NULL</code> to simply compute price changes in
+    original price levels. If <code>ticksize</code> is supplied, the price
+    changes will be divided by the value of <code>inTicksOfSize</code> to
+    compute price changes in ticks.</p>
+<p></p></dd>
+         
+  <dt>...</dt>
 <dd><p>arguments to be passed.</p></dd>
 
-           
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
     
 
+<p>all functions return an object of class <code>timeSeries</code></p>
 
-<p>all functions return an object of class <code>timeSeries</code>.</p>
-        
 
     </div>
     <div class="section level2">
     <h2 id="note">Note<a class="anchor" aria-label="anchor" href="#note"></a></h2>
     
 
-<p>The functions 
-    <code>midquoteSeries</code> and <code>spreadSeries</code> are synonyms
-    for  <code>midquotes</code> and <code>spreads</code>, respectively</p>
+<p>The functions <code>midquoteSeries</code> and <code>spreadSeries</code> may be
+  deprecated and removed. They are synonyms for <code>midquotes</code> and
+  <code>spreads</code>, respectively. Please use the shorter names.</p>
+    </div>
+    <div class="section level2">
+    <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
+    <div class="dont-index"><p><code><a href="fin-returns.html">returns</a></code>,
+  <code><a href="fin-cumulated.html">cumulated</a></code>,
+  <code><a href="fin-drawdowns.html">drawdowns</a></code>,
+  <code><a href="fin-splits.html">splits</a></code>,
+  <!-- %\code{\link{spreads}}, -->
+  <code>midquotes</code>,
+  <code><a href="fin-wealth.html">index2wealth</a></code></p></div>
     </div>
 
     <div class="section level2">

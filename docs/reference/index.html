@@ -114,7 +114,7 @@
           
           <code><a href="utils-structure.html">str(<i>&lt;timeSeries&gt;</i>)</a></code> 
         </dt>
-        <dd>timeSeries object structure</dd>
+        <dd>Display the structure of 'timeSeries' objects</dd>
       </dl><dl><dt>
           
           <code><a href="methods-is.html">is.timeSeries()</a></code> <code><a href="methods-is.html">is.signalSeries()</a></code> 
@@ -130,6 +130,16 @@
           <code><a href="timeSeries-isRegular.html">isDaily(<i>&lt;timeSeries&gt;</i>)</a></code> <code><a href="timeSeries-isRegular.html">isMonthly(<i>&lt;timeSeries&gt;</i>)</a></code> <code><a href="timeSeries-isRegular.html">isQuarterly(<i>&lt;timeSeries&gt;</i>)</a></code> <code><a href="timeSeries-isRegular.html">isRegular(<i>&lt;timeSeries&gt;</i>)</a></code> <code><a href="timeSeries-isRegular.html">frequency(<i>&lt;timeSeries&gt;</i>)</a></code> 
         </dt>
         <dd>Checks if a time series is regular</dd>
+      </dl><dl><dt>
+          
+          <code><a href="stats-na.contiguous.html">na.contiguous(<i>&lt;timeSeries&gt;</i>)</a></code> 
+        </dt>
+        <dd>Find longest contiguous stretch of non-NAs or check for NAs</dd>
+      </dl><dl><dt>
+          
+          <code><a href="base-sort.html">sort(<i>&lt;timeSeries&gt;</i>)</a></code> <code><a href="base-sort.html">is.unsorted(<i>&lt;timeSeries&gt;</i>)</a></code> 
+        </dt>
+        <dd>Sort a 'timeSeries' by time stamps</dd>
       </dl></div><div class="section level2">
       <h2 id="subset-timeseries-objects">Subset ‘timeSeries’ objects<a class="anchor" aria-label="anchor" href="#subset-timeseries-objects"></a></h2>
       
@@ -155,7 +165,7 @@
           
           <code><a href="stats-na.contiguous.html">na.contiguous(<i>&lt;timeSeries&gt;</i>)</a></code> 
         </dt>
-        <dd>Find longest contiguous stretch of non-NAs</dd>
+        <dd>Find longest contiguous stretch of non-NAs or check for NAs</dd>
       </dl><dl><dt>
           
           <code><a href="stats-na.omit.html">na.omit(<i>&lt;timeSeries&gt;</i>)</a></code> <code><a href="stats-na.omit.html">removeNA()</a></code> <code><a href="stats-na.omit.html">substituteNA()</a></code> <code><a href="stats-na.omit.html">interpNA()</a></code> 
@@ -186,7 +196,7 @@
           
           <code><a href="statistics-smoothLowess.html">smoothLowess()</a></code> <code><a href="statistics-smoothLowess.html">smoothSpline()</a></code> <code><a href="statistics-smoothLowess.html">smoothSupsmu()</a></code> 
         </dt>
-        <dd>Smoothes time series objects</dd>
+        <dd>Smooths time series objects</dd>
       </dl><dl><dt>
           
           <code><a href="stats-aggregate.html">aggregate(<i>&lt;timeSeries&gt;</i>)</a></code> 
@@ -283,7 +293,7 @@
           
           <code><a href="statistics-colCumsums.html">colCumsums(<i>&lt;timeSeries&gt;</i>)</a></code> <code><a href="statistics-colCumsums.html">colCummaxs(<i>&lt;timeSeries&gt;</i>)</a></code> <code><a href="statistics-colCumsums.html">colCummins(<i>&lt;timeSeries&gt;</i>)</a></code> <code><a href="statistics-colCumsums.html">colCumprods(<i>&lt;timeSeries&gt;</i>)</a></code> <code><a href="statistics-colCumsums.html">colCumreturns(<i>&lt;timeSeries&gt;</i>)</a></code> 
         </dt>
-        <dd>Cumulated Column Statistics</dd>
+        <dd>Cumulated column statistics</dd>
       </dl><dl><dt>
           
           <code><a href="statistics-rowCumsums.html">rowCumsums(<i>&lt;ANY&gt;</i>)</a></code> <code><a href="statistics-rowCumsums.html">rowCumsums(<i>&lt;timeSeries&gt;</i>)</a></code> 
@@ -296,7 +306,7 @@
         <dd>Lag a 'timeSeries' object</dd>
       </dl><dl><dt>
           
-          <code><a href="base-sort.html">sort(<i>&lt;timeSeries&gt;</i>)</a></code> 
+          <code><a href="base-sort.html">sort(<i>&lt;timeSeries&gt;</i>)</a></code> <code><a href="base-sort.html">is.unsorted(<i>&lt;timeSeries&gt;</i>)</a></code> 
         </dt>
         <dd>Sort a 'timeSeries' by time stamps</dd>
       </dl><dl><dt>
@@ -421,7 +431,7 @@
           
           <code><a href="base-cbind.html">cbind(<i>&lt;timeSeries&gt;</i>)</a></code> <code><a href="base-cbind.html">rbind(<i>&lt;timeSeries&gt;</i>)</a></code> <code><a href="base-cbind.html">cbind2(<i>&lt;timeSeries&gt;</i>,<i>&lt;ANY&gt;</i>)</a></code> <code><a href="base-cbind.html">rbind2(<i>&lt;timeSeries&gt;</i>,<i>&lt;ANY&gt;</i>)</a></code> 
         </dt>
-        <dd>Bind <code>"timeSeries"</code> objects by column or row</dd>
+        <dd>Bind 'timeSeries' objects by column or row</dd>
       </dl><dl><dt>
           
           <code><a href="base-merge.html">merge()</a></code> 
@@ -468,7 +478,7 @@
           
           <code><a href="base-dim.html">dim,timeSeries-method</a></code> <code><a href="base-dim.html">dim</a></code> <code><a href="base-dim.html">dimnames,timeSeries-method</a></code> <code><a href="base-dim.html">dimnames</a></code> <code><a href="base-dim.html">colnames</a></code> <code><a href="base-dim.html">colnames,timeSeries-method</a></code> <code><a href="base-dim.html">rownames,timeSeries-method</a></code> <code><a href="base-dim.html">rownames</a></code> <code><a href="base-dim.html">rownames</a></code> <code><a href="base-dim.html">names,timeSeries-method</a></code> <code><a href="base-dim.html">names</a></code> 
         </dt>
-        <dd>Time series columns and rows</dd>
+        <dd>Dimension and their names for 'timeSeries' objects</dd>
       </dl><dl><dt>
           
           <code><a href="timeSeries-getDataPart.html">getDataPart,timeSeries-method</a></code> <code><a href="timeSeries-getDataPart.html">setDataPart,timeSeries-method</a></code> 
@@ -484,6 +494,11 @@
           <code><a href="base-attach.html">attach(<i>&lt;timeSeries&gt;</i>)</a></code> 
         </dt>
         <dd>Attach a 'timeSeries' to the search path</dd>
+      </dl><dl><dt>
+          
+          <code><a href="internals.html">.colorwheelPalette()</a></code> 
+        </dt>
+        <dd>Exported internal functions</dd>
       </dl></div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside></div>

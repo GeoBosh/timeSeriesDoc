@@ -59,18 +59,25 @@ Computes runlengths of an univariate "timeSeries" object.'><!-- mathjax --><scri
     <dl><dt>x</dt>
 <dd><p>an univariate time series of class <code>"timeSeries"</code>.</p></dd>
 
-    <dt>...</dt>
-<dd><p>arguments to be passed.</p></dd>
+  <dt>...</dt>
+<dd><p>arguments passed to the function <code>na.omit</code>.</p></dd>
 
         
 </dl></div>
     <div class="section level2">
+    <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
+    
+
+<p>Runlengths are defined here as contiguous sequences of values having
+  the same sign.</p>
+<p>Zeroes are treated as <code>NA</code>s.</p>
+    </div>
+    <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
     
 
+<p>an object of class <code>"timeSeries"</code></p>
 
-<p>an object of class <code>timeSeries</code>.</p>
-        
 
     </div>
 
@@ -79,7 +86,7 @@ Computes runlengths of an univariate "timeSeries" object.'><!-- mathjax --><scri
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## random time series - </span></span></span>
 <span class="r-in"><span>   <span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">4711</span><span class="op">)</span></span></span>
 <span class="r-in"><span>   <span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">12</span><span class="op">)</span></span></span>
-<span class="r-in"><span>   <span class="va">tS</span> <span class="op">&lt;-</span> <span class="fu"><a href="timeSeries.html">timeSeries</a></span><span class="op">(</span>data<span class="op">=</span><span class="va">x</span>, charvec<span class="op">=</span><span class="fu">timeCalendar</span><span class="op">(</span><span class="op">)</span>, units<span class="op">=</span><span class="st">"x"</span><span class="op">)</span></span></span>
+<span class="r-in"><span>   <span class="va">tS</span> <span class="op">&lt;-</span> <span class="fu"><a href="timeSeries.html">timeSeries</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">x</span>, charvec <span class="op">=</span> <span class="fu">timeCalendar</span><span class="op">(</span><span class="op">)</span>, units <span class="op">=</span> <span class="st">"x"</span><span class="op">)</span></span></span>
 <span class="r-in"><span>   <span class="va">tS</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                      x</span>
@@ -106,6 +113,19 @@ Computes runlengths of an univariate "timeSeries" object.'><!-- mathjax --><scri
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2023-09-01 2</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2023-10-01 1</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2023-12-01 2</span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">## replace the middle value of the negative stretch of 3 values</span></span></span>
+<span class="r-in"><span><span class="va">tS</span><span class="op">[</span><span class="fl">5</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="cn">NA</span></span></span>
+<span class="r-in"><span><span class="co">## the two negative values separated by NA are still one run</span></span></span>
+<span class="r-in"><span><span class="fu">runlengths</span><span class="op">(</span><span class="va">tS</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>            x</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-03-01 3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-05-01 2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-06-01 1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-08-01 2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-09-01 1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-11-01 2</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

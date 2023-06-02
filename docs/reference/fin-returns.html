@@ -68,24 +68,29 @@ Compute financial returns from prices or indexes."><!-- mathjax --><script src="
     <dl><dt>x</dt>
 <dd><p>an object of class <code>timeSeries</code>.</p></dd>
 
-    <dt>percentage</dt>
-<dd><p>a logical value. By default <code>FALSE</code>, if <code>TRUE</code> the 
-        series will be expressed in percentage changes.</p></dd>
+  <dt>method</dt>
+<dd>
 
-    <dt>method</dt>
-<dd><p>a character string. Which method should be used to compute
-        the returns, "continuous", "discrete", or "compound", "simple".
-        The second pair of methods is a synonym for the first two
-        methods.</p></dd>
+<p>a character string. Which method should be used to compute the
+    returns, one of "continuous", "discrete", or "compound", "simple".
+    The second pair of methods is a synonym for the first two methods.</p>
+<p></p></dd>
     
-    <dt>na.rm</dt>
+  <dt>percentage</dt>
+<dd>
+    
+<p>a logical value. By default <code>FALSE</code>, if <code>TRUE</code> the series
+    will be expressed in percentage changes.</p>
+<p></p></dd>
+
+  <dt>na.rm</dt>
 <dd><p>a logical value. Should NAs be removed? By default <code>TRUE</code>.</p></dd>
     
-    <dt>trim</dt>
+  <dt>trim</dt>
 <dd><p>a logical value. Should the time series be trimmed? By Default 
-        <code>TRUE</code>.</p></dd>
+    <code>TRUE</code>.</p></dd>
     
-    <dt>...</dt>
+  <dt>...</dt>
 <dd><p>arguments to be passed.</p></dd>
 
         
@@ -95,10 +100,10 @@ Compute financial returns from prices or indexes."><!-- mathjax --><script src="
     
 
 
-<p>all functions return an object of class <code>timeSeries</code>.</p>
+<p>an object of class <code>timeSeries</code>.</p>
 <p></p>
 <p><code>returns0</code> returns an untrimmed series with the first
-    row of returns set to zero(s).</p>
+  row of returns set to zero(s).</p>
         
 
     </div>
@@ -106,10 +111,23 @@ Compute financial returns from prices or indexes."><!-- mathjax --><script src="
     <h2 id="note">Note<a class="anchor" aria-label="anchor" href="#note"></a></h2>
     
 
-<p>The functions <code>returnSeries</code>, <code>getReturns</code> are no longer
-    exported and will be removed in the near future. They are synonyms
-    for the function <code>returns</code> and their use was discouraged for
-    many years. Just use <code>returns</code>.</p>
+<p>The functions <code>returnSeries</code> and <code>getReturns</code> will be
+  removed in the near future. They are synonyms for the function
+  <code>returns</code> and their use was discouraged for many years. Just use
+  <code>returns</code>.</p>
+<p>The function <code>returnSeries</code> is no longer
+  exported. <code>getReturns</code> is exported only because we are waiting
+  for a package on CRAN to be updated.</p>
+    </div>
+    <div class="section level2">
+    <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
+    <div class="dont-index"><p><!-- %\code{\link{returns}}, -->
+  <code><a href="fin-cumulated.html">cumulated</a></code>,
+  <code><a href="fin-drawdowns.html">drawdowns</a></code>,
+  <code><a href="fin-splits.html">splits</a></code>,
+  <code><a href="fin-spreads.html">spreads</a></code>,
+  <code><a href="fin-spreads.html">midquotes</a></code>,
+  <code><a href="fin-wealth.html">index2wealth</a></code></p></div>
     </div>
 
     <div class="section level2">
