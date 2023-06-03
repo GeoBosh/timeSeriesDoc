@@ -119,6 +119,24 @@ Find the longest consecutive stretch of non-missing values in a
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2023-07-01   12   11</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2023-08-01    2    4</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2023-09-01    1    6</span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co">## tied longest stretches: 1:3, 6:9 and 10:12</span></span></span>
+<span class="r-in"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span>, <span class="cn">NA</span>, <span class="cn">NA</span>, <span class="fl">6</span><span class="op">:</span><span class="fl">8</span>, <span class="cn">NA</span>, <span class="fl">10</span><span class="op">:</span><span class="fl">12</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="co">## should return the 1st one</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/na.contiguous.html" class="external-link">na.contiguous</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>             <span class="co"># correct for R &gt; 4.3.0</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 6 7 8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> attr(,"na.action")</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1]  1  2  3  4  5  9 10 11 12</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> attr(,"class")</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "omit"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> attr(,"tsp")</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 6 8 1</span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/na.contiguous.html" class="external-link">na.contiguous</a></span><span class="op">(</span><span class="fu"><a href="timeSeries.html">timeSeries</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span> <span class="co"># correct for timeSeries version &gt; 4030.106 </span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      SS.1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    3</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
