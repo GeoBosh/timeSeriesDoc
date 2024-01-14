@@ -14,7 +14,7 @@ Functions for handling missing values in "timeSeries" objects.'><!-- mathjax -->
     
     <a class="navbar-brand me-2" href="../index.html">timeSeries</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4030.106.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4032.109</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,14 +51,9 @@ Functions for handling missing values in "timeSeries" objects.'><!-- mathjax -->
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="co"># S4 method for timeSeries</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="co"># S3 method for timeSeries</span></span>
 <span><span class="fu">na.omit</span><span class="op">(</span><span class="va">object</span>, method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"r"</span>, <span class="st">"s"</span>, <span class="st">"z"</span>, <span class="st">"ir"</span>, <span class="st">"iz"</span>, <span class="st">"ie"</span><span class="op">)</span>, </span>
-<span>    interp <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"before"</span>, <span class="st">"linear"</span>, <span class="st">"after"</span><span class="op">)</span>, <span class="va">FUN</span>, <span class="va">...</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">## Deprecated:</span></span>
-<span><span class="fu">removeNA</span><span class="op">(</span><span class="va">x</span>, <span class="va">...</span><span class="op">)</span></span>
-<span><span class="fu">substituteNA</span><span class="op">(</span><span class="va">x</span>, type <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"zeros"</span>, <span class="st">"mean"</span>, <span class="st">"median"</span><span class="op">)</span>, <span class="va">...</span><span class="op">)</span></span>
-<span><span class="fu">interpNA</span><span class="op">(</span><span class="va">x</span>, method <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"linear"</span>, <span class="st">"before"</span>, <span class="st">"after"</span><span class="op">)</span>, <span class="va">...</span><span class="op">)</span></span></code></pre></div>
+<span>    interp <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"before"</span>, <span class="st">"linear"</span>, <span class="st">"after"</span><span class="op">)</span>, <span class="va">FUN</span>, <span class="va">...</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -67,12 +62,9 @@ Functions for handling missing values in "timeSeries" objects.'><!-- mathjax -->
 <dd><p>an object of class <code>"timeSeries"</code>.</p></dd>
 
   <dt>method</dt>
-<dd><p>for <code>na.omit</code>, the method of handling NAs; 
-    for <code>interpNA</code>, how to interpolate the matrix column
-    by column, see Section ‘Details’.</p>
-<p></p></dd>
+<dd><p>the method of handling NAs, see section ‘Details’.</p></dd>
 
-  <dt>interp, type</dt>
+  <dt>interp</dt>
 <dd><p>Three alternative methods are provided to remove NAs from the
     data: 
     <code>type="zeros"</code> replaces the missing values with zeros,
@@ -89,16 +81,6 @@ Functions for handling missing values in "timeSeries" objects.'><!-- mathjax -->
     <code>FUN</code> is specified.</p>    
 <p></p></dd>
 
-  
-  <dt>x</dt>
-<dd>
-
-<p>a numeric matrix, or any other object which can be transformed into
-    a matrix through <code>x = as.matrix(x, ...)</code>. If <code>x</code> is a
-    vector, it will be transformed into a one-dimensional matrix.</p>
-<p></p></dd>
-
-
   <dt>...</dt>
 <dd><p>arguments to be passed to the function <code>as.matrix</code>.</p></dd>
 
@@ -109,85 +91,89 @@ Functions for handling missing values in "timeSeries" objects.'><!-- mathjax -->
 
 <p>Functions for handling missing values in <code>"timeSeries"</code> objects 
   and in objects which can be transformed into a vector or a two 
-    dimensional matrix.</p>
-
-<p>For <code>na.omit</code> argument <code>method</code> specifies the method how
-    to handle NAs.  Can be one of the following strings:</p>
-<p></p><dl><dt>method="s"</dt>
+  dimensional matrix.</p>
+<p>For <code>na.omit</code> argument <code>method</code> specifies how to handle
+  <code>NA</code>s.  Can be one of the following strings:</p>
+<p></p><dl><dt>method = "s"</dt>
 <dd><p><code>na.rm = FALSE</code>, skip, i.e. do nothing,</p></dd>
 
-        <dt>method="r"</dt>
+    <dt>method = "r"</dt>
 <dd><p>remove NAs,</p></dd>
 
-        <dt>method="z"</dt>
+    <dt>method = "z"</dt>
 <dd><p>substitute NAs by zeros,</p></dd>
  
-	<dt>method="ir"</dt>
+    <dt>method = "ir"</dt>
 <dd><p>interpolate NAs and remove NAs at the
-          beginning and end of the series,</p></dd>
+      beginning and end of the series,</p></dd>
 
 
-        <dt>method="iz"</dt>
+    <dt>method = "iz"</dt>
 <dd><p>interpolate NAs and substitute NAs at the
-        beginning and end of the series,</p></dd>
+      beginning and end of the series,</p></dd>
 
 
-	<dt>method="ie"</dt>
+    <dt>method = "ie"</dt>
 <dd><p>interpolate NAs and extrapolate NAs at the
-        beginning and end of theseries.</p></dd>
+      beginning and end of theseries.</p></dd>
 
-    
-</dl><p>For <code>interpNA</code> argument <code>method</code> specifies
-    how to interpolate the matrix column
-    by column. One of the following character strings:
-    <code>"linear"</code>,
-    <code>"before"</code>, 
-    <code>"after"</code>.
-    For interpolation the function <code>approx</code> is used.</p>       
-
-    
-<p>The functions are listed by topic.
-    <br></p>    
-<p></p><table class="table table"><tr><td><code>na.omit</code></td><td>Handles NAs,</td></tr><tr><td><code>removeNA</code></td><td>Removes NAs from a matrix object,</td></tr><tr><td><code>substituteNA</code></td><td>substitute NAs by zero, the column mean or median,</td></tr><tr><td><code>interpNA</code></td><td>interpolates NAs using R's "approx" function.</td></tr></table><p><b>Missing Values in Price and Index Series:</b></p>    
-<p>Applied to <code>timeSeries</code> objects the function <code>removeNA</code>
-    just removes rows with NAs from the series. For an interpolation
-    of time series points one can use the function <code>interpNA</code>.
-    Three different methods of interpolation are offered: <code>"linear"</code>
-    does a linear interpolation, <code>"before"</code> uses the previous value,
-    and <code>"after"</code> uses the following value. Note, that the 
-    interpolation is done on the index scale and not on the time scale.</p>    
-<p><b>Missing Values in Return Series:</b></p>    
-<p>For return series the function <code>substituteNA</code> may be useful. The 
-    function allows to fill missing values either by <code>method="zeros"</code>, 
-    the <code>method="mean"</code> or the <code>method="median"</code> value of the 
-    appropriate columns.</p>
+  
+</dl><p><!-- % For \code{interpNA} argument \code{method} specifies how to -->
+  <!-- % interpolate the matrix column by column. One of the following -->
+  <!-- % character strings: \code{"linear"}, \code{"before"}, \code{"after"}. -->
+  <!-- % For interpolation the function \code{approx} is used. -->
+  <!-- %    -->
+  <!-- % The functions are listed by topic. \cr -->
+  <!-- %  -->
+  <!-- %   \tabular{ll}{   -->
+  <!-- %   \code{removeNA} \tab removes NAs from a matrix object, \cr -->
+  <!-- %   \code{substituteNA} \tab substitute NAs by zero, the column mean or median, \cr -->
+  <!-- %   \code{interpNA} \tab interpolates NAs using R's "approx" function. } -->
+  <!-- %  -->
+  <!-- %  -->
+  <!-- % \bold{Missing Values in Price and Index Series:} -->
+  <!-- %    -->
+  <!-- % Applied to \code{timeSeries} objects the function \code{removeNA} -->
+  <!-- % just removes rows with NAs from the series. For an interpolation -->
+  <!-- % of time series points one can use the function \code{interpNA}. -->
+  <!-- % Three different methods of interpolation are offered: \code{"linear"} -->
+  <!-- % does a linear interpolation, \code{"before"} uses the previous value, -->
+  <!-- % and \code{"after"} uses the following value. Note, that the  -->
+  <!-- % interpolation is done on the index scale and not on the time scale. -->
+  <!-- %    -->
+  <!-- % \bold{Missing Values in Return Series:} -->
+  <!-- %    -->
+  <!-- % For return series the function \code{substituteNA} may be useful. The  -->
+  <!-- % function allows to fill missing values either by \code{method="zeros"},  -->
+  <!-- % the \code{method="mean"} or the \code{method="median"} value of the  -->
+  <!-- % appropriate columns. --></p>
     </div>
     <div class="section level2">
     <h2 id="note">Note<a class="anchor" aria-label="anchor" href="#note"></a></h2>
     
 
 <p>When dealing with daily data sets, there exists another function
-    <code>alignDailySeries</code> which can handle missing data in un-aligned
-    calendrical <code>"timeSeries"</code> objects.</p>    
-<p>The functions <code>removeNA</code>, <code>substituteNA</code> and <code>interpNA</code> 
-    are older implementations. Please use in all cases if possible the 
-    new function <code>na.omit</code>.</p>
-<p><strong>Additional remarks by GNB:</strong></p>    
+  <code>alignDailySeries</code> which can handle missing data in un-aligned
+  calendrical <code>"timeSeries"</code> objects.</p>  
+<p><!-- % The functions \code{removeNA}, \code{substituteNA} and \code{interpNA}  -->
+  <!-- % are older implementations. Please use in all cases if possible the  -->
+  <!-- % new function \code{na.omit}. --></p>  
+<p><strong>Additional remarks by GNB:</strong></p>  
 <p><code>removeNA(x)</code> is equivalent to <code>na.omit(x)</code> or
-    <code>na.omit(x), methods = "r"</code>.</p>
+  <code>na.omit(x), methods = "r"</code>.</p>  
 <p><code>interpNA</code> can be replaced by a call to <code>na.omit</code> with
-    argument method equal to <code>ir</code>, <code>iz</code>, or <code>ie</code>, and
-    argument <code>"interp"</code> equal to the <code>"method"</code> argument for
-    <code>interpNA</code> (note that the defaults are not the same).</p>
+  argument method equal to <code>ir</code>, <code>iz</code>, or <code>ie</code>, and
+  argument <code>"interp"</code> equal to the <code>"method"</code> argument for
+  <code>interpNA</code> (note that the defaults are not the same).</p>  
 <p><code>substituteNA(x, type = "zeros")</code> is equivalent to
-    <code>na.omit(x, method = "z")</code>. For other values of <code>type</code> one
-    can use argument <code>FUN</code>, as in <code>na.omit(x, FUN = "mean")</code>.</p>
+  <code>na.omit(x, method = "z")</code>. For other values of <code>type</code> one
+  can use argument <code>FUN</code>, as in <code>na.omit(x, FUN = "mean")</code>.</p>  
 <p>A final remark: the three deprecated functions are non-generic.
-    <code>removeNA(x)</code> is completely redundant as it simply calls
-    <code>na.omit</code>. The other two however may be useful for matrix-like
-    objects. Please inform the maintainer of the package if you use them
-    on objects other than from class <code>"timeSeries"</code> and wish them
-    kept in the future.</p>
+  <code>removeNA(x)</code> is completely redundant as it simply calls
+  <code>na.omit</code>. The other two however may be useful for matrix-like
+  objects. Please inform the maintainer of the package if you use them
+  on objects other than from class <code>"timeSeries"</code> and wish them
+  kept in the future.</p>
     </div>
     <div class="section level2">
     <h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
@@ -235,9 +221,9 @@ Functions for handling missing values in "timeSeries" objects.'><!-- mathjax -->
 <span class="r-out co"><span class="r-pr">#&gt;</span> [20,]         NA  0.37914099 -1.39575652  1.05144407 -0.1124329</span>
 <span class="r-in"><span><span class="va">Xts</span> <span class="op">&lt;-</span> <span class="fu"><a href="timeSeries.html">timeSeries</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span>  <span class="co"># convert X to timeSeries Xts</span></span></span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="co">## Remove Rows with NAs</span></span></span>
+<span class="r-in"><span><span class="co">## remove rows with NAs</span></span></span>
 <span class="r-in"><span><span class="fu">na.omit</span><span class="op">(</span><span class="va">Xts</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>             SS.1       SS.2       SS.3       SS.4       SS.5</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [1,] -1.2188515 -1.5131984 -0.1802216 -0.5824434  1.1745123</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [2,] -1.2900417 -0.4389865 -0.6658292 -0.7449056 -1.1151520</span>
@@ -254,7 +240,7 @@ Functions for handling missing values in "timeSeries" objects.'><!-- mathjax -->
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Subsitute NA's with zeros or column means (formerly substituteNA())</span></span></span>
 <span class="r-in"><span><span class="fu">na.omit</span><span class="op">(</span><span class="va">Xts</span>, method <span class="op">=</span> <span class="st">"z"</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>             SS.1        SS.2        SS.3        SS.4       SS.5</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [1,] -1.2188515 -1.51319841 -0.18022159 -0.58244338  1.1745123</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [2,] -1.2900417 -0.43898655 -0.66582924 -0.74490561 -1.1151520</span>
@@ -277,7 +263,7 @@ Functions for handling missing values in "timeSeries" objects.'><!-- mathjax -->
 <span class="r-out co"><span class="r-pr">#&gt;</span> [19,] -0.4709085  0.66014159 -0.53506265  0.07207710  2.2224636</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [20,]  0.0000000  0.37914099 -1.39575652  1.05144407 -0.1124329</span>
 <span class="r-in"><span><span class="fu">na.omit</span><span class="op">(</span><span class="va">Xts</span>, FUN <span class="op">=</span> <span class="st">"mean"</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>             SS.1        SS.2        SS.3        SS.4       SS.5</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [1,] -1.2188515 -1.51319841 -0.18022159 -0.58244338  1.1745123</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [2,] -1.2900417 -0.43898655 -0.66582924 -0.74490561 -1.1151520</span>
@@ -300,7 +286,7 @@ Functions for handling missing values in "timeSeries" objects.'><!-- mathjax -->
 <span class="r-out co"><span class="r-pr">#&gt;</span> [19,] -0.4709085  0.66014159 -0.53506265  0.07207710  2.2224636</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [20,]  0.2182346  0.37914099 -1.39575652  1.05144407 -0.1124329</span>
 <span class="r-in"><span><span class="fu">na.omit</span><span class="op">(</span><span class="va">Xts</span>, FUN <span class="op">=</span> <span class="st">"median"</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>             SS.1        SS.2        SS.3        SS.4       SS.5</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [1,] -1.2188515 -1.51319841 -0.18022159 -0.58244338  1.1745123</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [2,] -1.2900417 -0.43898655 -0.66582924 -0.74490561 -1.1151520</span>
@@ -325,7 +311,7 @@ Functions for handling missing values in "timeSeries" objects.'><!-- mathjax -->
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Subsitute NA's with a trimmed mean</span></span></span>
 <span class="r-in"><span><span class="fu">na.omit</span><span class="op">(</span><span class="va">Xts</span>, FUN <span class="op">=</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span>, <span class="va">na.rm</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">x</span>, trim <span class="op">=</span> <span class="fl">0.10</span>, na.rm <span class="op">=</span> <span class="va">na.rm</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>             SS.1        SS.2        SS.3        SS.4       SS.5</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [1,] -1.2188515 -1.51319841 -0.18022159 -0.58244338  1.1745123</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [2,] -1.2900417 -0.43898655 -0.66582924 -0.74490561 -1.1151520</span>
@@ -348,7 +334,7 @@ Functions for handling missing values in "timeSeries" objects.'><!-- mathjax -->
 <span class="r-out co"><span class="r-pr">#&gt;</span> [19,] -0.4709085  0.66014159 -0.53506265  0.07207710  2.2224636</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [20,]  0.2023988  0.37914099 -1.39575652  1.05144407 -0.1124329</span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="co">## Interpolate NA's Linearily (formerly interpNA())</span></span></span>
+<span class="r-in"><span><span class="co">## interpolate NA's linearily (formerly interpNA())</span></span></span>
 <span class="r-in"><span><span class="fu">na.omit</span><span class="op">(</span><span class="va">X</span>, method <span class="op">=</span> <span class="st">"ir"</span>, interp <span class="op">=</span> <span class="st">"linear"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>             [,1]       [,2]       [,3]       [,4]       [,5]</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [1,] -1.2188515 -1.5131984 -0.1802216 -0.5824434  1.1745123</span>
@@ -404,7 +390,7 @@ Functions for handling missing values in "timeSeries" objects.'><!-- mathjax -->
 <span class="r-out co"><span class="r-pr">#&gt;</span> attr(,"class")</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "omit"</span>
 <span class="r-in"><span>   </span></span>
-<span class="r-in"><span><span class="co">## Take Previous Values in a Column</span></span></span>
+<span class="r-in"><span><span class="co">## take previous values in a column</span></span></span>
 <span class="r-in"><span><span class="fu">na.omit</span><span class="op">(</span><span class="va">X</span>, method <span class="op">=</span> <span class="st">"ir"</span>, interp <span class="op">=</span> <span class="st">"before"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>             [,1]       [,2]       [,3]       [,4]       [,5]</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [1,] -1.2188515 -1.5131984 -0.1802216 -0.5824434  1.1745123</span>
@@ -461,24 +447,24 @@ Functions for handling missing values in "timeSeries" objects.'><!-- mathjax -->
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "omit"</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="co">## examples with X (which is a matrix, not "timeSeries"</span></span></span>
+<span class="r-in"><span><span class="co">## examples with X (which is a matrix, not "timeSeries")</span></span></span>
 <span class="r-in"><span><span class="co">## (these examples are not run automatically as these functions are</span></span></span>
 <span class="r-in"><span><span class="co">## deprecated.) </span></span></span>
 <span class="r-in"><span><span class="kw">if</span><span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span><span class="op">{</span></span></span>
-<span class="r-in"><span><span class="co">## Remove Rows with NAs - </span></span></span>
-<span class="r-in"><span>   <span class="fu">removeNA</span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="co">## Remove Rows with NAs</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="timeSeries-deprecated.html">removeNA</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span></span>
 <span class="r-in"><span>   </span></span>
-<span class="r-in"><span><span class="co">## Subsitute NA's by Zeros or Column Means - </span></span></span>
-<span class="r-in"><span>   <span class="fu">substituteNA</span><span class="op">(</span><span class="va">X</span>, type <span class="op">=</span> <span class="st">"zeros"</span><span class="op">)</span></span></span>
-<span class="r-in"><span>   <span class="fu">substituteNA</span><span class="op">(</span><span class="va">X</span>, type <span class="op">=</span> <span class="st">"mean"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="co">## subsitute NA's by zeros or column means</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="timeSeries-deprecated.html">substituteNA</a></span><span class="op">(</span><span class="va">X</span>, type <span class="op">=</span> <span class="st">"zeros"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="timeSeries-deprecated.html">substituteNA</a></span><span class="op">(</span><span class="va">X</span>, type <span class="op">=</span> <span class="st">"mean"</span><span class="op">)</span></span></span>
 <span class="r-in"><span>   </span></span>
-<span class="r-in"><span><span class="co">## Interpolate NA's Linearily - </span></span></span>
-<span class="r-in"><span>   <span class="fu">interpNA</span><span class="op">(</span><span class="va">X</span>, method <span class="op">=</span> <span class="st">"linear"</span><span class="op">)</span></span></span>
-<span class="r-in"><span>   <span class="co"># Note the corner missing value cannot be interpolated!</span></span></span>
+<span class="r-in"><span><span class="co">## interpolate NA's linearily</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="timeSeries-deprecated.html">interpNA</a></span><span class="op">(</span><span class="va">X</span>, method <span class="op">=</span> <span class="st">"linear"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="co"># Note the corner missing value cannot be interpolated!</span></span></span>
 <span class="r-in"><span>   </span></span>
-<span class="r-in"><span><span class="co">## Take Previous Values in a Column - </span></span></span>
-<span class="r-in"><span>   <span class="fu">interpNA</span><span class="op">(</span><span class="va">X</span>, method <span class="op">=</span> <span class="st">"before"</span><span class="op">)</span></span></span>
-<span class="r-in"><span>   <span class="co"># Also here, the corner value is excluded</span></span></span>
+<span class="r-in"><span><span class="co">## take previous values in a column</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="timeSeries-deprecated.html">interpNA</a></span><span class="op">(</span><span class="va">X</span>, method <span class="op">=</span> <span class="st">"before"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="co"># Also here, the corner value is excluded</span></span></span>
 <span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
     </div>

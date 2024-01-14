@@ -18,7 +18,7 @@ Find the longest consecutive stretch of non-missing values in a
     
     <a class="navbar-brand me-2" href="../index.html">timeSeries</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4030.106.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4032.109</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,13 +57,15 @@ Find the longest consecutive stretch of non-missing values in a
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="co"># S4 method for timeSeries</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/stats/na.contiguous.html" class="external-link">na.contiguous</a></span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="co"># S3 method for timeSeries</span></span>
+<span><span class="fu">na.contiguous</span><span class="op">(</span><span class="va">object</span>, <span class="va">...</span><span class="op">)</span></span>
+<span><span class="co"># S4 method for timeSeries</span></span>
+<span><span class="fu">is.na</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
-    <dl><dt>object</dt>
+    <dl><dt>object,x</dt>
 <dd><p>a <code>"timeSeries"</code> object.</p></dd>
 
   <dt>...</dt>
@@ -88,12 +90,12 @@ Find the longest consecutive stretch of non-missing values in a
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Dummy 'timeSeries' with NAs entries</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Dummy 'timeSeries' containing NAs</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">2023</span><span class="op">)</span></span></span>
-<span class="r-in"><span>   <span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fu"><a href="base-sample.html">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">20</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="cn">NA</span>,<span class="fl">4</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>, ncol <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></span>
-<span class="r-in"><span>   <span class="va">s</span> <span class="op">&lt;-</span> <span class="fu"><a href="timeSeries.html">timeSeries</a></span><span class="op">(</span><span class="va">data</span>, <span class="fu">timeCalendar</span><span class="op">(</span><span class="fl">2023</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-in"><span>   <span class="fu">is.na</span><span class="op">(</span><span class="va">s</span><span class="op">)</span>  </span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
+<span class="r-in"><span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fu"><a href="base-sample.html">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">20</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="cn">NA</span>,<span class="fl">4</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>, ncol <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">s</span> <span class="op">&lt;-</span> <span class="fu"><a href="timeSeries.html">timeSeries</a></span><span class="op">(</span><span class="va">data</span>, <span class="fu">timeCalendar</span><span class="op">(</span><span class="fl">2023</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">is.na</span><span class="op">(</span><span class="va">s</span><span class="op">)</span>  </span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> GMT </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>             TS.1  TS.2</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2023-01-01  TRUE FALSE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2023-02-01 FALSE FALSE</span>
@@ -108,8 +110,8 @@ Find the longest consecutive stretch of non-missing values in a
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2023-11-01 FALSE  TRUE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2023-12-01  TRUE FALSE</span>
 <span class="r-in"><span><span class="co">## Find the longest consecutive non-missing values</span></span></span>
-<span class="r-in"><span>   <span class="fu"><a href="https://rdrr.io/r/stats/na.contiguous.html" class="external-link">na.contiguous</a></span><span class="op">(</span><span class="va">s</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
+<span class="r-in"><span><span class="fu">na.contiguous</span><span class="op">(</span><span class="va">s</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> GMT </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>            TS.1 TS.2</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2023-02-01   16    5</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2023-03-01   15   20</span>
@@ -123,16 +125,14 @@ Find the longest consecutive stretch of non-missing values in a
 <span class="r-in"><span><span class="co">## tied longest stretches: 1:3, 6:9 and 10:12</span></span></span>
 <span class="r-in"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span>, <span class="cn">NA</span>, <span class="cn">NA</span>, <span class="fl">6</span><span class="op">:</span><span class="fl">8</span>, <span class="cn">NA</span>, <span class="fl">10</span><span class="op">:</span><span class="fl">12</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="co">## should return the 1st one</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/na.contiguous.html" class="external-link">na.contiguous</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>             <span class="co"># correct for R &gt; 4.3.0</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 6 7 8</span>
+<span class="r-in"><span><span class="fu">na.contiguous</span><span class="op">(</span><span class="va">x</span><span class="op">)</span>             <span class="co"># correct for R &gt; 4.3.0</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1 2 3</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> attr(,"na.action")</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1]  1  2  3  4  5  9 10 11 12</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1]  4  5  6  7  8  9 10 11 12</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> attr(,"class")</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "omit"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> attr(,"tsp")</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 6 8 1</span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/na.contiguous.html" class="external-link">na.contiguous</a></span><span class="op">(</span><span class="fu"><a href="timeSeries.html">timeSeries</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span> <span class="co"># correct for timeSeries version &gt; 4030.106 </span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-in"><span><span class="fu">na.contiguous</span><span class="op">(</span><span class="fu"><a href="timeSeries.html">timeSeries</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span> <span class="co"># correct for timeSeries version &gt; 4030.106 </span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      SS.1</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    1</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    2</span>

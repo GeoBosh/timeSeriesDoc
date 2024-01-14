@@ -16,7 +16,7 @@ Applies a function to a "timeSeries" object over regular or
     
     <a class="navbar-brand me-2" href="../index.html">timeSeries</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4030.106.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4032.109</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -213,7 +213,7 @@ Applies a function to a "timeSeries" object over regular or
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Percentual Returns of Swiss Bond Index and Performance Index - </span></span></span>
 <span class="r-in"><span>   <span class="va">LPP</span> <span class="op">&lt;-</span> <span class="fl">100</span> <span class="op">*</span> <span class="va">LPP2005REC</span><span class="op">[</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"SBI"</span>, <span class="st">"SPI"</span><span class="op">)</span><span class="op">]</span></span></span>
 <span class="r-in"><span>   <span class="fu"><a href="base-subsetting.html">head</a></span><span class="op">(</span><span class="va">LPP</span>, <span class="fl">20</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> GMT </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                   SBI        SPI</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2005-11-01 -0.0612745  0.8414595</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2005-11-02 -0.2762009  0.2519342</span>
@@ -238,7 +238,7 @@ Applies a function to a "timeSeries" object over regular or
 <span class="r-in"><span>   </span></span>
 <span class="r-in"><span><span class="co">## Aggregate Quarterly Returns -</span></span></span>
 <span class="r-in"><span>   <span class="fu">applySeries</span><span class="op">(</span><span class="va">LPP</span>, by <span class="op">=</span> <span class="st">"quarterly"</span>, FUN <span class="op">=</span> <span class="va">colSums</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> GMT </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                   SBI       SPI</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2005-12-31  0.5193189  7.295300</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2006-03-31 -1.6590275  7.074801</span>
@@ -265,7 +265,7 @@ Applies a function to a "timeSeries" object over regular or
 <span class="r-out co"><span class="r-pr">#&gt;</span> 7 2007-03-30 2007-06-29</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span>   <span class="fu">applySeries</span><span class="op">(</span><span class="va">LPP</span>, <span class="va">from</span>, <span class="va">to</span>, FUN <span class="op">=</span> <span class="va">colSums</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> GMT </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                   SBI       SPI</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2005-12-30  0.5193189  7.295300</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2006-03-31 -1.7047209  6.677154</span>
@@ -276,7 +276,7 @@ Applies a function to a "timeSeries" object over regular or
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2007-06-29 -0.1988528  2.097361</span>
 <span class="r-in"><span><span class="co">## Alternative Use - </span></span></span>
 <span class="r-in"><span>   <span class="fu">fapply</span><span class="op">(</span><span class="va">LPP</span>, <span class="va">from</span>, <span class="va">to</span>, FUN <span class="op">=</span> <span class="va">colSums</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> GMT </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                   SBI       SPI</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2005-12-30  0.5193189  7.295300</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2006-03-31 -1.7047209  6.677154</span>
@@ -289,7 +289,7 @@ Applies a function to a "timeSeries" object over regular or
 <span class="r-in"><span><span class="co">## Count Trading Days per Month - </span></span></span>
 <span class="r-in"><span>   <span class="va">colCounts</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">NROW</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>, times <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">NCOL</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-in"><span>   <span class="fu">applySeries</span><span class="op">(</span><span class="va">LPP</span>, FUN <span class="op">=</span> <span class="va">colCounts</span>, by <span class="op">=</span> <span class="st">"monthly"</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> GMT </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>            SBI SPI</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2005-11-30  22  22</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2005-12-31  22  22</span>

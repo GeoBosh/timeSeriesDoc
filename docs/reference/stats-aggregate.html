@@ -14,7 +14,7 @@ Aggregate a "timeSeries" object over general periods.'><!-- mathjax --><script s
     
     <a class="navbar-brand me-2" href="../index.html">timeSeries</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4030.106.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4032.109</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -106,7 +106,7 @@ Aggregate a "timeSeries" object over general periods.'><!-- mathjax --><script s
 <span class="r-in"><span><span class="co">## Aggregate by Weeks - </span></span></span>
 <span class="r-in"><span>   <span class="va">by</span> <span class="op">&lt;-</span> <span class="fu">timeSequence</span><span class="op">(</span>from <span class="op">=</span> <span class="fu"><a href="base-start.html">start</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>,  to <span class="op">=</span> <span class="fu"><a href="base-start.html">end</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>, by <span class="op">=</span> <span class="st">"week"</span><span class="op">)</span></span></span>
 <span class="r-in"><span>   <span class="fu">aggregate</span><span class="op">(</span><span class="va">x</span>, <span class="va">by</span>, <span class="va">mean</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> GMT </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                Open     High      Low    Close   Volume</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2000-09-27 63.43750 63.56250 59.81250 60.62500 53077800</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-04 59.65000 60.07500 57.70000 58.55000 40680380</span>
@@ -166,7 +166,7 @@ Aggregate a "timeSeries" object over general periods.'><!-- mathjax --><script s
 <span class="r-in"><span>   <span class="va">by</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/unique.html" class="external-link">unique</a></span><span class="op">(</span><span class="fu">timeLastNdayInMonth</span><span class="op">(</span><span class="fu"><a href="timeSeries-slotTime.html">time</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>, <span class="fl">5</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-in"><span>   <span class="va">X</span> <span class="op">&lt;-</span> <span class="fu">aggregate</span><span class="op">(</span><span class="va">x</span>, <span class="va">by</span>, <span class="va">mean</span><span class="op">)</span></span></span>
 <span class="r-in"><span>   <span class="va">X</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> GMT </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                Open     High      Low    Close   Volume</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2000-09-29 61.75000 62.25000 59.68750 60.75000 38761600</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-27 57.55625 59.29375 56.00625 57.56562 56372100</span>
@@ -186,21 +186,21 @@ Aggregate a "timeSeries" object over general periods.'><!-- mathjax --><script s
 <span class="r-out co"><span class="r-pr">#&gt;</span>      "Fri"      "Fri"      "Fri"      "Fri"      "Fri"      "Fri"      "Fri" </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2001-04-27 2001-05-25 2001-06-29 2001-07-27 2001-08-31 2001-09-28 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      "Fri"      "Fri"      "Fri"      "Fri"      "Fri"      "Fri" </span>
-<span class="r-in"><span>   <span class="fu">isMonthly</span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span></span>
+<span class="r-in"><span>   <span class="fu"><a href="timeSeries-isRegular.html">isMonthly</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] TRUE</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Aggregate to Last Day of Quarter -</span></span></span>
 <span class="r-in"><span>   <span class="va">by</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/unique.html" class="external-link">unique</a></span><span class="op">(</span><span class="fu">timeLastDayInQuarter</span><span class="op">(</span><span class="fu"><a href="timeSeries-slotTime.html">time</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-in"><span>   <span class="va">X</span> <span class="op">&lt;-</span>  <span class="fu">aggregate</span><span class="op">(</span><span class="va">x</span>, <span class="va">by</span>, <span class="va">mean</span><span class="op">)</span></span></span>
 <span class="r-in"><span>   <span class="va">X</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> GMT </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                Open     High      Low    Close   Volume</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2000-09-30 61.75000 62.25000 59.68750 60.75000 38761600</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2000-12-31 59.66245 61.15799 58.15104 59.40476 51663067</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2001-03-31 56.60282 58.10383 55.45111 56.83947 43853037</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2001-06-30 67.47548 68.69083 66.53270 67.70242 42081671</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2001-09-30 62.85552 63.81966 61.71155 62.67172 34511040</span>
-<span class="r-in"><span>   <span class="fu">isQuarterly</span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span></span>
+<span class="r-in"><span>   <span class="fu"><a href="timeSeries-isRegular.html">isQuarterly</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] TRUE</span>
 </code></pre></div>
     </div>

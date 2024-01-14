@@ -16,7 +16,7 @@ Functions and methods dealing with special monthly
     
     <a class="navbar-brand me-2" href="../index.html">timeSeries</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4030.106.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4032.109</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -69,7 +69,7 @@ Functions and methods dealing with special monthly
 <dd>
 
 <p>character strings specifying the rollling period composed by the
-    length of the period and its unit. Examples: <code>"3m"</code>
+    length of the period and its unit. Examples: <code>"3m"</code>,
     <code>"6m"</code>, <code>"12m"</code>, and <code>"24m"</code> represent quarterly,
     semi-annual, annual and bi-annual shifts, respectively.  It is the
     responsibility of the user to determine proper start of the series.</p>
@@ -125,15 +125,20 @@ Functions and methods dealing with special monthly
 
     
 </dl></div>
+    <div class="section level2">
+    <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
+    <div class="dont-index"><p><code><a href="timeSeries-isRegular.html">isMonthly</a></code>,
+  <code><a href="timeSeries-isRegular.html">isRegular</a></code></p></div>
+    </div>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Load Microsoft Daily Data Set</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## load Microsoft daily dataset</span></span></span>
 <span class="r-in"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="va">MSFT</span> </span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## count monthly records</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="base-subsetting.html">head</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>   <span class="co"># 3 obs. for Sep 2000</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> GMT </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>               Open    High     Low   Close   Volume</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2000-09-27 63.4375 63.5625 59.8125 60.6250 53077800</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2000-09-28 60.8125 61.8750 60.6250 61.3125 26180200</span>
@@ -143,7 +148,7 @@ Functions and methods dealing with special monthly
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-04 56.3750 56.5625 54.5000 55.4375 68226700</span>
 <span class="r-in"><span><span class="va">counts</span> <span class="op">&lt;-</span> <span class="fu">countMonthlyRecords</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">counts</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> GMT </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>            Counts</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2000-09-30      3</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-31     22</span>
@@ -168,7 +173,7 @@ Functions and methods dealing with special monthly
 <span class="r-out co"><span class="r-pr">#&gt;</span> [3] "Attributes: &lt; Component “units”: 1 string mismatch &gt;"                </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span>   </span></span>
-<span class="r-in"><span><span class="co">## quaterly non-overlapping time periods -</span></span></span>
+<span class="r-in"><span><span class="co">## quaterly non-overlapping time periods</span></span></span>
 <span class="r-in"><span><span class="va">windows</span> <span class="op">&lt;-</span> <span class="fu">rollMonthlyWindows</span><span class="op">(</span><span class="va">counts</span><span class="op">[</span><span class="op">-</span><span class="fl">1</span>, <span class="op">]</span>, period <span class="op">=</span> <span class="st">"3m"</span>, by <span class="op">=</span> <span class="st">"3m"</span><span class="op">)</span> </span></span>
 <span class="r-in"><span><span class="va">windows</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $from</span>
@@ -197,9 +202,9 @@ Functions and methods dealing with special monthly
 <span class="r-out co"><span class="r-pr">#&gt;</span> 7 2001-04-01 2001-06-30</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 8 2001-05-01 2001-07-31</span>
 <span class="r-in"><span>   </span></span>
-<span class="r-in"><span><span class="co">## Compute the average number of monthly trading days per quarter -  </span></span></span>
+<span class="r-in"><span><span class="co">## compute the average number of monthly trading days per quarter</span></span></span>
 <span class="r-in"><span><span class="fu">rollMonthlySeries</span><span class="op">(</span><span class="va">counts</span><span class="op">[</span><span class="op">-</span><span class="fl">1</span>, <span class="op">]</span>, period <span class="op">=</span> <span class="st">"3m"</span>, by <span class="op">=</span> <span class="st">"3m"</span>, FUN <span class="op">=</span> <span class="va">mean</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> GMT </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>              Counts</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2000-12-31 21.00000</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2001-01-31 20.66667</span>

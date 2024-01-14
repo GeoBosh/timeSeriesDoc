@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">timeSeries</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4030.106.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4032.109</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,7 +45,7 @@
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="co"># S4 method for timeSeries</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="co"># S3 method for timeSeries</span></span>
 <span><span class="fu">sort</span><span class="op">(</span><span class="va">x</span>, decreasing <span class="op">=</span> <span class="cn">FALSE</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for timeSeries</span></span>
@@ -76,11 +76,15 @@
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
     
 
-<p>Sorts a time series either in increasing or decreasing time stamp
-  order. Internally the function <code>order</code> from R's base package is
-  used. <code>order</code> generates a permutation which rearranges the time
-  stamps in ascending or descending order.</p>    
-<p>To find out if the series is unsorted, use <code>is.unsorted</code>.</p>
+<p>The method for <code>sort</code> sorts <code>x</code> either in increasing or
+  decreasing time stamp order.</p>
+<p>The method for <code>is.unsorted</code> returns <code>TRUE</code> if the time
+  stamps of <code>x</code> are not sorted in increasing order (including the
+  case when they are sorted in decreasing order) and <code>FALSE</code>
+  otherwise. <code>is.unsorted</code> may also return <code>NA</code> when there are
+  <code>NA</code>s among the time stamps of <code>x</code>.</p>
+<p>All this is in line with the documented functionality of
+  <code><a href="https://rdrr.io/r/base/is.unsorted.html" class="external-link">base::is.unsorted</a></code>.</p>
     </div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
@@ -89,21 +93,48 @@
 <p>for <code>sort</code>, a <code>"timeSeries"</code> object,</p>
 
 
-<p>for the <code>is.unsorted</code> method, <code>TRUE</code> or <code>FALSE</code></p>
+<p>for the <code>is.unsorted</code> method, <code>TRUE</code>, <code>FALSE</code>, or</p>
+<p></p>
+<p><code>NA</code>, as described in section ‘Details’.</p>
 
 
+    </div>
+    <div class="section level2">
+    <h2 id="note">Note<a class="anchor" aria-label="anchor" href="#note"></a></h2>
+    
+
+<p>If <code>is.unsorted</code> returns <code>NA</code> when there are <code>NA</code>s in
+  the data but not in the time stamps use <code>library{timeSeries}</code> or
+  call the function as <code>timeSeries::is.unsorted</code>. If you need more
+  details, read the rest of this note.</p>
+<p><code><a href="https://rdrr.io/r/base/is.unsorted.html" class="external-link">base::is.unsorted</a></code> 'sees' the method for <code>"timeSeries"</code>
+  objects when package timeSeries is loaded (whether or not it is
+  attached). However, due to the way <code><a href="https://rdrr.io/r/base/is.unsorted.html" class="external-link">base::is.unsorted</a></code> is
+  implemented, it may give wrong answers when there are <code>NA</code>'s
+  among the values of the time series. Developers of packages applying
+  <code>is.unsorted</code> on timeSeries objects should import if from package
+  timeSeries.</p>
+<p>The above feature is not a shortcoming of <code><a href="https://rdrr.io/r/base/is.unsorted.html" class="external-link">base::is.unsorted</a></code> but
+  a consequence of the fact that the timeSeries method is not consistent
+  with its semantics. For example, it works on the time stamps, while
+  <code>is.na</code> works on the data values.</p>
+    </div>
+    <div class="section level2">
+    <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
+    <div class="dont-index"><p><code><a href="https://rdrr.io/r/base/is.unsorted.html" class="external-link">is.unsorted</a></code> for further details on the <code>NA</code> case</p></div>
     </div>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Monthly Calendar Series -    </span></span></span>
-<span class="r-in"><span>   <span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="fin-align.html">daily2monthly</a></span><span class="op">(</span><span class="va">LPP2005REC</span><span class="op">[</span>, <span class="fl">1</span><span class="op">:</span><span class="fl">2</span><span class="op">]</span><span class="op">)</span><span class="op">[</span><span class="fl">3</span><span class="op">:</span><span class="fl">14</span>, <span class="op">]</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## a monthly calendar series</span></span></span>
+<span class="r-in"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="fin-align.html">daily2monthly</a></span><span class="op">(</span><span class="va">LPP2005REC</span><span class="op">[</span>, <span class="fl">1</span><span class="op">:</span><span class="fl">2</span><span class="op">]</span><span class="op">)</span><span class="op">[</span><span class="fl">3</span><span class="op">:</span><span class="fl">14</span>, <span class="op">]</span></span></span>
 <span class="r-in"><span>   </span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1234</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="co">## Resample the Series with respect to the time stamps -    </span></span></span>
-<span class="r-in"><span>   <span class="va">resampled</span> <span class="op">&lt;-</span> <span class="fu"><a href="base-sample.html">sample</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></span>
-<span class="r-in"><span>   <span class="va">resampled</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
+<span class="r-in"><span><span class="co">## resample the series with respect to the time stamps,</span></span></span>
+<span class="r-in"><span><span class="va">resampled</span> <span class="op">&lt;-</span> <span class="fu"><a href="base-sample.html">sample</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="co">## the time stamps are unordered</span></span></span>
+<span class="r-in"><span><span class="va">resampled</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> GMT </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                     SBI          SPI</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2006-12-31  0.001144121 -0.001101976</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2006-10-31  0.002819157 -0.008238610</span>
@@ -117,13 +148,15 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2006-08-31  0.000921518 -0.001466397</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2006-11-30  0.000453412 -0.008646808</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2006-03-31  0.000232369 -0.000929251</span>
-<span class="r-in"><span>   <span class="fu">is.unsorted</span><span class="op">(</span><span class="va">resampled</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">is.unsorted</span><span class="op">(</span><span class="va">resampled</span><span class="op">)</span> <span class="co"># TRUE (i.e., not sorted)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] TRUE</span>
 <span class="r-in"><span>   </span></span>
-<span class="r-in"><span><span class="co">## Now sort the serie in decreasing time order - </span></span></span>
-<span class="r-in"><span>   <span class="va">sorted</span> <span class="op">&lt;-</span> <span class="fu">sort</span><span class="op">(</span><span class="va">resampled</span>, , decreasing <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
-<span class="r-in"><span>   <span class="va">sorted</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
+<span class="r-in"><span><span class="co">## Now sort the series in decreasing time order</span></span></span>
+<span class="r-in"><span><span class="va">backward_in_time</span> <span class="op">&lt;-</span> <span class="fu">sort</span><span class="op">(</span><span class="va">resampled</span>, , decreasing <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="co">## time stamps ordered in decreasing order</span></span></span>
+<span class="r-in"><span><span class="co">## but is.unordered requires increasing order:</span></span></span>
+<span class="r-in"><span><span class="va">backward_in_time</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> GMT </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                     SBI          SPI</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2006-12-31  0.001144121 -0.001101976</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2006-11-30  0.000453412 -0.008646808</span>
@@ -137,13 +170,13 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2006-03-31  0.000232369 -0.000929251</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2006-02-28  0.001071074 -0.011956984</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2006-01-31 -0.000152952  0.002736095</span>
-<span class="r-in"><span>   <span class="fu">is.unsorted</span><span class="op">(</span><span class="va">sorted</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">is.unsorted</span><span class="op">(</span><span class="va">backward_in_time</span><span class="op">)</span> <span class="co"># still TRUE</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] TRUE</span>
 <span class="r-in"><span>   </span></span>
-<span class="r-in"><span><span class="co">## Is the reverted series ordered? - </span></span></span>
-<span class="r-in"><span>   <span class="va">reverted</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/rev.html" class="external-link">rev</a></span><span class="op">(</span><span class="va">sorted</span><span class="op">)</span></span></span>
-<span class="r-in"><span>   <span class="va">reverted</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
+<span class="r-in"><span><span class="co">## Is the reverted series ordered?</span></span></span>
+<span class="r-in"><span><span class="va">forward_in_time</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/rev.html" class="external-link">rev</a></span><span class="op">(</span><span class="va">backward_in_time</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">forward_in_time</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> GMT </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                     SBI          SPI</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2006-01-31 -0.000152952  0.002736095</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2006-02-28  0.001071074 -0.011956984</span>
@@ -157,7 +190,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2006-10-31  0.002819157 -0.008238610</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2006-11-30  0.000453412 -0.008646808</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2006-12-31  0.001144121 -0.001101976</span>
-<span class="r-in"><span>   <span class="fu">is.unsorted</span><span class="op">(</span><span class="va">reverted</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">is.unsorted</span><span class="op">(</span><span class="va">forward_in_time</span><span class="op">)</span> <span class="co"># FALSE (i.e., sorted)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] FALSE</span>
 </code></pre></div>
     </div>

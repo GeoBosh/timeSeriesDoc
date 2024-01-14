@@ -14,7 +14,7 @@ Returns start or end time stamp of a "timeSeries" object.'><!-- mathjax --><scri
     
     <a class="navbar-brand me-2" href="../index.html">timeSeries</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4030.106.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4032.109</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,10 +51,10 @@ Returns start or end time stamp of a "timeSeries" object.'><!-- mathjax --><scri
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="co"># S4 method for timeSeries</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="co"># S3 method for timeSeries</span></span>
 <span><span class="fu">start</span><span class="op">(</span><span class="va">x</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co"># S4 method for timeSeries</span></span>
+<span><span class="co"># S3 method for timeSeries</span></span>
 <span><span class="fu">end</span><span class="op">(</span><span class="va">x</span>, <span class="va">...</span><span class="op">)</span></span></code></pre></div>
     </div>
 
@@ -77,31 +77,31 @@ Returns start or end time stamp of a "timeSeries" object.'><!-- mathjax --><scri
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1234</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="co">## Create a dummy \code{"timeSeries"} -    </span></span></span>
-<span class="r-in"><span>   <span class="va">tS</span> <span class="op">&lt;-</span> <span class="fu"><a href="fin-dummy.html">dummyMonthlySeries</a></span><span class="op">(</span><span class="op">)</span><span class="op">[</span>, <span class="fl">1</span><span class="op">]</span></span></span>
-<span class="r-in"><span>   <span class="va">tS</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
+<span class="r-in"><span><span class="co">## Create a dummy \code{"timeSeries"}</span></span></span>
+<span class="r-in"><span><span class="va">tS</span> <span class="op">&lt;-</span> <span class="fu"><a href="fin-dummy.html">dummyMonthlySeries</a></span><span class="op">(</span><span class="op">)</span><span class="op">[</span>, <span class="fl">1</span><span class="op">]</span></span></span>
+<span class="r-in"><span><span class="va">tS</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> GMT </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                   TS.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-01-01 0.113703411</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-02-01 0.622299405</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-03-01 0.609274733</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-04-01 0.623379442</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-05-01 0.860915384</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-06-01 0.640310605</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-07-01 0.009495756</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-08-01 0.232550506</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-09-01 0.666083758</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-10-01 0.514251141</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-11-01 0.693591292</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-12-01 0.544974836</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-01-01 0.113703411</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-02-01 0.622299405</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-03-01 0.609274733</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-04-01 0.623379442</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-05-01 0.860915384</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-06-01 0.640310605</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-07-01 0.009495756</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-08-01 0.232550506</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-09-01 0.666083758</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-10-01 0.514251141</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-11-01 0.693591292</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-12-01 0.544974836</span>
 <span class="r-in"><span>   </span></span>
-<span class="r-in"><span><span class="co">## Return start and end time stamp -</span></span></span>
-<span class="r-in"><span>   <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fu">start</span><span class="op">(</span><span class="va">tS</span><span class="op">)</span>, <span class="fu">end</span><span class="op">(</span><span class="va">tS</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="co">## Return start and end time stamp</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fu">start</span><span class="op">(</span><span class="va">tS</span><span class="op">)</span>, <span class="fu">end</span><span class="op">(</span><span class="va">tS</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] [2023-01-01] [2023-12-01]</span>
-<span class="r-in"><span>   <span class="fu"><a href="https://rdrr.io/r/base/range.html" class="external-link">range</a></span><span class="op">(</span><span class="fu"><a href="timeSeries-slotTime.html">time</a></span><span class="op">(</span><span class="va">tS</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] [2024-01-01] [2024-12-01]</span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/range.html" class="external-link">range</a></span><span class="op">(</span><span class="fu"><a href="timeSeries-slotTime.html">time</a></span><span class="op">(</span><span class="va">tS</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] [2023-01-01] [2023-12-01]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] [2024-01-01] [2024-12-01]</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

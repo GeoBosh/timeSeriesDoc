@@ -14,7 +14,7 @@ Get or assign a financial center to a "timeSeries" object.'><!-- mathjax --><scr
     
     <a class="navbar-brand me-2" href="../index.html">timeSeries</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4030.106.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4032.109</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -81,20 +81,20 @@ Get or assign a financial center to a "timeSeries" object.'><!-- mathjax --><scr
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## An artificial 'timeSeries' Object - </span></span></span>
 <span class="r-in"><span>   <span class="va">tS</span> <span class="op">&lt;-</span> <span class="fu"><a href="fin-dummy.html">dummyMonthlySeries</a></span><span class="op">(</span><span class="op">)</span></span></span>
 <span class="r-in"><span>   <span class="va">tS</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> GMT </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                  TS.1      TS.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-01-01 0.21879954 0.2012480</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-02-01 0.81059855 0.2588098</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-03-01 0.52569755 0.9921504</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-04-01 0.91465817 0.8073523</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-05-01 0.83134505 0.5533336</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-06-01 0.04577026 0.6464061</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-07-01 0.45609148 0.3118243</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-08-01 0.26518667 0.6218192</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-09-01 0.30467220 0.3297702</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-10-01 0.50730687 0.5019975</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-11-01 0.18109621 0.6770945</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-12-01 0.75967064 0.4849912</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-01-01 0.21879954 0.2012480</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-02-01 0.81059855 0.2588098</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-03-01 0.52569755 0.9921504</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-04-01 0.91465817 0.8073523</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-05-01 0.83134505 0.5533336</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-06-01 0.04577026 0.6464061</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-07-01 0.45609148 0.3118243</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-08-01 0.26518667 0.6218192</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-09-01 0.30467220 0.3297702</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-10-01 0.50730687 0.5019975</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-11-01 0.18109621 0.6770945</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-12-01 0.75967064 0.4849912</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Print Financial Center -</span></span></span>
 <span class="r-in"><span>   <span class="fu">finCenter</span><span class="op">(</span><span class="va">tS</span><span class="op">)</span></span></span>
@@ -105,36 +105,36 @@ Get or assign a financial center to a "timeSeries" object.'><!-- mathjax --><scr
 <span class="r-in"><span><span class="co">## Assign New Financial Center - </span></span></span>
 <span class="r-in"><span>   <span class="fu">finCenter</span><span class="op">(</span><span class="va">tS</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"Zurich"</span></span></span>
 <span class="r-in"><span>   <span class="va">tS</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Zurich</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Zurich </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                           TS.1      TS.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-01-01 01:00:00 0.21879954 0.2012480</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-02-01 01:00:00 0.81059855 0.2588098</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-03-01 01:00:00 0.52569755 0.9921504</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-04-01 02:00:00 0.91465817 0.8073523</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-05-01 02:00:00 0.83134505 0.5533336</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-06-01 02:00:00 0.04577026 0.6464061</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-07-01 02:00:00 0.45609148 0.3118243</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-08-01 02:00:00 0.26518667 0.6218192</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-09-01 02:00:00 0.30467220 0.3297702</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-10-01 02:00:00 0.50730687 0.5019975</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-11-01 01:00:00 0.18109621 0.6770945</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-12-01 01:00:00 0.75967064 0.4849912</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-01-01 01:00:00 0.21879954 0.2012480</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-02-01 01:00:00 0.81059855 0.2588098</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-03-01 01:00:00 0.52569755 0.9921504</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-04-01 02:00:00 0.91465817 0.8073523</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-05-01 02:00:00 0.83134505 0.5533336</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-06-01 02:00:00 0.04577026 0.6464061</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-07-01 02:00:00 0.45609148 0.3118243</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-08-01 02:00:00 0.26518667 0.6218192</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-09-01 02:00:00 0.30467220 0.3297702</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-10-01 02:00:00 0.50730687 0.5019975</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-11-01 01:00:00 0.18109621 0.6770945</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-12-01 01:00:00 0.75967064 0.4849912</span>
 <span class="r-in"><span>   <span class="fu">setFinCenter</span><span class="op">(</span><span class="va">tS</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"New_York"</span></span></span>
 <span class="r-in"><span>   <span class="va">tS</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> New_York</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> New_York </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                           TS.1      TS.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-12-31 19:00:00 0.21879954 0.2012480</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-01-31 19:00:00 0.81059855 0.2588098</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-02-28 19:00:00 0.52569755 0.9921504</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-03-31 20:00:00 0.91465817 0.8073523</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-04-30 20:00:00 0.83134505 0.5533336</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-05-31 20:00:00 0.04577026 0.6464061</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-06-30 20:00:00 0.45609148 0.3118243</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-07-31 20:00:00 0.26518667 0.6218192</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-08-31 20:00:00 0.30467220 0.3297702</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-09-30 20:00:00 0.50730687 0.5019975</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-10-31 20:00:00 0.18109621 0.6770945</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-11-30 19:00:00 0.75967064 0.4849912</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-12-31 19:00:00 0.21879954 0.2012480</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-01-31 19:00:00 0.81059855 0.2588098</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-02-29 19:00:00 0.52569755 0.9921504</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-03-31 20:00:00 0.91465817 0.8073523</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-04-30 20:00:00 0.83134505 0.5533336</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-05-31 20:00:00 0.04577026 0.6464061</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-06-30 20:00:00 0.45609148 0.3118243</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-07-31 20:00:00 0.26518667 0.6218192</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-08-31 20:00:00 0.30467220 0.3297702</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-09-30 20:00:00 0.50730687 0.5019975</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-10-31 20:00:00 0.18109621 0.6770945</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-11-30 19:00:00 0.75967064 0.4849912</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

@@ -16,7 +16,7 @@ Functions and methods extracting and modifying positions
     
     <a class="navbar-brand me-2" href="../index.html">timeSeries</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4030.106.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4032.109</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -112,48 +112,48 @@ Functions and methods extracting and modifying positions
 <span class="r-in"><span><span class="co">## Return Series Positions -</span></span></span>
 <span class="r-in"><span>   <span class="fu">getTime</span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] [2023-01-01] [2023-02-01] [2023-03-01] [2023-04-01] [2023-05-01]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [6] [2023-06-01] [2023-07-01] [2023-08-01] [2023-09-01] [2023-10-01]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [11] [2023-11-01] [2023-12-01]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] [2024-01-01] [2024-02-01] [2024-03-01] [2024-04-01] [2024-05-01]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [6] [2024-06-01] [2024-07-01] [2024-08-01] [2024-09-01] [2024-10-01]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [11] [2024-11-01] [2024-12-01]</span>
 <span class="r-in"><span>   <span class="fu">time</span><span class="op">(</span><span class="va">X</span><span class="op">)</span>  </span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] [2023-01-01] [2023-02-01] [2023-03-01] [2023-04-01] [2023-05-01]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [6] [2023-06-01] [2023-07-01] [2023-08-01] [2023-09-01] [2023-10-01]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [11] [2023-11-01] [2023-12-01]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] [2024-01-01] [2024-02-01] [2024-03-01] [2024-04-01] [2024-05-01]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [6] [2024-06-01] [2024-07-01] [2024-08-01] [2024-09-01] [2024-10-01]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [11] [2024-11-01] [2024-12-01]</span>
 <span class="r-in"><span>  </span></span>
 <span class="r-in"><span><span class="co">## Add / Subtract one Day from X</span></span></span>
 <span class="r-in"><span>   <span class="fu">setTime</span><span class="op">(</span><span class="va">X</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu">time</span><span class="op">(</span><span class="va">X</span><span class="op">)</span> <span class="op">-</span> <span class="fl">24</span><span class="op">*</span><span class="fl">3600</span> <span class="co"># sec</span></span></span>
 <span class="r-in"><span>   <span class="va">X</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> GMT </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                  TS.1         TS.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2022-12-31 -0.5238281  0.656588464</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-01-31 -0.4968500  2.548991071</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-02-28 -1.8060313 -0.034760390</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-03-31 -0.5820759 -0.669633580</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-04-30 -1.1088896 -0.007604756</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-05-31 -1.0149620  1.777084448</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-06-30 -0.1623095 -1.138607737</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-07-31  0.5630558  1.367827179</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-08-31  1.6478175  1.329564791</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-09-30 -0.7733534  0.336472797</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-10-31  1.6059096  0.006892838</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-11-30 -1.1578085 -0.455468738</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-12-31 -0.5238281  0.656588464</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-01-31 -0.4968500  2.548991071</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-02-29 -1.8060313 -0.034760390</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-03-31 -0.5820759 -0.669633580</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-04-30 -1.1088896 -0.007604756</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-05-31 -1.0149620  1.777084448</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-06-30 -0.1623095 -1.138607737</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-07-31  0.5630558  1.367827179</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-08-31  1.6478175  1.329564791</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-09-30 -0.7733534  0.336472797</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-10-31  1.6059096  0.006892838</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-11-30 -1.1578085 -0.455468738</span>
 <span class="r-in"><span>   <span class="fu">time</span><span class="op">(</span><span class="va">X</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu">time</span><span class="op">(</span><span class="va">X</span><span class="op">)</span> <span class="op">+</span> <span class="fl">24</span><span class="op">*</span><span class="fl">3600</span> <span class="co"># sec</span></span></span>
 <span class="r-in"><span>   <span class="va">X</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> GMT </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                  TS.1         TS.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-01-01 -0.5238281  0.656588464</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-02-01 -0.4968500  2.548991071</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-03-01 -1.8060313 -0.034760390</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-04-01 -0.5820759 -0.669633580</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-05-01 -1.1088896 -0.007604756</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-06-01 -1.0149620  1.777084448</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-07-01 -0.1623095 -1.138607737</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-08-01  0.5630558  1.367827179</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-09-01  1.6478175  1.329564791</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-10-01 -0.7733534  0.336472797</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-11-01  1.6059096  0.006892838</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-12-01 -1.1578085 -0.455468738</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-01-01 -0.5238281  0.656588464</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-02-01 -0.4968500  2.548991071</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-03-01 -1.8060313 -0.034760390</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-04-01 -0.5820759 -0.669633580</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-05-01 -1.1088896 -0.007604756</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-06-01 -1.0149620  1.777084448</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-07-01 -0.1623095 -1.138607737</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-08-01  0.5630558  1.367827179</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-09-01  1.6478175  1.329564791</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-10-01 -0.7733534  0.336472797</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-11-01  1.6059096  0.006892838</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-12-01 -1.1578085 -0.455468738</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

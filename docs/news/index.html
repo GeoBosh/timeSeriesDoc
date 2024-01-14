@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">timeSeries</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4030.106.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4032.109</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,7 +39,17 @@
     </div>
 
     <div class="section level2">
-<h2 class="pkg-version" data-toc-text="4030.106.9000" id="timeseries-40301069000">timeSeries 4030.106.9000<a class="anchor" aria-label="anchor" href="#timeseries-40301069000"></a></h2>
+<h2 class="pkg-version" data-toc-text="4032.109" id="timeseries-4032109">timeSeries 4032.109<a class="anchor" aria-label="anchor" href="#timeseries-4032109"></a></h2><p class="text-muted">CRAN release: 2024-01-14</p>
+<ul><li><p>deprecated function <code>returnSeries</code> is now defunct, use <code>returns</code> instead.</p></li>
+<li><p>a number of generic functions from base R now get only S3 methods for ‘timeSeries’ objects. Previously they were turned into S4 generics with S4 methods.</p></li>
+<li><p>streamlined timeSeries methods for a number of functions. Left only S3 methods or only S4 methods were suitable.</p></li>
+<li><p>consolidated the NAMESPACE.</p></li>
+</ul></div>
+    <div class="section level2">
+<h2 class="pkg-version" data-toc-text="4032.108" id="timeseries-4032108">timeSeries 4032.108<a class="anchor" aria-label="anchor" href="#timeseries-4032108"></a></h2><p class="text-muted">CRAN release: 2023-12-19</p>
+<ul><li>fixed ‘Lost braces; missing escapes or markup?’ NOTE from CRAN.</li></ul></div>
+    <div class="section level2">
+<h2 class="pkg-version" data-toc-text="4031.107" id="timeseries-4031107">timeSeries 4031.107<a class="anchor" aria-label="anchor" href="#timeseries-4031107"></a></h2><p class="text-muted">CRAN release: 2023-08-26</p>
 <ul><li><p>refactored the ‘timeSeries’ methods for <code>head</code> and <code>tail</code>.</p></li>
 <li><p>fixed a bug in the ‘timeSeries’ method for <code><a href="https://rdrr.io/r/stats/na.contiguous.html" class="external-link">stats::na.contiguous</a></code>, which caused the wrong stretch to be returned in the case of tied longest stretches one of whom starts at the beginning of the series. Similar bug was present in <code><a href="https://rdrr.io/r/stats/na.contiguous.html" class="external-link">stats::na.contiguous.default</a></code>, see my bug report to R-devel from 2023-06-02 and the discussion there (<a href="https://stat.ethz.ch/pipermail/r-devel/2023-June/082642.html" class="external-link uri">https://stat.ethz.ch/pipermail/r-devel/2023-June/082642.html</a>)</p></li>
 <li><p>removed deprecated functions <code>spreadSeries</code>, <code>midquoteSeries</code>, and <code>durationSeries</code>. Use <code>spreads</code>, <code>midquotes</code>, and <code>durations</code>, respectively.</p></li>
@@ -57,7 +67,7 @@
 <li><p>formally deprecated <code>removeNA</code>, <code>interpNA</code>, and <code>substituteNA</code>. These had been informally deprecated in the documentation for a long time.</p></li>
 <li><p>the help page for <code>orderStatistics</code> erroneously claimed that the input should be an univariate <code>timeSeries</code> object, while it is explicitly written to cover the multivariate case.</p></li>
 <li><p>moved package ‘methods’ back to ‘Depends’ to avoid subtle problems when ‘methods’ is loaded but not attached. For example, it seems that ‘Math’ methods for ‘structure’ are not seen for <code>cummin</code> and other <code>cumXXX</code> functions, when called on time series objects (the other math functions work ok).</p></li>
-<li><p><code>cumsum</code>, <code>cumprod</code>, <code>cummin</code>, and <code>cummax</code> now work on the columns of the ‘timeSeries’ object and keep its class and other attributes. This is a breaking change since previously the return value was numeric vector, the result of applying the base R functions to the data part of the object. This was not particularly useful, especilly for multivariate time series. With this change all functions from the S4 <code>Math</code> group return ‘timeSeries’ when their argument is   object.</p></li>
+<li><p><code>cumsum</code>, <code>cumprod</code>, <code>cummin</code>, and <code>cummax</code> now work on the columns of the ‘timeSeries’ object and keep its class and other attributes. This is a breaking change since previously the return value was numeric vector, the result of applying the base R functions to the data part of the object. This was not particularly useful, especilly for multivariate time series. With this change all functions from the S4 <code>Math</code> group return ‘timeSeries’ when their argument is ‘timeSeries’ object.</p></li>
 <li><p>stopped exporting some internal functions that were accidentally used by other packages (after those packages were updated on CRAN).</p></li>
 <li><p>Numerous improvements to the documentation and further changes in the code.</p></li>
 </ul></div>

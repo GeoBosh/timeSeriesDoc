@@ -14,7 +14,7 @@ Checks if a time series is regular."><!-- mathjax --><script src="https://cdnjs.
     
     <a class="navbar-brand me-2" href="../index.html">timeSeries</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4030.106.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4032.109</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -62,7 +62,7 @@ Checks if a time series is regular."><!-- mathjax --><script src="https://cdnjs.
 <span><span class="fu">isRegular</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># S4 method for timeSeries</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/stats/time.html" class="external-link">frequency</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">...</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">frequency</span><span class="op">(</span><span class="va">x</span>, <span class="va">...</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -111,31 +111,42 @@ Checks if a time series is regular."><!-- mathjax --><script src="https://cdnjs.
 
 
 <p>The <code>is*</code> functions return <code>TRUE</code> or <code>FALSE</code> depending 
-    on whether the series fulfills the condition or not.<br></p>
+  on whether the series fulfills the condition or not.<br></p>
 
     
 <p></p>
 <p><code>frequency</code> returns in general 1, for quarterly series 4,
-    and for monthly series 12.</p>
+  and for monthly series 12.</p>
   
 
+    </div>
+    <div class="section level2">
+    <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
+    <div class="dont-index"><p><code><a href="https://geobosh.github.io/timeDateDoc/reference/calendar-isRegular.html" class="external-link">isRegular</a></code>
+  <code><a href="https://rdrr.io/r/stats/time.html" class="external-link">frequency</a></code></p></div>
     </div>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">MSFT</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu">isRegular</span><span class="op">(</span><span class="va">MSFT</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">isRegular</span><span class="op">(</span><span class="va">MSFT</span><span class="op">)</span> <span class="co"># FALSE</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] FALSE</span>
+<span class="r-in"><span><span class="fu">frequency</span><span class="op">(</span><span class="va">MSFT</span><span class="op">)</span> <span class="co"># 1</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## a monthly ts</span></span></span>
 <span class="r-in"><span><span class="va">ap</span> <span class="op">&lt;-</span> <span class="fu"><a href="methods-as.html">as.timeSeries</a></span><span class="op">(</span><span class="va">AirPassengers</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu">isRegular</span><span class="op">(</span><span class="va">ap</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">isRegular</span><span class="op">(</span><span class="va">ap</span><span class="op">)</span> <span class="co"># TRUE</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] TRUE</span>
+<span class="r-in"><span><span class="fu">frequency</span><span class="op">(</span><span class="va">ap</span><span class="op">)</span> <span class="co"># 12</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 12</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## a quarterly ts</span></span></span>
 <span class="r-in"><span><span class="va">pres</span> <span class="op">&lt;-</span> <span class="fu"><a href="methods-as.html">as.timeSeries</a></span><span class="op">(</span><span class="va">presidents</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu">isRegular</span><span class="op">(</span><span class="va">pres</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">isRegular</span><span class="op">(</span><span class="va">pres</span><span class="op">)</span> <span class="co"># TRUE</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] TRUE</span>
+<span class="r-in"><span><span class="fu">frequency</span><span class="op">(</span><span class="va">pres</span><span class="op">)</span> <span class="co"># 4</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 4</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

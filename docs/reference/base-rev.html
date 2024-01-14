@@ -14,7 +14,7 @@ Reverses an uni- or multivariate "timeSeries" object.'><!-- mathjax --><script s
     
     <a class="navbar-brand me-2" href="../index.html">timeSeries</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4030.106.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4032.109</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,7 +51,7 @@ Reverses an uni- or multivariate "timeSeries" object.'><!-- mathjax --><script s
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="co"># S4 method for timeSeries</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="co"># S3 method for timeSeries</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/rev.html" class="external-link">rev</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></code></pre></div>
     </div>
 
@@ -71,25 +71,25 @@ Reverses an uni- or multivariate "timeSeries" object.'><!-- mathjax --><script s
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1234</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="co">## Create Dummy "timeSeries"  -</span></span></span>
-<span class="r-in"><span>   <span class="va">tS</span> <span class="op">&lt;-</span> <span class="fu"><a href="fin-dummy.html">dummyMonthlySeries</a></span><span class="op">(</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="co">## Create Dummy "timeSeries"</span></span></span>
+<span class="r-in"><span><span class="va">tS</span> <span class="op">&lt;-</span> <span class="fu"><a href="fin-dummy.html">dummyMonthlySeries</a></span><span class="op">(</span><span class="op">)</span></span></span>
 <span class="r-in"><span>   </span></span>
-<span class="r-in"><span><span class="co">## Reverse Series -</span></span></span>
-<span class="r-in"><span>   <span class="fu"><a href="https://rdrr.io/r/base/rev.html" class="external-link">rev</a></span><span class="op">(</span><span class="va">tS</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
+<span class="r-in"><span><span class="co">## reverse series</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/rev.html" class="external-link">rev</a></span><span class="op">(</span><span class="va">tS</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> GMT </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                   TS.1       TS.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-12-01 0.544974836 0.03999592</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-11-01 0.693591292 0.15904600</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-10-01 0.514251141 0.30269337</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-09-01 0.666083758 0.31661245</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-08-01 0.232550506 0.23222591</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-07-01 0.009495756 0.18672279</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-06-01 0.640310605 0.26682078</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-05-01 0.860915384 0.28622328</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-04-01 0.623379442 0.83729563</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-03-01 0.609274733 0.29231584</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-02-01 0.622299405 0.92343348</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-01-01 0.113703411 0.28273358</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-12-01 0.544974836 0.03999592</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-11-01 0.693591292 0.15904600</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-10-01 0.514251141 0.30269337</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-09-01 0.666083758 0.31661245</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-08-01 0.232550506 0.23222591</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-07-01 0.009495756 0.18672279</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-06-01 0.640310605 0.26682078</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-05-01 0.860915384 0.28622328</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-04-01 0.623379442 0.83729563</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-03-01 0.609274733 0.29231584</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-02-01 0.622299405 0.92343348</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-01-01 0.113703411 0.28273358</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

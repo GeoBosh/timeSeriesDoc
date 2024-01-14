@@ -16,7 +16,7 @@ Functions and methods dealing with the coercion between "timeSeries"
     
     <a class="navbar-brand me-2" href="../index.html">timeSeries</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4030.106.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4032.109</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,10 +58,10 @@ Functions and methods dealing with the coercion between "timeSeries"
 <span><span class="fu">as.timeSeries</span><span class="op">(</span><span class="va">x</span>, <span class="va">...</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">## convert from 'timeSeries' to other classes</span></span>
+<span><span class="co"># S3 method for timeSeries</span></span>
+<span><span class="fu">as.ts</span><span class="op">(</span><span class="va">x</span>, <span class="va">...</span><span class="op">)</span></span>
 <span><span class="co"># S4 method for timeSeries</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">as.matrix</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">...</span><span class="op">)</span></span>
-<span><span class="co"># S4 method for timeSeries</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/stats/ts.html" class="external-link">as.ts</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">...</span><span class="op">)</span></span>
 <span><span class="co"># S4 method for timeSeries</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html" class="external-link">as.data.frame</a></span><span class="op">(</span><span class="va">x</span>, row.names <span class="op">=</span> <span class="cn">NULL</span>, optional <span class="op">=</span> <span class="cn">FALSE</span>, <span class="va">...</span><span class="op">)</span></span>
 <span><span class="co"># S4 method for timeSeries</span></span>
@@ -136,20 +136,20 @@ Functions and methods dealing with the coercion between "timeSeries"
 <span class="r-in"><span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">12</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">TS</span> <span class="op">&lt;-</span> <span class="fu"><a href="timeSeries.html">timeSeries</a></span><span class="op">(</span><span class="va">data</span>, <span class="va">charvec</span>, units <span class="op">=</span> <span class="st">"RAND"</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">TS</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> GMT </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                   RAND</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-01-01 -0.53462554</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-02-01  1.03171730</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-03-01  0.70956662</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-04-01  0.07844901</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-05-01  0.97608044</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-06-01 -0.26208703</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-07-01 -1.37029646</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-08-01  0.19624484</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-09-01 -1.21235565</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-10-01 -0.15885573</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-11-01 -0.66830348</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-12-01  0.88260316</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-01-01 -0.53462554</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-02-01  1.03171730</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-03-01  0.70956662</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-04-01  0.07844901</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-05-01  0.97608044</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-06-01 -0.26208703</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-07-01 -1.37029646</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-08-01  0.19624484</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-09-01 -1.21235565</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-10-01 -0.15885573</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-11-01 -0.66830348</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-12-01  0.88260316</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Coerce to Vector</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/vector.html" class="external-link">as.vector</a></span><span class="op">(</span><span class="va">TS</span><span class="op">)</span></span></span>
@@ -159,34 +159,34 @@ Functions and methods dealing with the coercion between "timeSeries"
 <span class="r-in"><span><span class="co">## Coerce to Matrix</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">as.matrix</a></span><span class="op">(</span><span class="va">TS</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                   RAND</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-01-01 -0.53462554</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-02-01  1.03171730</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-03-01  0.70956662</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-04-01  0.07844901</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-05-01  0.97608044</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-06-01 -0.26208703</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-07-01 -1.37029646</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-08-01  0.19624484</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-09-01 -1.21235565</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-10-01 -0.15885573</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-11-01 -0.66830348</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-12-01  0.88260316</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-01-01 -0.53462554</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-02-01  1.03171730</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-03-01  0.70956662</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-04-01  0.07844901</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-05-01  0.97608044</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-06-01 -0.26208703</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-07-01 -1.37029646</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-08-01  0.19624484</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-09-01 -1.21235565</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-10-01 -0.15885573</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-11-01 -0.66830348</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-12-01  0.88260316</span>
 <span class="r-in"><span>  </span></span>
 <span class="r-in"><span><span class="co">## Coerce to Data Frame</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html" class="external-link">as.data.frame</a></span><span class="op">(</span><span class="va">TS</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                   RAND</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-01-01 -0.53462554</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-02-01  1.03171730</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-03-01  0.70956662</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-04-01  0.07844901</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-05-01  0.97608044</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-06-01 -0.26208703</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-07-01 -1.37029646</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-08-01  0.19624484</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-09-01 -1.21235565</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-10-01 -0.15885573</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-11-01 -0.66830348</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2023-12-01  0.88260316</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-01-01 -0.53462554</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-02-01  1.03171730</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-03-01  0.70956662</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-04-01  0.07844901</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-05-01  0.97608044</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-06-01 -0.26208703</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-07-01 -1.37029646</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-08-01  0.19624484</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-09-01 -1.21235565</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-10-01 -0.15885573</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-11-01 -0.66830348</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2024-12-01  0.88260316</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

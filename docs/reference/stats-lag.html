@@ -14,7 +14,7 @@ Compute a lagged version of a "timeSeries" object.'><!-- mathjax --><script src=
     
     <a class="navbar-brand me-2" href="../index.html">timeSeries</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4030.106.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4032.109</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,7 +51,7 @@ Compute a lagged version of a "timeSeries" object.'><!-- mathjax --><script src=
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="co"># S4 method for timeSeries</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="co"># S3 method for timeSeries</span></span>
 <span><span class="fu">lag</span><span class="op">(</span><span class="va">x</span>, k <span class="op">=</span> <span class="fl">1</span>, trim <span class="op">=</span> <span class="cn">FALSE</span>, units <span class="op">=</span> <span class="cn">NULL</span>, <span class="va">...</span><span class="op">)</span></span></code></pre></div>
     </div>
 
@@ -101,12 +101,12 @@ Compute a lagged version of a "timeSeries" object.'><!-- mathjax --><script src=
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Load Micsrosoft Data Set -</span></span></span>
-<span class="r-in"><span>   <span class="va">x</span> <span class="op">=</span> <span class="va">MSFT</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">20</span>, <span class="st">"Open"</span><span class="op">]</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Load Micsrosoft Data Set</span></span></span>
+<span class="r-in"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="va">MSFT</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">20</span>, <span class="st">"Open"</span><span class="op">]</span></span></span>
 <span class="r-in"><span>   </span></span>
-<span class="r-in"><span><span class="co">## Lag the 'timeSeries' Object:</span></span></span>
-<span class="r-in"><span>   <span class="fu">lag</span><span class="op">(</span><span class="va">x</span>, k <span class="op">=</span> <span class="op">-</span><span class="fl">1</span><span class="op">:</span><span class="fl">1</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
+<span class="r-in"><span><span class="co">## Lag the 'timeSeries' Object</span></span></span>
+<span class="r-in"><span><span class="fu">lag</span><span class="op">(</span><span class="va">x</span>, k <span class="op">=</span> <span class="op">-</span><span class="fl">1</span><span class="op">:</span><span class="fl">1</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> GMT </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>            Open[-1] Open[0] Open[1]</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2000-09-27  60.8125 63.4375      NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2000-09-28  61.0000 60.8125 63.4375</span>

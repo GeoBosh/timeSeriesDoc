@@ -14,7 +14,7 @@ Extract a part from a "timeSeries" object.'><!-- mathjax --><script src="https:/
     
     <a class="navbar-brand me-2" href="../index.html">timeSeries</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4030.106.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4032.109</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,7 +51,7 @@ Extract a part from a "timeSeries" object.'><!-- mathjax --><script src="https:/
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="co"># S4 method for timeSeries</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="co"># S3 method for timeSeries</span></span>
 <span><span class="fu">window</span><span class="op">(</span><span class="va">x</span>, <span class="va">start</span>, <span class="va">end</span>, <span class="va">...</span><span class="op">)</span></span></code></pre></div>
     </div>
 
@@ -82,15 +82,15 @@ Extract a part from a "timeSeries" object.'><!-- mathjax --><script src="https:/
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Load LPP Benchmark Returns -</span></span></span>
-<span class="r-in"><span>   <span class="va">x</span> <span class="op">&lt;-</span> <span class="va">LPP2005REC</span><span class="op">[</span>, <span class="fl">7</span><span class="op">:</span><span class="fl">9</span><span class="op">]</span></span></span>
-<span class="r-in"><span>   <span class="fu"><a href="https://rdrr.io/r/base/range.html" class="external-link">range</a></span><span class="op">(</span><span class="fu"><a href="timeSeries-slotTime.html">time</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## load LPP benchmark returns</span></span></span>
+<span class="r-in"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="va">LPP2005REC</span><span class="op">[</span>, <span class="fl">7</span><span class="op">:</span><span class="fl">9</span><span class="op">]</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/range.html" class="external-link">range</a></span><span class="op">(</span><span class="fu"><a href="timeSeries-slotTime.html">time</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] [2005-11-01] [2007-04-11]</span>
 <span class="r-in"><span>  </span></span>
-<span class="r-in"><span><span class="co">## Extract Data for January 2006 - </span></span></span>
-<span class="r-in"><span>   <span class="fu">window</span><span class="op">(</span><span class="va">x</span>, <span class="st">"2006-01-01"</span>, <span class="st">"2006-01-31"</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
+<span class="r-in"><span><span class="co">## extract data for January 2006</span></span></span>
+<span class="r-in"><span><span class="fu">window</span><span class="op">(</span><span class="va">x</span>, <span class="st">"2006-01-01"</span>, <span class="st">"2006-01-31"</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> GMT </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                   LPP25        LPP40        LPP60</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2006-01-02  0.000165480  0.000297932  0.000444413</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2006-01-03  0.000019500 -0.000076900  0.000009450</span>

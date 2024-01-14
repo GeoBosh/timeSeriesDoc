@@ -18,7 +18,7 @@ Aligns a "timeSeries" object to equidistant time stamps.  There
     
     <a class="navbar-brand me-2" href="../index.html">timeSeries</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4030.106.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4032.109</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -177,7 +177,7 @@ Aligns a "timeSeries" object to equidistant time stamps.  There
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co">## Use Microsofts' OHLCV Price Series -</span></span></span>
 <span class="r-in"><span>   <span class="fu"><a href="base-subsetting.html">head</a></span><span class="op">(</span><span class="va">MSFT</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> GMT </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>               Open    High     Low   Close   Volume</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2000-09-27 63.4375 63.5625 59.8125 60.6250 53077800</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2000-09-28 60.8125 61.8750 60.6250 61.3125 26180200</span>
@@ -207,7 +207,7 @@ Aligns a "timeSeries" object to equidistant time stamps.  There
 <span class="r-in"><span>   <span class="va">Close</span> <span class="op">&lt;-</span> <span class="va">MSFT</span><span class="op">[</span>, <span class="st">"Close"</span><span class="op">]</span></span></span>
 <span class="r-in"><span>   <span class="va">tsApril01</span> <span class="op">&lt;-</span> <span class="fu"><a href="stats-window.html">window</a></span><span class="op">(</span><span class="va">Close</span>, start<span class="op">=</span><span class="st">"2001-04-01"</span>, end<span class="op">=</span><span class="st">"2001-04-30"</span><span class="op">)</span></span></span>
 <span class="r-in"><span>   <span class="va">tsApril01</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> GMT </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>              Close</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2001-04-02 55.8125</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2001-04-03 53.3750</span>
@@ -239,7 +239,7 @@ Aligns a "timeSeries" object to equidistant time stamps.  There
 <span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] [2001-04-16]</span>
 <span class="r-in"><span>   <span class="fu">alignDailySeries</span><span class="op">(</span><span class="va">tsRet</span>, method <span class="op">=</span> <span class="st">"fillNA"</span>, include.weekends <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> GMT </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                   Close</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2001-04-03 -0.044655387</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2001-04-04 -0.027301399</span>
@@ -262,7 +262,7 @@ Aligns a "timeSeries" object to equidistant time stamps.  There
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2001-04-27 -0.029506728</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2001-04-30  0.009342398</span>
 <span class="r-in"><span>   <span class="fu">alignDailySeries</span><span class="op">(</span><span class="va">tsRet</span>, method <span class="op">=</span> <span class="st">"fillNA"</span>, include.weekends <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> GMT </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                   Close</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2001-04-03 -0.044655387</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2001-04-04 -0.027301399</span>
@@ -295,7 +295,7 @@ Aligns a "timeSeries" object to equidistant time stamps.  There
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">## Align Daily Series by Interpolated Values -</span></span></span>
 <span class="r-in"><span>   <span class="fu">alignDailySeries</span><span class="op">(</span><span class="va">tsRet</span>, method <span class="op">=</span> <span class="st">"interp"</span>, include.weekend <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> GMT </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                   Close</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2001-04-03 -0.044655387</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2001-04-04 -0.027301399</span>
@@ -318,7 +318,7 @@ Aligns a "timeSeries" object to equidistant time stamps.  There
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2001-04-27 -0.029506728</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2001-04-30  0.009342398</span>
 <span class="r-in"><span>   <span class="fu">alignDailySeries</span><span class="op">(</span><span class="va">tsRet</span>, method <span class="op">=</span> <span class="st">"interp"</span>, include.weekend <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> GMT </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                    Close</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2001-04-03 -0.0446553871</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2001-04-04 -0.0273013989</span>
@@ -356,7 +356,7 @@ Aligns a "timeSeries" object to equidistant time stamps.  There
 <span class="r-in"><span><span class="co">## Aggregate daily records to end of month records -</span></span></span>
 <span class="r-in"><span>   <span class="va">X</span> <span class="op">&lt;-</span> <span class="fu">daily2monthly</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></span>
 <span class="r-in"><span>   <span class="va">X</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> GMT </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>               Open    High     Low   Close   Volume</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2000-09-30 61.0000 61.3125 58.6250 60.3125 37026800</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-31 69.0000 69.5000 68.0000 68.8750 52237000</span>
@@ -371,13 +371,13 @@ Aligns a "timeSeries" object to equidistant time stamps.  There
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2001-07-31 66.0100 67.3900 65.8500 66.1900 29515800</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2001-08-31 56.8500 58.0600 56.3000 57.0500 28950400</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2001-09-30 50.1000 50.6800 48.0000 49.9600 40595600</span>
-<span class="r-in"><span>   <span class="fu">isMonthly</span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span></span>
+<span class="r-in"><span>   <span class="fu"><a href="timeSeries-isRegular.html">isMonthly</a></span><span class="op">(</span><span class="va">X</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] TRUE</span>
 <span class="r-in"><span>   </span></span>
 <span class="r-in"><span><span class="co">## Aggregate daily records to end of week records -</span></span></span>
 <span class="r-in"><span>   <span class="va">X</span> <span class="op">&lt;-</span> <span class="fu">daily2weekly</span><span class="op">(</span><span class="va">x</span>, startOn<span class="op">=</span><span class="st">"Fri"</span><span class="op">)</span></span></span>
 <span class="r-in"><span>   <span class="va">X</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> GMT</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> GMT </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>               Open    High     Low   Close    Volume</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2000-09-29 61.0000 61.3125 58.6250 60.3125  37026800</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2000-10-06 55.8125 56.7500 54.7500 55.5625  30897000</span>
