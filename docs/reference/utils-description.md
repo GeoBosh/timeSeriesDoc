@@ -14,5 +14,5 @@ description()
 ``` r
 ## Show Default Description String - 
    description()
-#> [1] "Fri Dec 12 16:28:28 2025 by user: georgi"
+#> [1] "Fri Dec 12 16:49:46 2025 by user: georgi"
 ```

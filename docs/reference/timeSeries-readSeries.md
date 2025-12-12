@@ -104,10 +104,10 @@ all.equal(msft, MSFT)
 #> [1] "Attributes: < Component “documentation”: 1 string mismatch >"
 ## ... almost, except for slot 'documentation'
 c(msft@documentation, MSFT@documentation)
-#> [1] "Fri Dec 12 16:28:27 2025" ""                        
+#> [1] "Fri Dec 12 16:49:44 2025" ""                        
 ## actually, all.equal() says 'attribute', not slot. this is ok too:
 c(attr(MSFT, "documentation"), attr(msft, "documentation"))
-#> [1] ""                         "Fri Dec 12 16:28:27 2025"
+#> [1] ""                         "Fri Dec 12 16:49:44 2025"
 ## make 'documentation' equal, here "", and compare again:
 msft@documentation <- ""
 all.equal(msft, MSFT) # TRUE

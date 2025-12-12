@@ -61,7 +61,7 @@ and allow to modify the optional attributes of a `timeSeries` object.
    getAttributes(tS)
 #> NULL
    tS@documentation
-#> [1] "Fri Dec 12 16:28:27 2025"
+#> [1] "Fri Dec 12 16:49:45 2025"
    
 ## Set a new Optional Attribute -
    setAttributes(tS) <- list(what="A dummy Series")
@@ -87,7 +87,7 @@ and allow to modify the optional attributes of a `timeSeries` object.
 #> 
 #> 
    tS@documentation
-#> [1] "Fri Dec 12 16:28:27 2025"
+#> [1] "Fri Dec 12 16:49:45 2025"
 #> attr(,"Attributes")
 #> attr(,"Attributes")$what
 #> attr(,"Attributes")$what[[1]]

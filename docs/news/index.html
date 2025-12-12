@@ -60,7 +60,7 @@
 <h2 class="pkg-version" data-toc-text="4032.109" id="timeseries-4032109">timeSeries 4032.109<a class="anchor" aria-label="anchor" href="#timeseries-4032109"></a></h2><p class="text-muted">CRAN release: 2024-01-14</p>
 <ul><li><p>deprecated function <code>returnSeries</code> is now defunct, use <code>returns</code> instead.</p></li>
 <li><p>a number of generic functions from base R now get only S3 methods for ‘timeSeries’ objects. Previously they were turned into S4 generics with S4 methods.</p></li>
-<li><p>streamlined timeSeries methods for a number of functions. Left only S3 methods or only S4 methods were suitable.</p></li>
+<li><p>streamlined <code>"timeSeries"</code> methods for a number of functions. Left only S3 methods or only S4 methods were suitable.</p></li>
 <li><p>consolidated the NAMESPACE.</p></li>
 </ul></div>
     <div class="section level2">
@@ -111,15 +111,15 @@
 <li><p>deprecated function <code>colStdevs</code> is now defunct. Use <code><a href="../reference/statistics-colSums.html">colSds()</a></code> instead.</p></li>
 </ul><div class="section level3">
 <h3 id="technical-changes-4021-105">Technical changes<a class="anchor" aria-label="anchor" href="#technical-changes-4021-105"></a></h3>
-<ul><li><p>stopped exporting (almost) all functions whose names start with a ‘.’. Historically, the package was exporting all functions, including those start with a ‘.’. This should be of no concern for users since these functions were not documented but the developers of some Rmetrics packages where using such functions.</p></li>
+<ul><li><p>stopped exporting (almost) all functions whose names start with a ‘.’. Historically, the package was exporting all functions, including those starting with a ‘.’. This should be of no concern for users since these functions were not documented but the developers of some Rmetrics packages where using such functions.</p></li>
 <li><p>the additional arguments of the S3 <code>timeSeries</code> method for <code><a href="../reference/base-diff.html">diff()</a></code> are now in its signature, which previously was <code>diff(x, ...)</code>. An intermediate function, <code>.diff.timeSeries</code>, was eliminated in the process.</p></li>
-<li><p>the bodies of the methods of <code>series&lt;-()</code> and <code>coredata&lt;-</code> for signature <code>"matrix"</code> of value were identical. Now the body is a separate, unexported function, which is used as the definition of both of these methods.</p></li>
+<li><p>the bodies of the methods of <code>series&lt;-</code> and <code>coredata&lt;-</code> for signature <code>"matrix"</code> or value were identical. Now the body is a separate, unexported function, which is used as the definition of both of these methods.</p></li>
 <li><p>eliminated <code>.merge.timeSeries</code> and other redundancy in the implementation of the <code>c("timeSeries", "timeSeries")</code> method.</p></li>
 <li><p>eliminated <code>.rev.timeSeries</code> in the definition of the <code>rev</code> method.</p></li>
 <li><p>eliminated <code>.scale.timeSeries</code> in the definition of the <code>scale</code> timeSeries method.</p></li>
 <li><p>same as above for <code>.sort.timeSeries</code>.</p></li>
-<li><p>eliminated <code>.start.timeSeries</code>and redundancy in the implementation of the <code>timeSeries</code> method.</p></li>
-<li><p>eliminated <code>.end.timeSeries</code>and redundancy in the implementation of the <code>timeSeries</code> method.</p></li>
+<li><p>eliminated <code>.start.timeSeries</code>and the redundancy in the implementation of the <code>timeSeries</code> method.</p></li>
+<li><p>eliminated <code>.end.timeSeries</code> and the redundancy in the implementation of the <code>timeSeries</code> method.</p></li>
 <li><p>the function <code>.applySeries</code> is now defunct. It was obsoleted long time ago and was exported for historical reasons only. Use <code><a href="../reference/base-apply.html">applySeries()</a></code> instead.</p></li>
 </ul></div>
 </div>

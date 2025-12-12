@@ -50,8 +50,8 @@ CRAN release: 2024-01-14
   ‘timeSeries’ objects. Previously they were turned into S4 generics
   with S4 methods.
 
-- streamlined timeSeries methods for a number of functions. Left only S3
-  methods or only S4 methods were suitable.
+- streamlined `"timeSeries"` methods for a number of functions. Left
+  only S3 methods or only S4 methods were suitable.
 
 - consolidated the NAMESPACE.
 
@@ -219,9 +219,9 @@ CRAN release: 2022-10-15
 
 - stopped exporting (almost) all functions whose names start with a ‘.’.
   Historically, the package was exporting all functions, including those
-  start with a ‘.’. This should be of no concern for users since these
-  functions were not documented but the developers of some Rmetrics
-  packages where using such functions.
+  starting with a ‘.’. This should be of no concern for users since
+  these functions were not documented but the developers of some
+  Rmetrics packages where using such functions.
 
 - the additional arguments of the S3 `timeSeries` method for
   [`diff()`](https://geobosh.github.io/timeSeriesDoc/reference/base-diff.md)
@@ -229,10 +229,10 @@ CRAN release: 2022-10-15
   intermediate function, `.diff.timeSeries`, was eliminated in the
   process.
 
-- the bodies of the methods of `series<-()` and `coredata<-` for
-  signature `"matrix"` of value were identical. Now the body is a
-  separate, unexported function, which is used as the definition of both
-  of these methods.
+- the bodies of the methods of `series<-` and `coredata<-` for signature
+  `"matrix"` or value were identical. Now the body is a separate,
+  unexported function, which is used as the definition of both of these
+  methods.
 
 - eliminated `.merge.timeSeries` and other redundancy in the
   implementation of the `c("timeSeries", "timeSeries")` method.
@@ -244,11 +244,11 @@ CRAN release: 2022-10-15
 
 - same as above for `.sort.timeSeries`.
 
-- eliminated `.start.timeSeries`and redundancy in the implementation of
-  the `timeSeries` method.
+- eliminated `.start.timeSeries`and the redundancy in the implementation
+  of the `timeSeries` method.
 
-- eliminated `.end.timeSeries`and redundancy in the implementation of
-  the `timeSeries` method.
+- eliminated `.end.timeSeries` and the redundancy in the implementation
+  of the `timeSeries` method.
 
 - the function `.applySeries` is now defunct. It was obsoleted long time
   ago and was exported for historical reasons only. Use
