@@ -1,222 +1,75 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/404.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/index.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/news/index.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/00timeSeries-package.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/base-apply.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/base-attach.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/base-cbind.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/base-diff.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/base-dim.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/base-is.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/base-merge.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/base-rank.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/base-rev.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/base-sample.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/base-scale.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/base-sort.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/base-start.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/base-subsetting.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/base-t.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/data-examples.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/fin-align.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/fin-cumulated.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/fin-daily.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/fin-drawdowns.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/fin-dummy.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/fin-durations.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/fin-monthly.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/fin-periodical.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/fin-returns.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/fin-runlengths.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/fin-splits.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/fin-spreads.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/fin-turnpoints.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/fin-wealth.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/internals.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/methods-as.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/methods-base.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/methods-comment.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/methods-is.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/methods-mathOps.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/methods-plot.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/methods-show.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/methods-stats.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/statistics-colCumsums.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/statistics-colSums.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/statistics-orderColnames.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/statistics-orderStatistics.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/statistics-rollMean.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/statistics-rowCumsums.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/statistics-smoothLowess.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/stats-aggregate.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/stats-filter.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/stats-lag.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/stats-model.frame.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/stats-na.contiguous.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/stats-na.omit.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/stats-window.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/timeSeries-class.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/timeSeries-deprecated.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/timeSeries-getDataPart.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/timeSeries-isRegular.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/timeSeries-isUnivariate.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/timeSeries-readSeries.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/timeSeries-slotDocumentation.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/timeSeries-slotFinCenter.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/timeSeries-slotSeries.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/timeSeries-slotTime.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/timeSeries-slotUnits.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/timeSeries.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/utils-description.html</loc>
-  </url>
-  <url>
-    <loc>https://geobosh.github.io/timeSeriesDoc/reference/utils-structure.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/404.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/authors.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/index.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/news/index.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/00timeSeries-package.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/base-apply.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/base-attach.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/base-cbind.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/base-diff.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/base-dim.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/base-merge.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/base-rank.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/base-rev.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/base-sample.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/base-scale.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/base-sort.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/base-start.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/base-subsetting.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/base-t.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/data-examples.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/fin-align.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/fin-cumulated.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/fin-drawdowns.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/fin-dummy.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/fin-durations.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/fin-monthly.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/fin-periodical.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/fin-returns.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/fin-runlengths.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/fin-splits.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/fin-spreads.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/fin-turnpoints.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/fin-wealth.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/index.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/internals.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/interpNA.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/methods-as.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/methods-comment.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/methods-is.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/methods-mathOps.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/methods-plot.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/methods-show.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/methods-stats.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/seriesData.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/statistics-colCumsums.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/statistics-colSums.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/statistics-orderColnames.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/statistics-orderStatistics.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/statistics-rollMean.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/statistics-rowCumsums.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/statistics-smoothLowess.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/stats-aggregate.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/stats-filter.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/stats-lag.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/stats-na.contiguous.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/stats-na.omit.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/stats-window.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/substituteNA.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/timeSeries-class.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/timeSeries-deprecated.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/timeSeries-getDataPart.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/timeSeries-isRegular.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/timeSeries-isUnivariate.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/timeSeries-readSeries.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/timeSeries-slotDocumentation.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/timeSeries-slotFinCenter.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/timeSeries-slotSeries.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/timeSeries-slotTime.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/timeSeries-slotUnits.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/timeSeries.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/utils-description.html</loc></url>
+<url><loc>https://geobosh.github.io/timeSeriesDoc/reference/utils-structure.html</loc></url>
 </urlset>
+
